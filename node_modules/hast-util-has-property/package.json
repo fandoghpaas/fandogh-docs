@@ -1,0 +1,59 @@
+{
+  "name": "hast-util-has-property",
+  "version": "1.0.1",
+  "description": "Check if a node has a property",
+  "license": "MIT",
+  "keywords": [
+    "hast",
+    "html",
+    "element",
+    "property"
+  ],
+  "repository": "syntax-tree/hast-util-has-property",
+  "bugs": "https://github.com/syntax-tree/hast-util-has-property/issues",
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "esmangle": "^1.0.1",
+    "nyc": "^11.0.0",
+    "remark-cli": "^4.0.0",
+    "remark-preset-wooorm": "^3.0.0",
+    "tape": "^4.4.0",
+    "xo": "^0.18.0"
+  },
+  "scripts": {
+    "build-md": "remark . --quiet --frail --output",
+    "build-bundle": "browserify index.js --bare -s hastUtilHasProperty > hast-util-has-property.js",
+    "build-mangle": "esmangle hast-util-has-property.js > hast-util-has-property.min.js",
+    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+    "lint": "xo",
+    "test-api": "node test.js",
+    "test-coverage": "nyc --reporter lcov tape test.js",
+    "test": "npm run build && npm run lint && npm run test-coverage"
+  },
+  "xo": {
+    "space": true,
+    "esnext": false,
+    "ignores": [
+      "hast-util-has-property.js"
+    ]
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-wooorm"
+    ]
+  }
+}

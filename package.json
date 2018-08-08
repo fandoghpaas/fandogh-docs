@@ -1,0 +1,10 @@
+{
+"name": "mycoolproject",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "devDependencies": {
+    "docz": "^0.9.6"
+  }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>react-lightweight-tooltip - A lightweight React.js tooltip component</title>
+
+    
+
+    
+
+    
+  <link href="style.572e21b9261846b5ead7.css" rel="stylesheet"></head>
+  <body>
+    <div class="pure-g">
+      <header class="pure-u-1">
+        
+        <h1>react-lightweight-tooltip</h1>
+        
+
+        
+        <div class="description">A lightweight React.js tooltip component</div>
+        
+      </header>
+
+      <article class="pure-u-1">
+        <h2>Demo</h2>
+        <section class="demonstration">
+          
+        </section>
+
+        <h2>Documentation</h2>
+        <section class="documentation">
+          <div><div><p><a href="http://travis-ci.org/mcumpl/react-lightweight-tooltip"><img src="https://secure.travis-ci.org/mcumpl/react-lightweight-tooltip.svg" alt="build status"/></a><span>
+</span><a href="https://www.npmjs.com/package/react-lightweight-tooltip"><img src="https://img.shields.io/npm/v/react-lightweight-tooltip.svg" alt="npm version"/></a><span>
+</span><a href="https://www.bithound.io/github/mcumpl/react-lightweight-tooltip"><img src="https://www.bithound.io/github/mcumpl/react-lightweight-tooltip/badges/score.svg" alt="bitHound Score"/></a><span>
+</span><a href="https://david-dm.org/mcumpl/react-lightweight-tooltip"><img src="https://david-dm.org/mcumpl/react-lightweight-tooltip.svg" alt="Dependency Status"/></a></p><h1><span>A lightweight React.js tooltip component</span></h1><h2><span>Demo</span></h2><p><a href="https://mcumpl.github.io/react-lightweight-tooltip/"><span>Check it out</span></a></p><h2><span>Features</span></h2><ul><li><span>Shows onMouseEnter and hides onMouseLeave on devices with mouse</span></li><li><span>Shows onTouchStart and hides “on touch outside” on devices with touch screen</span></li><li><span>Uses inline-styles for easy composing of specialized components</span></li><li><span>Can contain rich content (composed of components)</span></li><li><span>Works well on a long lists (eg. financial transactions)</span></li><li><span>Is relatively small (~130 lines of ES6 code incl. default inline-styles)</span></li><li><span>Has no external dependencies except React and ReactDOM</span></li><li><span>Includes TypeScript typings</span></li></ul><h2><span>Installation</span></h2><pre><pre class="lowlight"><code class="hljs js">npm install react-lightweight-tooltip --save
+</code></pre></pre><h2><span>Basic Usage</span></h2><h3><span>Import tooltip component</span></h3><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">import</span> {Tooltip} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react-lightweight-tooltip&#x27;</span>;
+</code></pre></pre><h3><span>Use tooltip component</span></h3><pre><pre class="lowlight"><code class="hljs js">&lt;Tooltip content=<span class="hljs-string">&quot;Yes, the default one&quot;</span>&gt;Simple black tooltip&lt;<span class="hljs-regexp">/Tooltip&gt;
+</span></code></pre></pre><h2><span>Advanced Usage</span></h2><h3><span>The props</span></h3><h4><span>children</span></h4><p><span>The </span><em><span>children</span></em><span> represent the element(s) the tooltip is wrapped around.</span></p><h4><span>content</span></h4><p><span>The </span><em><span>content</span></em><span> is the actual content of the tooltip. 
+It can be string or array of React Elements. </span></p><p><span>Note that each React Element in the array has to have its unique key prop.</span></p><pre><pre class="lowlight"><code class="hljs js">&lt;Tooltip
+  content={
+    [
+      <span class="hljs-string">&#x27;This repo is hosted on &#x27;</span>,
+      &lt;a href=<span class="hljs-string">&quot;https://github.com&quot;</span> key=<span class="hljs-string">&quot;githublink&quot;</span> target=<span class="hljs-string">&quot;_blank&quot;</span>&gt;Github&lt;<span class="hljs-regexp">/a&gt;,
+    ]
+  }&gt;
+  Tooltip with a link
+&lt;/</span>Tooltip&gt;
+</code></pre></pre><h4><span>styles</span></h4><p><span>The </span><em><span>styles</span></em><span> prop is used to override the default styles of the tooltip. 
+When passed to the component, the component merges them with its default styles. </span></p><p><span>This is especaially handy when writing specialized components.</span></p><pre><pre class="lowlight"><code class="hljs js"><span class="hljs-keyword">const</span> greenRoundedStyle = {
+  <span class="hljs-attr">content</span>: {
+    <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&#x27;green&#x27;</span>,
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;#000&#x27;</span>,
+  },
+  <span class="hljs-attr">tooltip</span>: {
+    <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&#x27;green&#x27;</span>,
+    <span class="hljs-attr">borderRadius</span>: <span class="hljs-string">&#x27;10px&#x27;</span>,
+  },
+  <span class="hljs-attr">arrow</span>: {
+    <span class="hljs-attr">borderTop</span>: <span class="hljs-string">&#x27;solid green 5px&#x27;</span>,
+  },
+};
+
+<span class="hljs-keyword">const</span> GreenRoundedTooltip = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> (
+    &lt;Tooltip
+      content={
+        [
+          &#x27;This repo is hosted on &#x27;,
+          &lt;a href=&quot;https://github.com&quot; key=&quot;githublink&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;,
+        ]
+      }
+      styles={greenRoundedStyle}&gt;
+      Green tooltip with rounded corners and a link
+    &lt;/Tooltip&gt;
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> GreenRoundedTooltip;
+</code></pre></pre><h3><span>Custom Styling</span></h3><p><span>You can easily override the default styles by passing your own styles to the </span><em><span>styles</span></em><span> prop. 
+When your styles get passed, the component merges them with its default styles. </span></p><p><span>The default styles are the following:</span></p><pre><pre class="lowlight"><code class="hljs js">{
+  <span class="hljs-attr">wrapper</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;relative&#x27;</span>,
+    <span class="hljs-attr">display</span>: <span class="hljs-string">&#x27;inline-block&#x27;</span>,
+    <span class="hljs-attr">zIndex</span>: <span class="hljs-string">&#x27;98&#x27;</span>,
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;#555&#x27;</span>,
+    <span class="hljs-attr">cursor</span>: <span class="hljs-string">&#x27;help&#x27;</span>,
+  },
+  <span class="hljs-attr">tooltip</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;absolute&#x27;</span>,
+    <span class="hljs-attr">zIndex</span>: <span class="hljs-string">&#x27;99&#x27;</span>,
+    <span class="hljs-attr">background</span>: <span class="hljs-string">&#x27;#000&#x27;</span>,
+    <span class="hljs-attr">bottom</span>: <span class="hljs-string">&#x27;100%&#x27;</span>,
+    <span class="hljs-attr">left</span>: <span class="hljs-string">&#x27;50%&#x27;</span>,
+    <span class="hljs-attr">marginBottom</span>: <span class="hljs-string">&#x27;10px&#x27;</span>,
+    <span class="hljs-attr">padding</span>: <span class="hljs-string">&#x27;5px&#x27;</span>,
+    <span class="hljs-attr">WebkitTransform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+    <span class="hljs-attr">msTransform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+    <span class="hljs-attr">OTransform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+    <span class="hljs-attr">transform</span>: <span class="hljs-string">&#x27;translateX(-50%)&#x27;</span>,
+  },
+  <span class="hljs-attr">content</span>: {
+    <span class="hljs-attr">background</span>: <span class="hljs-string">&#x27;#000&#x27;</span>,
+    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;#fff&#x27;</span>,
+    <span class="hljs-attr">fontSize</span>: <span class="hljs-string">&#x27;.8em&#x27;</span>,
+    <span class="hljs-attr">padding</span>: <span class="hljs-string">&#x27;.3em 1em&#x27;</span>,
+    <span class="hljs-attr">whiteSpace</span>: <span class="hljs-string">&#x27;nowrap&#x27;</span>,
+  },
+  <span class="hljs-attr">arrow</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;absolute&#x27;</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;0&#x27;</span>,
+    <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;0&#x27;</span>,
+    <span class="hljs-attr">bottom</span>: <span class="hljs-string">&#x27;-5px&#x27;</span>,
+    <span class="hljs-attr">left</span>: <span class="hljs-string">&#x27;50%&#x27;</span>,
+    <span class="hljs-attr">marginLeft</span>: <span class="hljs-string">&#x27;-5px&#x27;</span>,
+    <span class="hljs-attr">borderLeft</span>: <span class="hljs-string">&#x27;solid transparent 5px&#x27;</span>,
+    <span class="hljs-attr">borderRight</span>: <span class="hljs-string">&#x27;solid transparent 5px&#x27;</span>,
+    <span class="hljs-attr">borderTop</span>: <span class="hljs-string">&#x27;solid #000 5px&#x27;</span>,
+  },
+  <span class="hljs-attr">gap</span>: {
+    <span class="hljs-attr">position</span>: <span class="hljs-string">&#x27;absolute&#x27;</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;100%&#x27;</span>,
+    <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;20px&#x27;</span>,
+    <span class="hljs-attr">bottom</span>: <span class="hljs-string">&#x27;-20px&#x27;</span>,
+  },
+}
+</code></pre></pre><h2><span>TODO</span></h2><ul><li><span>Improve demo: dispay examples and code only, make it responsive</span></li><li><span>Improve docs: tooltip style/dom explanation</span></li><li><span>Improve tests (let me think...)</span></li><li><span>Write typings</span></li></ul><h2><span>Acknowledgements</span></h2><p><span>Special thanks to </span><a href="https://github.com/no23reason"><span>@no23reason</span></a><span> for his help with the “on touch outside” handling. This project uses the </span><a href="https://github.com/survivejs/react-component-boilerplate"><span>react-component-boilerplate</span></a><span>.</span></p><h2><span>License</span></h2><p><em><span>react-lightweight-tooltip</span></em><span> is available under MIT license. See LICENSE for more details.</span></p></div></div>
+        </section>
+      </article>
+    </div>
+  <script type="text/javascript" src="manifest.40624a5a6c415f8ab915.js"></script><script type="text/javascript" src="vendors.8ac3155eaec2c21d5328.js"></script><script type="text/javascript" src="style.572e21b9261846b5ead7.js"></script><script type="text/javascript" src="app.da30b9722da19fc1f9ba.js"></script></body>
+</html>
