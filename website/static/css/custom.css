@@ -1,0 +1,52 @@
+/* your custom css */
+@font-face {
+  font-family: Yekan;
+  src: url(../fonts/yekan-regular.ttf)
+}
+
+
+body {
+  direction: rtl;
+  font-family: Yekan, sans-serif;
+}
+.logo {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.mainContainer .wrapper {
+  text-align: right;
+}
+pre, code {
+  text-align: left;
+  direction: ltr;
+}
+footer{
+  direction: ltr;
+}
+
+
+.nav-footer .sitemap {
+  margin: 0 auto;
+}
+.nav-footer .sitemap div{
+  text-align: center;
+}
+.nav-footer .fbOpenSource {
+  margin-top: 80px;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
