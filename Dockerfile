@@ -11,7 +11,7 @@ RUN apt-get update && \
 RUN npm install --prefix ./website
 RUN npm run build --prefix ./website 
 
-RUN cp -r website/build/fandogh  /usr/share/nginx/html/
+RUN cp -a website/build/fandogh/.  /usr/share/nginx/html/
 
 EXPOSE 80
 
