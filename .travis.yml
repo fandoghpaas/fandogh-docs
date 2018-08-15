@@ -11,6 +11,6 @@ install:
 # command to run tests
 script:
   - echo $TRAVIS_COMMIT
-  - fandogh login --username=$FANDOGH_USERNAME --password=$FANDOGH_PASSWORD
+  - COLLECT_ERROR=True fandogh login --username=$FANDOGH_USERNAME --password=$FANDOGH_PASSWORD
   - fandogh image publish --version=$TRAVIS_COMMIT
   - fandogh service deploy --version=$TRAVIS_COMMIT --name=doc
