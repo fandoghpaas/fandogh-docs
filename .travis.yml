@@ -1,6 +1,6 @@
 branches:
   only:
-  - travis
+  - master
 language: python
 cache: yarn
 python:
