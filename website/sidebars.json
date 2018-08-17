@@ -1,12 +1,18 @@
 {
   "docs": {
-    "شروع": [
-         "getting-started",
-         "namespaces",
+    "مستندات": [
+      "getting-started",
+      "namespaces",
       "images",
       "services",
       "managed-services",
       "custom-domains"
     ]
-  }
+  },
+  "مشکلات رایج": [
+    "نصب CLI",
+    "ساخت تصویر",
+    "سرویس‌ها و managed-serviceها",
+    "دامنه‌ها"
+  ]
 }
