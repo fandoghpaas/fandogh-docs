@@ -12,7 +12,7 @@ sidebar_label: سرویس‌های مدیریت شده
 ## MySQL + PHPMyAdmin
 
 
-![/img/docs/mysql-phpmyadmin.png](MySQL + PHPMyAdmin)
+![MySQL + PHPMyAdmin](/img/docs/mysql-phpmyadmin.png "MySQL + PHPMyAdmin")
 
 MySQL یکی از محبوب‌ترین RDBMS‌های امروزی است که طرفداران زیادی در ایران داد، به همین دلیل MySQL به عنوان اولین managed-service به فندق اضافه شد.
 این managed-service از دو image متفاوت تشکیل شده، یکی خود MySQL و دیگری PHPMyAdmin که یک رابط کاربری تحت وب برای MySQL است.
@@ -36,7 +36,8 @@ fandogh managed-service deploy mysql 9.1 \
 
 ## Postgresql + Adminer
 
-![/img/docs/postgresql-logo.png](Postgresql + Adminer)
+
+![Postgresql + Adminer](/img/docs/postgresql-logo.png "Postgresql + Adminer")
 
 Postgresql یکی دیگر از RDBMS‌های معروف و پرطرفداری است که می‌توانید به سادگی به عنوان یک managed-service روی Namespace خود دیپلوی کنید.
 هنگام دیپلوی کردن Postgresql پارامتر‌های زیر را می‌توانید مشخص کنید:
