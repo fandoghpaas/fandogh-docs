@@ -7,7 +7,7 @@
       "services",
       "managed-services",
       "custom-domains",
-      "secret",
+      "secret"
     ]
   }
 }
