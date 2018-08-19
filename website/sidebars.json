@@ -6,7 +6,8 @@
       "images",
       "services",
       "managed-services",
-      "custom-domains"
+      "custom-domains",
+      "secret"
     ]
   }
 }
