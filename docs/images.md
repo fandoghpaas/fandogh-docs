@@ -1,8 +1,8 @@
 ---
-id: images  
-title: تصاویر در فندق  
-sidebar_label: تصاویر در فندق  
----  
+id: images
+title: تصاویر در فندق
+sidebar_label: تصاویر در فندق
+---
 
 
 در فندق هر Image معادل یک پروژه است، مثلا API یا Front که برای آن تعداد Image Version منتشر(publish) می‌کنید، این ImageVersion ها حاوی محتویات پروژه شما در آن ورژن هستند.
