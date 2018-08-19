@@ -25,10 +25,11 @@ Secretهایی که از نوع docker-registry هستند برای همین م�
 ```
 fandogh  secret create  \
           --name canister \
+          -t docker-registry \
           -f server=cloud.canister.io:5000 \
           -f username=JohnKane \
-          -f password=J0hnKane \
-          -t docker-registry
+          -f password=J0hnKane 
+
 ```
 پارامتر‌هایی که برای این کامند استفاده شده است عبارتند از:
 
