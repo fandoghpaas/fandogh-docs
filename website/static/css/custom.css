@@ -23,7 +23,9 @@ pre, code {
 footer{
   direction: ltr;
 }
-
+ol,ul {
+  padding-right: 2em;
+}
 
 .nav-footer .sitemap {
   margin: 0 auto;
