@@ -24,7 +24,9 @@ sidebar_label: سرویس‌ها
 * **--env** یا **-e**
 از طریق این پارامتر مشخص می‌کنید می‌توانید environment variable های مختلف مورد نیاز سرویس برای اجرا را مشخص کنید.توجه داشته باشید که هیچ محدودیتی در تعداد `--env` وجود ندارد .به عنوان مثال فرض کنید سرویس برای کار به پارامتر‌های api_token و secret_key نیاز دارد، در این صورت از این طریق پارامتر‌ها را مشخص می‌کنید:
 ```
-fandogh service deploy --env api_token="some token" --env api_secret_key="some secret key"
+fandogh service deploy
+	--env api_token="some token"
+	--env api_secret_key="some secret key"
 ```
 * **--port** یا **-p**
 از طریق این پارامتر مشخص می‌کنید می‌توانید کدام یک از پورت‌های سرویس مورد نظر خود را می‌خواهید در دسترس قرار دهید.در صورت عدم مشخص کردن پورت بخصوصی، پورت 80 در دسترس قرار می‌گیرد.
@@ -40,7 +42,9 @@ fandogh service deploy --internal
 * **--hosts** یا **-h**
 از طریق این سویچ می‌توانید از بین دامنه‌هایی که قبلا ثبت و تایید کرده‌اید یک یا چند موررد را انتخاب کنید که به این سرویس متصل شوند، می‌توانید بیش از یکبار این سویچ را استفاده کنید مثلا:
 ```
-fandogh service deploy -h site.com -h www.site.com
+fandogh service deploy
+	-h site.com
+	-h www.site.com
 ```
 **دقت داشته باشید باید از طریق CNAME دامنه مورد نظر به آدرس‌های این سرویس متصل شده باشد.**
 
@@ -52,32 +56,37 @@ fandogh service deploy -h site.com -h www.site.com
 مثلا فرض کنید که یک تصویر در فندق منتشر کرده‌اید به نام order-handling-api و می‌خواهید از روی ورژن v.3.2 آن که قبلا آن را ایجاد کرده‌اید یک سرویس با نام oh-api دیپلوی کنید، برای این کار کافیست این دستور را اجرا کنید:
 ```
 fandogh service deploy \
-     --version v3.2
-     --image order-handling-api
-     --name oh-api
+	 --version v3.2 \
+	 --image order-handling-api \
+	 --name oh-api
+
 ```
 به این ترتیب سرویس شما ساخته خواهد شد.
+
 ### ساخت سرویس از Imageهای Docker hub
+
 در این حالت شما قصد دارید مستقیما یکی از Imageهای داخل Docker hub را در Namespace خود دیپلوی کنید، برای اینکار کافیست نام image را با فرمت namespace/image-name مشخص کنید و ورژن Image را نیز از طریق سویچ `version--‍` تغیین کنید.
-توجه داشته باشید که Imageهای رسمی داکر مثل Nginx یا Wordpress در Namespaceای به نام library قرار دارند.
+
+> توجه داشته باشید که Imageهای رسمی داکر مثل Nginx یا Wordpress در
+> Namespaceای به نام library قرار دارند.
+
 به عنوان مثال اگر قصد ساخت سرویس از ایمیجی به نام some-ns/foo و ورژن latest داشته باشیم، باید به این ترتیب عمل کنیم:
 ```
-fandogh service deploy\
-     --image some-ns/foo
-     --version latest
-```
+fandogh service deploy \
+ --image some-ns/foo \
+ --version latest
+ ```
 
 ### ساخت سرویس از رجیستری‌های دیگر
-در صورتی که شما قصد دارید از روی Imageای سرویس دیپلوی کنید که این Image در یک رجیستری بخصوص، مثلا Canister قرار دارد کافیست به عنوان نام Image از آدرس کامل Image به همراه URL رجیستری استفاده کنید، به عنوان مثال :
+در صورتی که شما قصد دارید از روی Imageای سرویس دیپلوی کنید که این Image در یک رجیستری بخصوص، مثلا Canister قرار دارد، کافیست به عنوان نام Image از آدرس کامل Image به همراه URL رجیستری استفاده کنید، به عنوان مثال :
 ```
 fandogh service deploy \
-       --image cloud.canister.io:5000/mahdixareie/hello-world \
-       --version v2.0 \
-       --name hello-world \
-       -s canister
-
+     --image cloud.canister.io:5000/mahdixareie/hello-world \
+     --version v2.0 \
+     --name hello-world \
+     -s canister
 ```
-همون طور که مشاهده می‌کنید علاوه بر پارامتر‌های معمول deploy پارامتر `s-` هم استفاده شده است، به دلیل اینکه رجیستری مشخص شده یک رجیستری private است، این پارامتر نام یک [Secret](/docs/secret.html) را مشخص کرده که فندق باید از آن هنگام Pull کردن تصویر از registry استفاده کند.
+همون طور که مشاهده می‌کنید علاوه بر پارامتر‌های معمول deploy پارامتر `s-` هم استفاده شده است، به دلیل اینکه رجیستری مشخص شده یک رجیستری private است، این پارامتر نام یک [Secret](/docs/secret.html) را مشخص کرده که فندق باید از آن، هنگام Pull کردن تصویر از registry، استفاده کند.
 
 ## مشاهده وضعیت سرویس
 در صورتی که نیاز داشته باشید جزئیات مربوط به یک سرویس و وضعیت آن را مشاهده کنید می‌توانید از دستور details در CLI استفاده کنید، به عنوان مثال اگر نام سرویس ما blog باشد می‌توانیم به این صورت جزئیات سرویس را مشاهده کنیم:
