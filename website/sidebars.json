@@ -9,6 +9,9 @@
       "custom-domains",
       "ssl-certificate",
       "secret"
+    ],
+    "عیب یابی": [
+      "geeting-started"
     ]
   }
 }
