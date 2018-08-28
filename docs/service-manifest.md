@@ -102,14 +102,14 @@ spec:
 ```
 که 200Mi یعنی ۲۰۰ مگابایت فضای رم باید به این سرویس تخصیص داده بشه، می‌تونید هر مقداری که نیاز دارید رو مشخص کنید،‌مثلا برای ۱ گیگ باید 1024Mi بنویسید.
 
-## فیلد‌ spec در InternalServiceها
+### فیلد‌ spec در InternalServiceها
 فیلد spec در InternalService ها کاملا مشابه فیلد spec در ExternalService ها هستش به جز اینکه فیلد‌های زیر رو نداره:
 - port
 - path
 - allow_http
 - domains
 
-## فیلد spec در ManagedServiceها
+### فیلد spec در ManagedServiceها
  - service_name
 از طریق این فیلد مشخص می‌کنید کدام یک از managed-service های فندق را قصد دارید ایجاد کنید، برای مشاهده انواع managed-service‌ها به [این بخش](https://docs.fandogh.cloud/docs/managed-services.html#%D8%A7%D9%86%D9%88%D8%A7%D8%B9-managed-service) رجوع کنید.
  - version
@@ -131,3 +131,73 @@ spec:
     memory: 200Mi
 ```
 که 200Mi یعنی ۲۰۰ مگابایت فضای رم باید به این سرویس تخصیص داده بشه، می‌تونید هر مقداری که نیاز دارید رو مشخص کنید،‌مثلا برای ۱ گیگ باید 1024Mi بنویسید.
+
+## نمونه مانیفست برای انواع سرویس
+
+### نمونه مانیفست برای ExternalService
+```
+kind: ExternalService
+name: hello-world
+spec:
+  image: registry.my-comapny.com:5000/gerdoo/hello-world:v1
+  image_pull_policy: Always
+  image_pull_secret: "private-registry-secret"
+  replicas: 4
+  port: 8080
+  path: /hello-world/
+  allow_http: false
+  env:
+    - name: DEBUG
+      value: 1
+    - name: API_KEY
+      value: SOME_LONG_RANDOM_STRING
+
+  domains:
+     - name: hello-world.my-company.com
+     - name: hw.my-company.com
+
+  port_mapping:
+    - port: 8081
+      target_port: 8081
+      protocol: tcp
+  resources:
+    memory: 100Mi
+
+```
+### نمونه مانیفست برای InternalService
+```
+kind: InternalService
+name: cache
+spec:
+  image: library/redis:latest
+  image_pull_policy: IfNotPresent
+  replicas: 1
+  env:
+    - name: VERSION
+      value: v1
+  port_mapping:
+    - port: 6379
+      target_port: 6379
+      # default protocol is TCP
+  resources:
+    memory: 400Mi
+```
+### نمونه مانیفست برای ManagedService
+```
+
+kind: ManagedService
+name: db
+spec:
+  service_name: mysql
+  version: 5.7
+  parameters:
+    - name: phpmyadmin_enabled
+      value: true
+    - name: mysql_root_password
+      value: some_long_unpredictable_string
+
+  resources:
+    limit:
+      memory: 800Mi
+
+```
