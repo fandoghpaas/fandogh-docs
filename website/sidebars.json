@@ -8,7 +8,8 @@
       "managed-services",
       "custom-domains",
       "ssl-certificate",
-      "secret"
+      "secret",
+      "service-manifest"
     ]
   }
 }
