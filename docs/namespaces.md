@@ -30,5 +30,9 @@ sidebar_label: فضانام‌ها
 ![Fandogh Storage](/img/docs/shared_storage.png "Fandogh Storage")
 
 همانطور که انتظار می‌رود هر سرویس باید بتواند در فضایی مانا اطلاعات خود را ذخیره و بازیابی کند، به همین جهت هر Namepace به همراه یک Persistent Storage یا فضای ذخیره‌سازی مانا  ساخته می‌شود، و  در مسیر `/mnt/shared-volume` در تمام سرویس‌ها در دسترس است\
+
+> توجه داشته باشید از طریق [مانیفست سرویس](https://docs.fandogh.cloud/docs/service-manifest.html#%D9%81%DB%8C%D9%84%D8%AF-spec-%D8%AF%D8%B1-externalservice-%D9%87%D8%A7) می‌توانید مدیریت بیشتری روی محل
+> mount شدن فضای ذخیره‌سازی خود داشته باشید.
+
 به صورت پیش فرض همه سرویس‌ها به این فضای اطلاعاتی دسترسی دارند و می‌توانند عملیات Read و Write بر روی آن انجام دهند.
 
