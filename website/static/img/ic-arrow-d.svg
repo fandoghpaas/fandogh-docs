@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 7">
+    <defs>
+        <style>
+            .cls-1{fill:#cbcbcb}
+        </style>
+    </defs>
+    <g id="ic_arrowD" transform="rotate(-90 3.5 3.5)">
+        <path id="Path_622" d="M103.832 6l4.457-4.489a.661.661 0 0 0 0-.928L107.9.192a.65.65 0 0 0-.922 0l-5.308 5.345a.666.666 0 0 0 0 .932l5.3 5.34a.65.65 0 0 0 .922 0l.39-.393a.661.661 0 0 0 0-.928z" class="cls-1" data-name="Path 622" transform="translate(-101.48)"/>
+    </g>
+</svg>
