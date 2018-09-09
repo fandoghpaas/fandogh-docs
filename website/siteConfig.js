@@ -9,6 +9,8 @@
 // site configuration options.
 
 /* List of projects/orgs using your project for the users page */
+const articles = require('./articles')
+
 const users = [
   {
     caption: 'فندق',
@@ -16,8 +18,27 @@ const users = [
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
     image: '/img/fandogh.svg',
     infoLink: 'https://www.fandogh.cloud',
-    pinned: true,
   },
+	{
+		caption: 'فندق',
+		// You will need to prepend the image path with your baseUrl
+		// if it is not '/', like: '/test-site/img/docusaurus.svg'.
+		image: '/img/fandogh.svg',
+		infoLink: 'https://www.fandogh.cloud',
+	},{
+		caption: 'فندق',
+		// You will need to prepend the image path with your baseUrl
+		// if it is not '/', like: '/test-site/img/docusaurus.svg'.
+		image: '/img/fandogh.svg',
+		infoLink: 'https://www.fandogh.cloud',
+	},{
+		caption: 'فندق',
+		// You will need to prepend the image path with your baseUrl
+		// if it is not '/', like: '/test-site/img/docusaurus.svg'.
+		image: '/img/fandogh.svg',
+		infoLink: 'https://www.fandogh.cloud',
+
+	}
 ];
 
 const siteConfig = {
@@ -43,16 +64,17 @@ const siteConfig = {
 
   // If you have users set above, you add it here:
   users,
+	articles,
 
   /* path to images for header/footer */
-  headerIcon: 'img/fandogh.svg',
+  headerIcon: 'img/fandogh-logo.svg',
   footerIcon: 'img/fandogh.svg',
   favicon: 'img/fandogh.png',
 
   /* colors for website */
   colors: {
-    primaryColor: '#291996',
-    secondaryColor: '#291996',
+    primaryColor: '#4f4f4f',
+    secondaryColor: '#4f4f4f',
   },
 
   /* custom fonts for website */

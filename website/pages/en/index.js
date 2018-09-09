@@ -58,10 +58,15 @@ const Logo = props => (
 
 const ProjectTitle = props => (
   <h2 className="projectTitle">
-    {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+    <img title={'لوگو فندق'} src={imgUrl('fandogh-logo@2x.png')} />
   </h2>
 );
+
+const ProjectDescription = _ => (
+  <p>
+		لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+  </p>
+)
 
 const PromoSection = props => (
   <div className="section promoSection">
@@ -79,8 +84,9 @@ class HomeSplash extends React.Component {
        
         <div className="inner">
           <ProjectTitle />
+          <ProjectDescription/>
           <PromoSection>
-            <Button href="/docs/getting-started.html">شروع سریع</Button>
+            <Button href="/docs/getting-started.html">شروع کار با فندق</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -164,35 +170,88 @@ const Description = props => (
   </Block>
 );
 
+const Document = props => (
+  <div className="blockElement documentation threeByGridBlock alignCenter imageAlignTop">
+		<img src={imgUrl(props.image)} alt={props.title}/>
+    <h3>
+      {props.title}
+    </h3>
+    <p>
+      {props.description}
+    </p>
+  </div>
+)
+const Documentation = props => {
+
+  let documentations = [
+    {
+      image: 'doc.svg',
+      title: 'مستندات',
+      description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.'
+    },
+		{
+			image: 'api.svg',
+			title: 'API ها',
+			description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.'
+		},
+		{
+			image: 'contact.svg',
+			title: 'ارتباط با ما',
+			description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.'
+		}
+  ]
+
+  let docs = documentations.map(item => <Document image={item.image} title={item.title} description={item.description} />)
+
+  return (
+    <div className="DocumentationSection">
+				<div className="gridBlock">
+					{docs}
+				</div>
+    </div>
+  )
+}
+
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {
     return null;
   }
   const showcase = siteConfig.users
-    .filter(user => {
-      return user.pinned;
-    })
     .map((user, i) => {
       return (
-        <a href={user.infoLink} key={i}>
+        <a className="blockElement showcase fourByGridBlock imageAlignTop" href={user.infoLink} key={i}>
           <img src={user.image} alt={user.caption} title={user.caption} />
+          <h3>{user.caption}</h3>
         </a>
       );
     });
 
   return (
     <div className="productShowcaseSection paddingBottom">
-      <h2>{"چه کسانی از فندق استفاده می کنند؟"}</h2>
+      <h2>{"سرویس‌هایی که از فندق استفاده می‌کنند:"}</h2>
       {/* <p>This project is used by all these people</p> */}
-      <div className="logos">{showcase}</div>
-      {/* <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
-        </a>
-      </div> */}
+				<div className="gridBlock showcases">{showcase}</div>
     </div>
   );
 };
+
+const Articles = props => {
+	const articles = siteConfig.articles.map((article,i) => {
+		return (
+			<a className="blockElement article fourByGridBlock imageAlignTop" href={article.url} key={i}>
+				<h3>{article.title}</h3>
+				<p>{article.description}</p>
+			</a>
+		)
+	})
+	return (
+		<div className="articlesSection paddingBottom">
+			<h2>{"پربازدیدترین مطالب:"}</h2>
+			{/* <p>This project is used by all these people</p> */}
+				<div className="gridBlock showcases">{articles}</div>
+		</div>
+	);
+}
 
 class Index extends React.Component {
   render() {
@@ -202,7 +261,11 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Showcase language={language} />
+					<div className="wrapper">
+						<Documentation />
+						<Showcase language={language} />
+						<Articles/>
+					</div>
         </div>
       </div>
     );
