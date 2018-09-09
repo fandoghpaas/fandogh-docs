@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: service-manifest
 title: مانیفست سرویس
 sidebar_label: مانیفست سرویس

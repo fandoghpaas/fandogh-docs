@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: managed-services
 title: سرویس‌های مدیریت شده
 sidebar_label: سرویس‌های مدیریت شده

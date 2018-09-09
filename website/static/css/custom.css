@@ -200,14 +200,60 @@ ol,ul {
   top: calc(50% - 11px);
   left: 15px;
 }
+.onPageNav {
+  border-right: 1px dashed #c8c8c8;
+  padding: 0 30px;
+}
+.onPageNav > .toc-headings {
+  border-left: none;
+}
 
 /* Docs Main container*/
+.docMainWrapper > * {
+  margin: 0 auto !important;
+}
+.documentInner {
+  padding: 0 24px;
+  box-sizing: border-box;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .mainContainer .wrapper .post .postHeader {
   border-bottom: 1px dashed #c8c8c8;
 }
 .postHeader .postHeader h1 {
 
 }
+
+.breadcrumb {
+  border-bottom: 1px dashed #c8c8c8;
+  padding:  0 112px 24px 112px;
+}
+.breadcrumb a {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  color: #00b1d7;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.breadcrumb span {
+  font-size: 12px;
+  font-style: normal;
+  color: #4f4f4f;
+  margin: 0 10px;
+}
+.breadcrumb::before {
+  content: url('../img/documents.png');
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.hash-link {
+  margin-right: -20px;
+  padding-left: 4px;
+}
+
 
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {

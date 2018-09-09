@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: doc1
 title: شروع به کار
 sidebar_label: شروع سریع فندق

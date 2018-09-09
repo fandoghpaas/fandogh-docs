@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: namespaces
 title: فضانام‌ها یا Namespaces
 sidebar_label: فضانام‌ها

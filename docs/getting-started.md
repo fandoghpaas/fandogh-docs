@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: getting-started
 title: شروع به کار
 sidebar_label: شروع سریع فندق
