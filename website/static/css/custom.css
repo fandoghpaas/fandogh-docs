@@ -164,6 +164,7 @@ ol,ul {
   margin: 30px;
   display: block;
   transition: all ease .4s;
+  padding: 15px;
 }
 .articlesSection .article p{
   padding: 15px;
@@ -179,6 +180,33 @@ ol,ul {
 .articlesSection .article:hover {
   border-radius: 10px;
   box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* Docs Navbar */
+.docsNavContainer {
+  background: #f2f2f2;
+  flex: 0 0 275px;
+}
+.navGroupCategoryTitle {
+  background-color: #f6f6f6;
+  padding: 12px 30px;
+  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
+  position: relative;
+}
+.navGroupCategoryTitle::after {
+  content: url('../img/ic-arrow-d.png');
+  position: absolute;
+  top: calc(50% - 11px);
+  left: 15px;
+}
+
+/* Docs Main container*/
+.mainContainer .wrapper .post .postHeader {
+  border-bottom: 1px dashed #c8c8c8;
+}
+.postHeader .postHeader h1 {
+
 }
 
 
