@@ -124,6 +124,27 @@ volume_mounts:
     memory: 200Mi
 ```
 که 200Mi یعنی ۲۰۰ مگابایت فضای رم باید به این سرویس تخصیص داده شود، می‌توانید هر مقداری که نیاز دارید را مشخص کنید،‌ مثلا برای ۱ گیگ باید 1024Mi بنویسید.
+ - **readiness_probe** و **liveness_probe**
+پایداری سرویس شما در گروی این است که فندق بتواند به درستی سلامت و آمادگی سرویس شما را تشخیص دهد، در بسیاری از موارد بدون همکاری سرویس شما امکان اینکه این امر به طور دقیق انجام شود وجود ندارد.
+به همین دلیل، امکانی در manifest وجود دارد که از طریق آن می‌توانید یک API در اختیار فندق قرار دهید تا از طریق آن API فندق بتواند از صحت/آمادگی سرویس شما مطلع شود.
+روش کار به این شکل است که یک HTTP API مشخص می‌کنید که فندق آن را در بازه‌های زمانی مشخص فراخوانی می‌کند و اگر با کد 200 پاسخ دریافت کند به معنی سلامت سرویس شماست و در غیر اینصورت یعنی سرویس دچار مشکل شده است.
+
+```
+  liveness_probe:
+    initial_delay_seconds: 12
+    period_seconds: 60
+    http_get:
+      path: "/are-you-live"
+      port: 80
+  readiness_probe:
+    initial_delay_seconds: 5
+    period_seconds: 10
+    http_get:
+      path: "/are-you-ready"
+      port: 80
+```
+در مثال بالا در ابتدا قبل از این فندق ترافیک را به سمت سرویس شما هدایت کند، از طریق فراخوانی pathای که در قسمت readiness_probe مشخص کردید از آمادگی سرویس شما برای دریافت ترافیک اطمینان حاصل می‌کند، این موضوع برای سرویس‌هایی که زمان نیاز دارند تا به طور کامل لود شوند، بسیار کاربردی است.
+سپس بعد از راه‌اندازی سرویس به اندازه `initial_delay_seconds` صبر می‌کند و سپس هر  در بازه های زمانی مشخص شده توسط `period_seconds`  بر حسب ثانیه، از طریق فراخوانی path ، مثلا  `/are-you-live` ، سلامت سرویس را بررسی می‌کند، در صورتی که با کدی غیر از ۲۰۰ پاسخ دریافت کند سرویس را restart می‌کند.
 
 ### فیلد‌ spec در InternalServiceها
 فیلد spec در InternalService ها کاملا مشابه فیلد spec در ExternalService هاست به جز اینکه فیلد‌های زیر را ندارد:
@@ -188,6 +209,18 @@ spec:
   volume_mounts:
     - mount_path: /var/lib/mysql
       sub_path: mysql
+  liveness_probe:
+    initial_delay_seconds: 12
+    period_seconds: 60
+    http_get:
+      path: "/are-you-live"
+      port: 80
+  readiness_probe:
+    initial_delay_seconds: 5
+    period_seconds: 10
+    http_get:
+      path: "/are-you-ready"
+      port: 80
 ```
 ### نمونه مانیفست برای InternalService
 ```
@@ -209,6 +242,18 @@ spec:
   volume_mounts:
     - mount_path: /var/lib/mysql
       sub_path: mysql
+  liveness_probe:
+    initial_delay_seconds: 12
+    period_seconds: 60
+    http_get:
+      path: "/are-you-live"
+      port: 80
+  readiness_probe:
+    initial_delay_seconds: 5
+    period_seconds: 10
+    http_get:
+      path: "/are-you-ready"
+      port: 80
 ```
 ### نمونه مانیفست برای ManagedService
 ```
