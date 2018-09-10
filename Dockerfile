@@ -10,8 +10,8 @@ RUN apt-get update && \
     apt-get install -y nodejs
 RUN npm cache clean --force
 RUN npm i yarn -g
-RUN yarn install --cwd ./website
-RUN yarn run build --cwd ./website
+RUN yarn --cwd ./website install
+RUN yarn --cwd ./website run build
 
 RUN cp -a website/build/fandogh/.  /usr/share/nginx/html/
 
