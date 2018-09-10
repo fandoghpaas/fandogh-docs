@@ -4,10 +4,43 @@
   src: url(../fonts/yekan-regular.ttf)
 }
 
+p {
+  line-height: 1.8;
+}
 
-body {
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
   direction: rtl;
   font-family: Yekan, sans-serif;
+}
+blockquote {
+    background-color: #fff;
+    border-left: none;
+    padding: 15px 0 15px 0;
+    border-radius: 8px;
+    position: relative;
+}
+blockquote p {
+    background: rgba(255, 187, 0, 0.16);
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: 200;
+}
+.wrapper blockquote > p:first-child {
+    padding-top: 15px;
+}
+blockquote:before {
+    content: " ";
+    display: block;
+    background: #ffb300;
+    border-radius: 10px;
+    height: 100%;
+    width: 10px;
+    position: absolute;
+    top: 0;
+    right: -10px;
 }
 .logo {
   margin-left: 10px;
@@ -19,6 +52,11 @@ body {
 pre, code {
   text-align: left;
   direction: ltr;
+}
+code {
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 footer{
   direction: ltr;
@@ -200,14 +238,90 @@ ol,ul {
   top: calc(50% - 11px);
   left: 15px;
 }
+.toc .toggleNav ul {
+  padding-right: 2em;
+}
+.toc .toggleNav ul li {
+  margin: 5px 0;
+}
+.toc .toggleNav ul li.navListItemActive a {
+  color: #00b1d7;
+}
+.onPageNav {
+  border-right: 1px dashed #c8c8c8;
+  padding: 0 30px;
+}
+.onPageNav > .toc-headings {
+  border-left: none;
+}
+
+.onPageNav > .toc-headings > li > a {
+  font-weight: bold;
+  color: #4f4f4f;
+  font-size: 14px;
+}
+.onPageNav .toc-headings {
+  padding-right: 1em;
+}
+.onPageNav .toc-headings li {
+  margin: 5px 0;
+}
 
 /* Docs Main container*/
+.docMainWrapper > * {
+  margin: 0 auto !important;
+}
+.documentInner {
+  padding: 30px 24px;
+  box-sizing: border-box;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.documentInner a {
+    color: #00b1d7;
+    text-decoration: underline;
+}
+
 .mainContainer .wrapper .post .postHeader {
   border-bottom: 1px dashed #c8c8c8;
 }
 .postHeader .postHeader h1 {
 
 }
+
+.breadcrumb {
+  border-bottom: 1px dashed #c8c8c8;
+  padding:  0 112px 24px 112px;
+}
+.breadcrumb a {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  color: #00b1d7;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.breadcrumb span {
+  font-size: 12px;
+  font-style: normal;
+  color: #4f4f4f;
+  margin: 0 10px;
+}
+.breadcrumb::before {
+  content: url('../img/documents.png');
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.hash-link {
+  margin-left: 20px;
+  padding-right: 4px;
+  opacity: 1;
+}
+.hash-link svg path {
+  fill: #00b1d7;
+}
+
 
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {

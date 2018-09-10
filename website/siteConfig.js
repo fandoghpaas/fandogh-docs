@@ -10,6 +10,8 @@
 
 /* List of projects/orgs using your project for the users page */
 const articles = require('./articles')
+const docLayou = require('./layouts/custom')
+const fs = require('fs')
 
 const users = [
   {
@@ -49,6 +51,25 @@ const siteConfig = {
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
+
+	layouts: {
+
+		fandogh: function({React, MarkdownBlock}) {
+			return class extends React.Component {
+				render() {
+					let md = fs.readFileSync("../docs/"+this.props.source, "utf8");
+					md = md.replace(/---((?:\\.|[^"\\])*)---/, '')
+					let e = React.createElement
+					// create breadcrumb dom
+					let category = this.props.metadata.category
+					let breadCrumb = e('div' ,{className:'breadcrumb'},
+							[e('a',{href: '/'}, 'خانه'), e('a',{href: '/'}, ' > ') , e('a',{href: '#'}, category ), e('a',{href: '/'},' > ') , e('span',{}, this.props.metadata.sidebar_label)]
+						)
+					return e('div', {}, [breadCrumb,e('div', {className: 'documentInner'}, e(MarkdownBlock ,{}, md))]);
+				}
+			}
+		}
+	},
 
   // Used for publishing and more
   projectName: 'fandogh',

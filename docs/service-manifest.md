@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: service-manifest
 title: مانیفست سرویس
 sidebar_label: مانیفست سرویس
@@ -27,7 +28,6 @@ fandogh service apply -f api-v1.2.yaml
 این فیلد حاوی آبجکتی است که بسته به مقدار فیلد `kind` ساختار متفاوتی دارد و مشخصات سرویس شما داخل آن قرار می‌گیرد.
 این ساختار کلی مانیفست است:
 ```
----
 kind: ExternalService
 name: some-api
 spec:

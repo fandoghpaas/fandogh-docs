@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: ssl-certificate
 title: گواهینامه رایگان SSL
 sidebar_label: گواهینامه رایگان SSL

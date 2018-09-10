@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: secret
 title: Secret ها
 sidebar_label: Secretها

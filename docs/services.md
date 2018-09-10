@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: services
 title: سرویس‌ها
 sidebar_label: سرویس‌ها

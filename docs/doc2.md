@@ -1,4 +1,5 @@
 ---
+layout: fandogh
 id: doc2
 title: بخش دوم
 sidebar_label: شروع یواش فندق
