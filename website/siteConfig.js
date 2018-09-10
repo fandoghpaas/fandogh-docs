@@ -53,8 +53,7 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
 	layouts: {
-
-		fandogh: function({React, MarkdownBlock}) {
+		'fandogh': function({React, MarkdownBlock}) {
 			return class extends React.Component {
 				render() {
 					let md = fs.readFileSync("../docs/"+this.props.source, "utf8");
@@ -70,6 +69,20 @@ const siteConfig = {
 			}
 		}
 	},
+
+	markdownPlugins: [
+		function foo(md) {
+			md.renderer.rules.fence_custom.foo = function(
+				tokens,
+				idx,
+				options,
+				env,
+				instance
+			) {
+				return '<div class="foo">bar</div>';
+			};
+		},
+	],
 
   // Used for publishing and more
   projectName: 'fandogh',

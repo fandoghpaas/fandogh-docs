@@ -18,7 +18,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 blockquote {
     background-color: #fff;
     border-left: none;
-    padding: 15px 0 15px 0;
+    padding: 8px 0 8px 0;
     border-radius: 8px;
     position: relative;
 }
@@ -40,7 +40,7 @@ blockquote:before {
     width: 10px;
     position: absolute;
     top: 0;
-    right: -10px;
+    right: -5px;
 }
 .logo {
   margin-left: 10px;
@@ -320,6 +320,18 @@ ol,ul {
 }
 .hash-link svg path {
   fill: #00b1d7;
+}
+
+
+.mainContainer .wrapper .post .postHeaderTitle {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+.mainContainer .wrapper .post article {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 
