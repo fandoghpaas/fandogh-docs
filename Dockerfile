@@ -9,8 +9,9 @@ RUN apt-get update && \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get install -y nodejs
 RUN npm cache clean --force
-RUN npm install --prefix ./website
-RUN npm run build --prefix ./website 
+RUN npm i yarn -g
+RUN yarn install --cwd ./website
+RUN yarn run build --cwd ./website
 
 RUN cp -a website/build/fandogh/.  /usr/share/nginx/html/
 
