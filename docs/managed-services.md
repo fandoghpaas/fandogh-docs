@@ -61,5 +61,28 @@ Postgresql یکی دیگر از RDBMS‌های معروف و پرطرفداری 
 * نام سرویسش test-dbms ( یعنی در شبکه داخلی فضانام شما باقی سرویس‌ها از طریق نام test-dbms می‌توانند به آن متصل شوند)
 * رمز عبور آن test123 است
 *  Adminer هم در آن غیر‌فعال شده است.
+  
+
+### Deploy With Manifest
+  
+
+شما همچنین می توانید برای اجرای راحت تر سرویس های مدیریت شده ار [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
+
+```
+kind: ManagedService
+name: db
+spec:
+  service_name: mysql
+  version: 5.7
+  parameters:
+    - name: phpmyadmin_enabled
+      value: true
+    - name: mysql_root_password
+      value: some_long_unpredictable_string
+
+  resources:
+    limit:
+      memory: 800Mi
+```
 
 
