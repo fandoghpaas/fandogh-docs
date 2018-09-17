@@ -286,7 +286,6 @@ spec:
       value: some_long_unpredictable_string
 
   resources:
-    limit:
       memory: 800Mi
 
 ```
