@@ -192,6 +192,30 @@ volume_mounts:
 ```
 که 200Mi یعنی ۲۰۰ مگابایت فضای رم باید به این سرویس تخصیص داده شود، می‌توانید هر مقداری که نیاز دارید را مشخص کنید،‌مثلا برای ۱ گیگ باید 1024Mi بنویسید.
 
+### قابلیت استفاده از متغیر در manifest
+شما می‌توانید در داخل manifest از متغیر‌های مختلف استفاده کنید و هنگام فراخوانی دستور `fandogh service apply` مقدار متغیر‌ها را مشخص کنید.
+به عنوان مثلا تصور کنید، مقدار Environment variable ای مثل DB_PASSWORD را مایل نیستید در فایل manifest بنویسید، برای این کار می‌توانید به این شکل عمل کنید:
+```
+kind: ExternalService
+name: hello-world
+spec:
+  image: registry.my-comapny.com:5000/golabi/api:v1
+  image_pull_policy: Always
+  image_pull_secret: "private-registry-secret"
+  replicas: 4
+  port: 8080
+  env:
+    - name: DB_PASSWORD
+      value: ${DB_PASSWORD}
+```
+اگر دقت کنید مقداری که برای DB_PASSWORD مشخص شده `{DB_PASSWORD}$` است یعنی این مقدار یک متغیر است.
+بعدا هنگام دیپلوی باید مقدار این متغیر را مشخص کنید:
+```
+fandogh service apply \
+-f my-api-manifest.yaml \
+-p DB_PASSWORD=somelongunpredictablestring
+```
+
 ## نمونه مانیفست برای انواع سرویس
 
 ### نمونه مانیفست برای ExternalService
