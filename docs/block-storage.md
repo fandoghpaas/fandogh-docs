@@ -1,4 +1,11 @@
-# ‌Dedicated Volume
+---
+layout: fandogh
+id: dedicated-volume
+title: Dedicated Volume
+sidebar_label: Dedicated Volume
+---
+
+# Dedicated Volume
 
 هر سرویس دارای اطلاعات ارزشمندی است که باید بتوان آن‌ها را در فضایی پایا ذخیره کرد تا بتوان در هر زمان به آن دسترسی داشت. در بستر فندق، این محل‌های ذخیره سازی **volume** نام دارند.
 
