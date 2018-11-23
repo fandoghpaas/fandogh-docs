@@ -10,7 +10,7 @@
       "ssl-certificate",
       "secret",
       "service-manifest",
-      "block-storage"
+      "dedicated-volume"
     ]
   }
 }
