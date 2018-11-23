@@ -9,7 +9,8 @@
       "custom-domains",
       "ssl-certificate",
       "secret",
-      "service-manifest"
+      "service-manifest",
+      "block-storage"
     ]
   }
 }
