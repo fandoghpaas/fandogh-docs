@@ -39,9 +39,9 @@ sidebar_label: Dedicated Volume
 برای این منظور کاربر می تواند با استفاده از دستور add درخواستی مبنی بر ساخت یک volume به سرور فندق بفرستد.
 
 ```
-fandogh volume add --name vol1 -c 5Gi
-fandogh volume add --name vol2 -c 2Gi
-fandogh volume add --name vol3 -c 20Gi
+fandogh volume add --name vol1 -c 10
+fandogh volume add --name vol2 -c 30
+fandogh volume add --name vol3 -c 20
 ```
 
 
