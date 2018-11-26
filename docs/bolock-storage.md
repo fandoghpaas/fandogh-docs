@@ -40,9 +40,9 @@ volume ها هم٬ مانند تمام موارد دیگری که در فندق 
 برای این امر٬ مثل دستور زیر کاربر می تواند با استفاده از دستور add درخواستی مبنی بر ساخت یک volume به سرور فندق بفرستد.
 
 ```
-Fandogh volume add --name vol1 -c 5Gi
-Fandogh volume add --name vol2 -c 2Gi
-Fandogh volume add --name vol3 -c 20Gi
+Fandogh volume add --name vol1 -c 10Gi
+Fandogh volume add --name vol2 -c 20Gi
+Fandogh volume add --name vol3 -c 30Gi
 ```
 
 **پارامترهای دستور add :**
@@ -67,7 +67,7 @@ Fandogh volume add --name vol3 -c 20Gi
 
 | Name | Status | Mounted To | Volume 			  | Capacity | Creation Date |
 |------|--------|------------|--------------------|------------|-----|
-|vol1  |Bound   |    None    |pvc-28a98eabebfd11e8|5Gi| 2018-11-19 13:15:17+00:00
+|vol1  |Bound   |    None    |pvc-28a98eabebfd11e8|10Gi| 2018-11-19 13:15:17+00:00
 
 همانطور که در جدول بالا مشاهده می کنید٬ یک پیغام مبنی بر موفقیت آمیز بودن ساخت volume با نام vol1 نمایش داده شده و در ادامه آن یک جدول نمایش داده شده است که دارای چند ستون می باشد که در در آن اطلاعاتی مربوط به volume تازه ساخته شده آورده شده که در ادامه در مورد هر کدام از این فیلدها توضیح خواهیم داد.
 
