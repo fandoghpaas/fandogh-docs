@@ -210,10 +210,22 @@ spec:
 ```
 اگر دقت کنید مقداری که برای DB_PASSWORD مشخص شده `{DB_PASSWORD}$` است یعنی این مقدار یک متغیر است.
 بعدا هنگام دیپلوی باید مقدار این متغیر را مشخص کنید:
+<br/>
+**۱- Inline Param**
+در این روش شما باید مقدار environment variable را در ادامه دستور apply مانند قطعه کد زیر قرار دهید.
 ```
 fandogh service apply \
 -f my-api-manifest.yaml \
 -p DB_PASSWORD=somelongunpredictablestring
+```
+<br/>
+**۲- OS Environment Variable**
+در این روش شما می توانید از environment variable هایی که از قبل بر روی محیط خود ایجاد کرده اید استفاده کنید. مزیت این روش نسبت به روش Inline Param در این است که فقط شما باید نام varaibleای که از قبل بر روی محیط خود ایجاد کرده اید را بعد از p- قرار دهید.
+برای مثال اگر شما از قبل در محیط خود DB_PASSWORD   را export کرده بودید و حالا همین متغیر را در مانیفست خود استفاده کرده اید٬ مانند دستور زیر باید در ادامه دستو apply بنویسید p DB_PASSWORD-  تا خود cli مقدار این متغیر را از روی محیطی که بر روی آن در حال اجرا می باشد بخواند.
+```
+fandogh service apply \
+-f my-api-manifest.yaml \
+-p DB_PASSWORD
 ```
 
 ## نمونه مانیفست برای انواع سرویس
