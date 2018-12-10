@@ -37,8 +37,9 @@ sidebar_label: دامنه دلخواه
 `happy-banana.fandogh.cloud` ایجاد کنید.\
 
 
-##  مدیریت دامنه ها
 
+##  مدیریت دامنه ها
+![ CLI Image](/img/docs/cli_image.png "CLI Image")
 کلیه دستورات مربوط به بخش domain در ادامه توضیح داده شده اند.
 
 >شما همچنین می توانید با وارد کردن دستور`fandogh domain --help` در CLI لیست دستورات موجود را مشاهده کنید.
