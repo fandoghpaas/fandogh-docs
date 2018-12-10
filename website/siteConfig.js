@@ -93,7 +93,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'getting-started', label: 'مستندات'},
+    // {doc: 'getting-started', label: 'مستندات'},
   ],
 
   // If you have users set above, you add it here:
@@ -101,7 +101,7 @@ const siteConfig = {
 	articles,
 
   /* path to images for header/footer */
-  headerIcon: 'img/fandogh-logo.svg',
+  headerIcon: 'img/logo-header.svg',
   footerIcon: 'img/fandogh.svg',
   favicon: 'img/fandogh.png',
 

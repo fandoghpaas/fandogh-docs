@@ -171,7 +171,7 @@ const Description = props => (
 );
 
 const Document = props => (
-    <div className="blockElement documentation threeByGridBlock alignCenter imageAlignTop">
+    <div className="documentation-item">
         <a href={props.url}>
             <img src={imgUrl(props.image)} alt={props.title}/>
             <h3>
@@ -187,21 +187,29 @@ const Documentation = props => {
 
     let documentations = [
         {
-            image: 'doc.svg',
+            image: 'writing.svg',
             title: 'مستندات',
-            description: 'مستندات فندق به شما کمک می‌کند تا بتوانید به آسانی با امکانات فندق آشنا شوید و از کار کردن با این سکو لذت ببرید',
             url: '/docs/getting-started.html'
         },
-        // {
-        //     image: 'api.svg',
-        //     title: 'API ها',
-        //     description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.',
-        //     url: 'https://google.com'
-        // },
+       
         {
-            image: 'contact.svg',
-            title: 'ارتباط با ما',
-            description: 'سوالات انتقادات و پیشهاداتتان را با ما در میان بگذارید',
+            image: 'settings.svg',
+            title: 'آموزش‌ها',
+            url: 'https://fandogh.cloud/contact-us'
+        },
+        {
+            image: 'project-management.svg',
+            title: 'مفاهیم',
+            url: 'https://fandogh.cloud/contact-us'
+        },
+        {
+            image: 'blogger.svg',
+            title: 'بلاگ',
+            url: 'https://fandogh.cloud/contact-us'
+        },
+        {
+            image: 'loupe.svg',
+            title: 'منابع',
             url: 'https://fandogh.cloud/contact-us'
         }
     ]
@@ -209,8 +217,8 @@ const Documentation = props => {
     let docs = documentations.map(item => <Document {...item}/>)
 
     return (
-        <div className="DocumentationSection">
-            <div className="gridBlock">
+        <div className="documentation">
+            <div className="documentation-wrapper">
                 {docs}
             </div>
         </div>
@@ -265,7 +273,7 @@ class Index extends React.Component {
 
         return (
             <div>
-                <HomeSplash language={language}/>
+                {/* <HomeSplash language={language}/> */}
                 <div className="mainContainer">
                     <div className="wrapper">
                         <Documentation/>

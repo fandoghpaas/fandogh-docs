@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="blogger" viewBox="0 0 64.004 64.004">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:url(#linear-gradient-2)}.cls-3{fill:url(#linear-gradient-3)}
+        </style>
+        <linearGradient id="linear-gradient" x1="1" x2="-.018" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#220286"/>
+            <stop offset="1" stop-color="#00e3dc"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="1.931" x2="-.425" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-3" x1="1.296" x2="-.295" xlink:href="#linear-gradient"/>
+    </defs>
+    <path id="Path_1127" d="M51.746 64H12.258A12.177 12.177 0 0 1 0 51.938V12.066A12.177 12.177 0 0 1 12.258 0H39a12.264 12.264 0 0 1 12.345 12.153v9.988H64v29.8A12.177 12.177 0 0 1 51.746 64zM12.258 3.75a8.423 8.423 0 0 0-8.508 8.316v39.872a8.423 8.423 0 0 0 8.508 8.316h39.488a8.423 8.423 0 0 0 8.508-8.316V25.89H47.6V12.153A8.511 8.511 0 0 0 39 3.75zm0 0" class="cls-1" data-name="Path 1127"/>
+    <path id="Path_1128" d="M116.014 111.431h-15.127a6.132 6.132 0 0 1-6.125-6.125v-1.419a6.132 6.132 0 0 1 6.125-6.125h15.126a6.133 6.133 0 0 1 6.125 6.125v1.419a6.132 6.132 0 0 1-6.124 6.125zm-15.126-9.919a2.378 2.378 0 0 0-2.375 2.375v1.419a2.378 2.378 0 0 0 2.375 2.375h15.126a2.378 2.378 0 0 0 2.375-2.375v-1.419a2.378 2.378 0 0 0-2.375-2.375zm0 0" class="cls-2" data-name="Path 1128" transform="translate(-82.916 -85.541)"/>
+    <path id="Path_1129" d="M129.071 290.65h-28.184a6.133 6.133 0 0 1-6.125-6.125v-5.595a6.132 6.132 0 0 1 6.125-6.125h28.184a6.132 6.132 0 0 1 6.125 6.125v5.594a6.133 6.133 0 0 1-6.125 6.126zm-28.184-14.095a2.378 2.378 0 0 0-2.375 2.375v5.594a2.378 2.378 0 0 0 2.375 2.375h28.184a2.378 2.378 0 0 0 2.375-2.375v-5.594a2.378 2.378 0 0 0-2.375-2.375zm0 0" class="cls-3" data-name="Path 1129" transform="translate(-82.916 -238.702)"/>
+</svg>

@@ -1,7 +1,7 @@
 /* your custom css */
 @font-face {
   font-family: Yekan;
-  src: url(../fonts/yekan-regular.ttf)
+  src: url(../fonts/yekan-regular.ttf);
 }
 
 p {
@@ -9,39 +9,116 @@ p {
   font-size: 14px;
 }
 
-
-
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   direction: rtl;
   font-family: Yekan, sans-serif;
 }
 blockquote {
-    background-color: #fff;
-    border-left: none;
-    padding: 8px 0 8px 0;
-    border-radius: 8px;
-    position: relative;
+  background-color: #fff;
+  border-left: none;
+  padding: 8px 0 8px 0;
+  border-radius: 8px;
+  position: relative;
 }
 blockquote p {
-    background: rgba(255, 187, 0, 0.16);
-    padding: 15px 30px;
-    font-size: 14px;
-    font-weight: 200;
+  background: rgba(255, 187, 0, 0.16);
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: 200;
 }
 .wrapper blockquote > p:first-child {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 blockquote:before {
-    content: " ";
-    display: block;
-    background: #ffb300;
-    border-radius: 10px;
-    height: 100%;
-    width: 10px;
-    position: absolute;
-    top: 0;
-    right: -5px;
+  content: " ";
+  display: block;
+  background: #ffb300;
+  border-radius: 10px;
+  height: 100%;
+  width: 10px;
+  position: absolute;
+  top: 0;
+  right: -5px;
 }
 .logo {
   margin-left: 10px;
@@ -50,7 +127,11 @@ blockquote:before {
 .mainContainer .wrapper {
   text-align: right;
 }
-pre, code {
+.headerTitleWithLogo {
+  display: none !important;
+}
+pre,
+code {
   text-align: left;
   direction: ltr;
 }
@@ -59,10 +140,11 @@ code {
   box-sizing: border-box;
   border-radius: 10px;
 }
-footer{
+footer {
   direction: ltr;
 }
-ol,ul {
+ol,
+ul {
   padding-right: 2em;
 }
 
@@ -77,7 +159,7 @@ ol,ul {
   padding: 10px 30px;
   font-size: 16px;
   line-height: 1.7;
-  transition: all ease .6s;
+  transition: all ease 0.6s;
 }
 .button:hover {
   -webkit-backdrop-filter: blur(40px);
@@ -87,11 +169,10 @@ ol,ul {
   color: #00b1d7;
 }
 
-
 .nav-footer .sitemap {
   margin: 0 auto;
 }
-.nav-footer .sitemap div{
+.nav-footer .sitemap div {
   text-align: center;
 }
 .nav-footer .fbOpenSource {
@@ -101,19 +182,30 @@ ol,ul {
 /* header section */
 
 .fixedHeaderContainer {
-  background-color: #fff;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);;
+  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(to bottom, #160074, #0f0050);
+  height: 180px;
+  display: flex;
+  align-items: center;
 }
 
+.fixedHeaderContainer .wrapper {
+  margin: inherit !important;
+}
 .fixedHeaderContainer header img {
-  width: 82px;
+}
+.fixedHeaderContainer a {
+  height: auto !important;
+  width: 224px;
 }
 
-.fixedHeaderContainer .wrapper{
+.fixedHeaderContainer .wrapper {
   max-width: 100% !important;
 }
-.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a
-{
+.navigationSlider .slidingNav ul li a:focus,
+.navigationSlider .slidingNav ul li a:hover,
+.navigationSlider .slidingNav ul li.siteNavItemActive a,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
   border-bottom: 1px solid #00b1d7;
   color: #00b1d7;
   background: transparent;
@@ -122,13 +214,13 @@ ol,ul {
 .navigationSlider .slidingNav ul li a {
   padding-bottom: -5px;
   color: #4f4f4f;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   display: block;
 }
-.navigationSlider{
+.navigationSlider {
   margin-right: 50px;
 }
-.navigationSlider .slidingNav ul li a:hover{
+.navigationSlider .slidingNav ul li a:hover {
   background: transparent;
   color: #4c4d4f;
 }
@@ -137,7 +229,7 @@ ol,ul {
 .homeContainer .homeWrapper {
   padding: 5em 10px;
 }
-.homeContainer{
+.homeContainer {
   background-image: linear-gradient(to bottom, #00b1d7, #0f0050);
   color: #fff;
 }
@@ -158,26 +250,33 @@ ol,ul {
 }
 
 /* Documentation Section */
-.DocumentationSection {
-  margin-top: 5em;
+.documentation{
+  margin-top: 90px;
 }
-.DocumentationSection img {
-  width: 82px;
+.documentation-wrapper{
+  display: flex;
+  justify-content: center;
+
 }
-.DocumentationSection p {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.8;
-}
-.DocumentationSection .documentation {
-  padding: 60px 30px 30px 30px;
-  transition: all ease .4s;
-}
-.DocumentationSection .documentation:hover {
+.documentation-item img{
+  width: 64px;
+  height: 64px;
+  }
+.documentation-item{
+  display: flex;
+  flex : 1 1;
+  justify-content: center;
+  height: 180px;
   border-radius: 10px;
   box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
-}
+  background-color: #ffffff;
+  margin: 0 10px;
+  padding: 30px 0;
 
+}
+/* .documentation-item img {
+
+} */
 /* Production showcase Section */
 .productShowcaseSection img {
   width: 128px;
@@ -185,11 +284,11 @@ ol,ul {
 }
 .productShowcaseSection .showcase {
   text-align: center;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
   padding: 50px 70px;
   display: block;
 }
-.productShowcaseSection .showcase:hover{
+.productShowcaseSection .showcase:hover {
   border-radius: 10px;
   box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
 }
@@ -202,16 +301,16 @@ ol,ul {
 .articlesSection .article {
   margin: 30px;
   display: block;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
   padding: 15px;
 }
-.articlesSection .article p{
+.articlesSection .article p {
   padding: 15px;
   font-size: 14px;
   line-height: 1.8;
   font-weight: normal;
 }
-.articlesSection .article h3{
+.articlesSection .article h3 {
   color: #4010af;
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 15px;
@@ -234,7 +333,7 @@ ol,ul {
   position: relative;
 }
 .navGroupCategoryTitle::after {
-  content: url('../img/ic-arrow-d.png');
+  content: url("../img/ic-arrow-d.png");
   position: absolute;
   top: calc(50% - 11px);
   left: 15px;
@@ -280,20 +379,19 @@ ol,ul {
 }
 
 .documentInner a {
-    color: #00b1d7;
-    text-decoration: underline;
+  color: #00b1d7;
+  text-decoration: underline;
 }
 
 .mainContainer .wrapper .post .postHeader {
   border-bottom: 1px dashed #c8c8c8;
 }
 .postHeader .postHeader h1 {
-
 }
 
 .breadcrumb {
   border-bottom: 1px dashed #c8c8c8;
-  padding:  0 112px 24px 112px;
+  padding: 0 112px 24px 112px;
 }
 .breadcrumb a {
   font-size: 12px;
@@ -310,7 +408,7 @@ ol,ul {
   margin: 0 10px;
 }
 .breadcrumb::before {
-  content: url('../img/documents.png');
+  content: url("../img/documents.png");
   margin-left: 10px;
   vertical-align: middle;
 }
@@ -323,25 +421,25 @@ ol,ul {
   fill: #00b1d7;
 }
 
-
 .mainContainer .wrapper .post .postHeaderTitle {
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 700px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 700px;
 }
 .mainContainer .wrapper .post article {
-    padding: 10px;
-    margin: 0 auto;
-    max-width: 700px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 700px;
 }
-
-
-
+@media screen and (min-width: 1024px) {
+  .navPusher {
+    padding-top: 140px;
+  }
+}
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
 @media only screen and (min-width: 1024px) {
-
 }
 
 @media only screen and (max-width: 1023px) {

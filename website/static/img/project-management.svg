@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64.02 64.002">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:url(#linear-gradient-2)}.cls-3{fill:url(#linear-gradient-3)}.cls-4{fill:url(#linear-gradient-4)}.cls-5{fill:url(#linear-gradient-5)}.cls-6{fill:url(#linear-gradient-6)}.cls-7{fill:url(#linear-gradient-7)}.cls-8{fill:url(#linear-gradient-8)}.cls-9{fill:url(#linear-gradient-9)}.cls-10{fill:url(#linear-gradient-10)}
+        </style>
+        <linearGradient id="linear-gradient" x1="1" x2="0" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#220286"/>
+            <stop offset="1" stop-color="#00e3dc"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="1.612" x2="-2.204" y1="1" y2="1" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-3" x1="15.654" x2="-14.734" y1="1" y2="1" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-4" x1="2.958" x2="-1.099" y1=".5" y2=".5" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-5" x1="1.627" x2="-7.069" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-6" x1="3.498" x2="-16.007" y1="1.422" y2="-4.574" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-7" x1="8.652" x2="-21.713" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-8" x1="7.006" x2="-.142" y1="7.209" y2="-.162" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-9" x1="16.165" x2="-1.567" y1="5.597" y2="-.173" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-10" x1="23.387" x2="-5.96" y1="1.917" y2=".1" xlink:href="#linear-gradient"/>
+    </defs>
+    <g id="project-management" transform="translate(0 -.066)">
+        <g id="Group_2000" data-name="Group 2000" transform="translate(0 .331)">
+            <g id="Group_1999" data-name="Group 1999">
+                <path id="Path_1148" d="M63.108 18.595L58.973 18a1.062 1.062 0 0 1-.488-1.9l3.34-2.5a1.062 1.062 0 0 0 .212-1.487l-3.824-5.1a1.062 1.062 0 0 0-1.486-.213l-3.339 2.5a1.062 1.062 0 0 1-1.693-1l.591-4.132a1.062 1.062 0 0 0-.9-1.2l-6.306-.9a1.062 1.062 0 0 0-1.2.9L43.285 7.1a1.062 1.062 0 0 1-1.9.488l-2.5-3.34a1.062 1.062 0 0 0-1.487-.212L34.2 6.432a20.553 20.553 0 0 0-4.345 0 20.183 20.183 0 0 0-17.8 18.1c-.029.3-.039.6-.054.9h-.319a1.062 1.062 0 0 0-1.039.85l-.734 3.491-2.936-2.033a1.062 1.062 0 0 0-1.354.123L2.432 31.05a1.062 1.062 0 0 0-.124 1.35l2.018 2.935-3.492.734A1.062 1.062 0 0 0 0 37.112v4.249A1.062 1.062 0 0 0 .843 42.4l3.492.734-2.018 2.936a1.062 1.062 0 0 0 .123 1.353l3.187 3.187a1.062 1.062 0 0 0 1.354.123l2.935-2.023.734 3.49a1.062 1.062 0 0 0 1.039.85h4.249a1.062 1.062 0 0 0 1.04-.843l.734-3.492 2.935 2.018A1.062 1.062 0 0 0 22 50.612l1.65-1.655v3.027a4.235 4.235 0 0 0 2.125 3.658v5.9a4.249 4.249 0 0 0 4.249 4.249h4.249a4.249 4.249 0 0 0 4.249-4.249v-5.9a4.235 4.235 0 0 0 2.125-3.658v-4.2a5.205 5.205 0 0 1 2.453-4.341 20.386 20.386 0 0 0 2.5-1.912l-1.417-1.583a18.084 18.084 0 0 1-2.238 1.711 7.317 7.317 0 0 0-3.427 6.12v4.2a2.124 2.124 0 0 1-2.118 2.13h-8.5a2.124 2.124 0 0 1-2.125-2.125v-4.293a7.147 7.147 0 0 0-3.37-6A18 18 0 0 1 31.92 8.447a1.155 1.155 0 0 0-.041.116 1.062 1.062 0 0 0 .2.787l2.5 3.339a1.04 1.04 0 0 1 .064 1.179 1.056 1.056 0 0 1-1.062.511l-4.132-.591a1.062 1.062 0 0 0-1.2.9L27.35 21a1.062 1.062 0 0 0 .9 1.2l4.132.591a1.062 1.062 0 0 1 .488 1.9l-3.339 2.5a1.062 1.062 0 0 0-.212 1.487l3.824 5.1a1.062 1.062 0 0 0 1.489.222l3.34-2.5a1.062 1.062 0 0 1 1.688 1l-.59 4.132a1.062 1.062 0 0 0 .9 1.2l6.31.9a1.177 1.177 0 0 0 .15.01 1.062 1.062 0 0 0 1.053-.911l.59-4.132a1.062 1.062 0 0 1 1.9-.488l2.5 3.339a1.062 1.062 0 0 0 1.487.212l5.1-3.824a1.062 1.062 0 0 0 .212-1.487l-2.5-3.339a1.044 1.044 0 0 1-.064-1.179 1.032 1.032 0 0 1 1.062-.51l4.132.59a1.062 1.062 0 0 0 1.2-.9l.9-6.31a1.062 1.062 0 0 0-.894-1.208zM27.9 56.233h8.5v2.125h-8.5zm0 4.249h8.5v1.062a2.124 2.124 0 0 1-2.125 2.125h-4.251a2.124 2.124 0 0 1-2.124-2.124zm-8.457-18.319a20.077 20.077 0 0 0 1.815 1.323A5.185 5.185 0 0 1 23.4 46.2l-2.28 2.279-2.206-1.521a2.125 2.125 0 0 0-3.285 1.312l-.557 2.653h-2.524l-.557-2.648a2.125 2.125 0 0 0-3.285-1.312L6.5 48.479l-1.936-1.932 1.52-2.205a2.125 2.125 0 0 0-1.311-3.286L2.125 40.5v-2.525l2.648-.558a2.125 2.125 0 0 0 1.312-3.279l-1.521-2.212L6.5 29.995l2.208 1.521a2.125 2.125 0 0 0 3.283-1.316l.186-.884a20.229 20.229 0 0 0 .842 3.6 6.374 6.374 0 1 0 6.424 9.242zm-1.65-1.5a4.243 4.243 0 1 1-3.984-5.679h.04a20.119 20.119 0 0 0 3.944 5.683zm43.356-15.911l-3.081-.44a3.187 3.187 0 0 0-3 5.067l1.866 2.489-3.4 2.549-1.867-2.488a3.187 3.187 0 0 0-5.7 1.461l-.43 3.085-4.206-.6.44-3.081a3.187 3.187 0 0 0-5.067-3l-2.489 1.866-2.549-3.4 2.488-1.867a3.187 3.187 0 0 0-1.461-5.7l-3.081-.44.6-4.206 3.081.44a3.187 3.187 0 0 0 3-5.067l-1.874-2.496 3.4-2.549 1.867 2.489A3.187 3.187 0 0 0 45.39 7.4l.44-3.081 4.206.6L49.6 8a3.187 3.187 0 0 0 5.067 3l2.489-1.866 2.549 3.4-2.493 1.866a3.187 3.187 0 0 0 1.461 5.7l3.081.44z" class="cls-1" data-name="Path 1148" transform="translate(0 -2.057)"/>
+            </g>
+        </g>
+        <g id="Group_2002" data-name="Group 2002" transform="translate(37.18 10.172)">
+            <g id="Group_2001" data-name="Group 2001">
+                <path id="Path_1149" d="M288.5 76.171a8.5 8.5 0 1 0 8.5 8.5 8.5 8.5 0 0 0-8.5-8.5zm0 14.872a6.374 6.374 0 1 1 6.374-6.374 6.374 6.374 0 0 1-6.374 6.374z" class="cls-2" data-name="Path 1149" transform="translate(-280 -76.171)"/>
+            </g>
+        </g>
+        <g id="Group_2004" data-name="Group 2004" transform="translate(31.086 47.071)">
+            <g id="Group_2003" data-name="Group 2003">
+                <path id="Rectangle_882" d="M0 0h2.125v3.187H0z" class="cls-3" data-name="Rectangle 882"/>
+            </g>
+        </g>
+        <g id="Group_2006" data-name="Group 2006" transform="translate(17.268 12.18)">
+            <g id="Group_2005" data-name="Group 2005">
+                <path id="Path_1150" d="M140.279 115.75a12.747 12.747 0 0 1-2.152-22.662l-1.136-1.8a14.872 14.872 0 0 0 2.517 26.436 6.782 6.782 0 0 1 4.355 6.331h2.125a8.888 8.888 0 0 0-5.709-8.305z" class="cls-4" data-name="Path 1150" transform="translate(-130.044 -91.291)"/>
+            </g>
+        </g>
+        <g id="Group_2008" data-name="Group 2008" transform="translate(52.332 39.636)">
+            <g id="Group_2007" data-name="Group 2007">
+                <path id="Rectangle_883" d="M0 0h7.436v2.125H0z" class="cls-5" data-name="Rectangle 883"/>
+            </g>
+        </g>
+        <g id="Group_2010" data-name="Group 2010" transform="translate(50.59 45.192)">
+            <g id="Group_2009" data-name="Group 2009">
+                <path id="Rectangle_884" d="M0 0h2.125v8.296H0z" class="cls-6" data-name="Rectangle 884" transform="matrix(.64 -.768 .768 .64 0 1.632)"/>
+            </g>
+        </g>
+        <g id="Group_2012" data-name="Group 2012" transform="translate(45.958 48.134)">
+            <g id="Group_2011" data-name="Group 2011">
+                <path id="Rectangle_885" d="M0 0h2.125v7.436H0z" class="cls-7" data-name="Rectangle 885"/>
+            </g>
+        </g>
+        <g id="Group_2014" data-name="Group 2014" transform="translate(1.085 16.297)">
+            <g id="Group_2013" data-name="Group 2013">
+                <path id="Rectangle_886" d="M0 0h8.76v2.123H0z" class="cls-8" data-name="Rectangle 886" transform="rotate(-14.035 8.628 1.062)"/>
+            </g>
+        </g>
+        <g id="Group_2016" data-name="Group 2016" transform="translate(2.849 5.842)">
+            <g id="Group_2015" data-name="Group 2015">
+                <path id="Rectangle_887" d="M0 0h2.123v9.138H0z" class="cls-9" data-name="Rectangle 887" transform="rotate(-54.48 1.678 .864)"/>
+            </g>
+        </g>
+        <g id="Group_2018" data-name="Group 2018" transform="translate(11.951 .067)">
+            <g id="Group_2017" data-name="Group 2017">
+                <path id="Rectangle_888" d="M0 0h2.125v8.771H0z" class="cls-10" data-name="Rectangle 888" transform="rotate(-14.3 2.088 .261)"/>
+            </g>
+        </g>
+    </g>
+</svg>
