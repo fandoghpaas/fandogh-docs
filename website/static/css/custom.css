@@ -250,21 +250,20 @@ ul {
 }
 
 /* Documentation Section */
-.documentation{
-  margin-top: 90px;
+.documentation {
+  margin: 90px 0;
 }
-.documentation-wrapper{
+.documentation-wrapper {
   display: flex;
   justify-content: center;
-
 }
-.documentation-item img{
+.documentation-item img {
   width: 64px;
   height: 64px;
-  }
-.documentation-item{
+}
+.documentation-item {
   display: flex;
-  flex : 1 1;
+  flex: 1 1;
   justify-content: center;
   height: 180px;
   border-radius: 10px;
@@ -272,7 +271,7 @@ ul {
   background-color: #ffffff;
   margin: 0 10px;
   padding: 30px 0;
-
+  text-align: center;
 }
 /* .documentation-item img {
 
@@ -294,26 +293,72 @@ ul {
 }
 
 /* Articles Section */
+.articleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 90px 0;
+}
+.articleHeader h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+}
+.articleHeader .divider {
+  width: 50%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #4f4f4f;
+}
+.articleHeader button {
+  width: 160px;
+  height: 46px;
+  border-radius: 23px;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 3px 26px 0 rgba(254, 93, 144, 0.4);
+  background-image: linear-gradient(to left, #ffa7ad, #ff628f);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: Yekan;
+}
 .articlesSection {
   text-align: center;
   box-sizing: border-box;
+}
+.articlesSection .article img {
+  padding: 5px 0;
 }
 .articlesSection .article {
   margin: 30px;
   display: block;
   transition: all ease 0.4s;
-  padding: 15px;
+  padding: 25px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
+}
+.articlesSection .article span {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size:16px;
+  color: #75879c;
 }
 .articlesSection .article p {
   padding: 15px;
   font-size: 14px;
   line-height: 1.8;
   font-weight: normal;
+  height: 140px;
+  overflow: hidden;
 }
 .articlesSection .article h3 {
-  color: #4010af;
-  border-bottom: 1px solid #e8e8e8;
-  padding-bottom: 15px;
+  color: #4f4f4f;
+  padding-bottom: 30px;
+  font-size: 24px;
 }
 .articlesSection .article:hover {
   border-radius: 10px;

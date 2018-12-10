@@ -5,285 +5,293 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+const React = require("react");
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const CompLibrary = require("../../core/CompLibrary.js");
 const MarkdownBlock = CompLibrary.MarkdownBlock;
 /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
+const siteConfig = require(process.cwd() + "/siteConfig.js");
 
 function imgUrl(img) {
-    return siteConfig.baseUrl + 'img/' + img;
+  return siteConfig.baseUrl + "img/" + img;
 }
 
 function docUrl(doc, language) {
-    return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
+  return siteConfig.baseUrl + "docs/" + (language ? language + "/" : "") + doc;
 }
 
 function pageUrl(page, language) {
-    return siteConfig.baseUrl + (language ? language + '/' : '') + page;
+  return siteConfig.baseUrl + (language ? language + "/" : "") + page;
 }
 
 class Button extends React.Component {
-    render() {
-        return (
-            <div className="pluginWrapper buttonWrapper">
-                <a className="button" href={this.props.href} target={this.props.target}>
-                    {this.props.children}
-                </a>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="pluginWrapper buttonWrapper">
+        <a className="button" href={this.props.href} target={this.props.target}>
+          {this.props.children}
+        </a>
+      </div>
+    );
+  }
 }
 
 Button.defaultProps = {
-    target: '_self',
+  target: "_self"
 };
 
 const SplashContainer = props => (
-    <div className="homeContainer">
-        <div className="homeSplashFade">
-            <div className="wrapper homeWrapper">{props.children}</div>
-        </div>
+  <div className="homeContainer">
+    <div className="homeSplashFade">
+      <div className="wrapper homeWrapper">{props.children}</div>
     </div>
+  </div>
 );
 
 const Logo = props => (
-    <div className="projectLogo">
-        <img src={props.img_src}/>
-    </div>
+  <div className="projectLogo">
+    <img src={props.img_src} />
+  </div>
 );
 
 const ProjectTitle = props => (
-    <h2 className="projectTitle">
-        <img title={'لوگو فندق'} src={imgUrl('fandogh-logo@2x.png')}/>
-    </h2>
+  <h2 className="projectTitle">
+    <img title={"لوگو فندق"} src={imgUrl("fandogh-logo@2x.png")} />
+  </h2>
 );
 
-const ProjectDescription = _ => (
-    <p>
-    </p>
-)
+const ProjectDescription = _ => <p />;
 
 const PromoSection = props => (
-    <div className="section promoSection">
-        <div className="promoRow">
-            <div className="pluginRowBlock">{props.children}</div>
-        </div>
+  <div className="section promoSection">
+    <div className="promoRow">
+      <div className="pluginRowBlock">{props.children}</div>
     </div>
+  </div>
 );
 
 class HomeSplash extends React.Component {
-    render() {
-        let language = this.props.language || '';
-        return (
-            <SplashContainer>
-
-                <div className="inner">
-                    <ProjectTitle/>
-                    <ProjectDescription/>
-                    <PromoSection>
-                        <Button href="/docs/getting-started.html">شروع کار با فندق</Button>
-                    </PromoSection>
-                </div>
-            </SplashContainer>
-        );
-    }
+  render() {
+    let language = this.props.language || "";
+    return (
+      <SplashContainer>
+        <div className="inner">
+          <ProjectTitle />
+          <ProjectDescription />
+          <PromoSection>
+            <Button href="/docs/getting-started.html">شروع کار با فندق</Button>
+          </PromoSection>
+        </div>
+      </SplashContainer>
+    );
+  }
 }
 
 const Block = props => (
-    <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock align="center" contents={props.children} layout={props.layout}/>
-    </Container>
+  <Container
+    padding={["bottom", "top"]}
+    id={props.id}
+    background={props.background}
+  >
+    <GridBlock align="center" contents={props.children} layout={props.layout} />
+  </Container>
 );
 
 const Features = props => (
-    <Block layout="fourColumn">
-        {[
-            {
-                content: 'This is the content of my feature',
-                image: imgUrl('docusaurus.svg'),
-                imageAlign: 'top',
-                title: 'Feature One',
-            },
-            {
-                content: 'The content of my second feature',
-                image: imgUrl('docusaurus.svg'),
-                imageAlign: 'top',
-                title: 'Feature Two',
-            },
-        ]}
-    </Block>
+  <Block layout="fourColumn">
+    {[
+      {
+        content: "This is the content of my feature",
+        image: imgUrl("docusaurus.svg"),
+        imageAlign: "top",
+        title: "Feature One"
+      },
+      {
+        content: "The content of my second feature",
+        image: imgUrl("docusaurus.svg"),
+        imageAlign: "top",
+        title: "Feature Two"
+      }
+    ]}
+  </Block>
 );
 
 const FeatureCallout = props => (
-    <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-    </div>
+  <div
+    className="productShowcaseSection paddingBottom"
+    style={{ textAlign: "center" }}
+  >
+    <h2>Feature Callout</h2>
+    <MarkdownBlock>These are features of this project</MarkdownBlock>
+  </div>
 );
 
 const LearnHow = props => (
-    <Block background="light">
-        {[
-            {
-                content: 'Talk about learning how to use this',
-                image: imgUrl('docusaurus.svg'),
-                imageAlign: 'right',
-                title: 'Learn How',
-            },
-        ]}
-    </Block>
+  <Block background="light">
+    {[
+      {
+        content: "Talk about learning how to use this",
+        image: imgUrl("docusaurus.svg"),
+        imageAlign: "right",
+        title: "Learn How"
+      }
+    ]}
+  </Block>
 );
 
 const TryOut = props => (
-    <Block id="try">
-        {[
-            {
-                content: 'Talk about trying this out',
-                image: imgUrl('docusaurus.svg'),
-                imageAlign: 'left',
-                title: 'Try it Out',
-            },
-        ]}
-    </Block>
+  <Block id="try">
+    {[
+      {
+        content: "Talk about trying this out",
+        image: imgUrl("docusaurus.svg"),
+        imageAlign: "left",
+        title: "Try it Out"
+      }
+    ]}
+  </Block>
 );
 
 const Description = props => (
-    <Block background="dark">
-        {[
-            {
-                content: 'This is another description of how this project is useful',
-                image: imgUrl('docusaurus.svg'),
-                imageAlign: 'right',
-                title: 'Description',
-            },
-        ]}
-    </Block>
+  <Block background="dark">
+    {[
+      {
+        content: "This is another description of how this project is useful",
+        image: imgUrl("docusaurus.svg"),
+        imageAlign: "right",
+        title: "Description"
+      }
+    ]}
+  </Block>
 );
 
 const Document = props => (
-    <div className="documentation-item">
-        <a href={props.url}>
-            <img src={imgUrl(props.image)} alt={props.title}/>
-            <h3>
-                {props.title}
-            </h3>
-            <p>
-                {props.description}
-            </p>
-        </a>
-    </div>
-)
+  <div className="documentation-item">
+    <a href={props.url}>
+      <img src={imgUrl(props.image)} alt={props.title} />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </a>
+  </div>
+);
 const Documentation = props => {
+  let documentations = [
+    {
+      image: "writing.svg",
+      title: "مستندات",
+      url: "/docs/getting-started.html"
+    },
 
-    let documentations = [
-        {
-            image: 'writing.svg',
-            title: 'مستندات',
-            url: '/docs/getting-started.html'
-        },
-       
-        {
-            image: 'settings.svg',
-            title: 'آموزش‌ها',
-            url: 'https://fandogh.cloud/contact-us'
-        },
-        {
-            image: 'project-management.svg',
-            title: 'مفاهیم',
-            url: 'https://fandogh.cloud/contact-us'
-        },
-        {
-            image: 'blogger.svg',
-            title: 'بلاگ',
-            url: 'https://fandogh.cloud/contact-us'
-        },
-        {
-            image: 'loupe.svg',
-            title: 'منابع',
-            url: 'https://fandogh.cloud/contact-us'
-        }
-    ]
+    {
+      image: "settings.svg",
+      title: "آموزش‌ها",
+      url: "https://fandogh.cloud/contact-us"
+    },
+    {
+      image: "project-management.svg",
+      title: "مفاهیم",
+      url: "https://fandogh.cloud/contact-us"
+    },
+    {
+      image: "blogger.svg",
+      title: "بلاگ",
+      url: "https://fandogh.cloud/contact-us"
+    },
+    {
+      image: "loupe.svg",
+      title: "منابع",
+      url: "https://fandogh.cloud/contact-us"
+    }
+  ];
 
-    let docs = documentations.map(item => <Document {...item}/>)
+  let docs = documentations.map(item => <Document {...item} />);
 
-    return (
-        <div className="documentation">
-            <div className="documentation-wrapper">
-                {docs}
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="documentation">
+      <div className="documentation-wrapper">{docs}</div>
+    </div>
+  );
+};
 
 const Showcase = props => {
-    if ((siteConfig.users || []).length === 0) {
-        return null;
-    }
-    const showcase = siteConfig.users
-        .map((user, i) => {
-            return (
-                <a className="blockElement showcase fourByGridBlock imageAlignTop" href={user.infoLink} key={i}>
-                    <img src={user.image} alt={user.caption} title={user.caption}/>
-                    <h3>{user.caption}</h3>
-                </a>
-            );
-        });
-
+  if ((siteConfig.users || []).length === 0) {
+    return null;
+  }
+  const showcase = siteConfig.users.map((user, i) => {
     return (
-        <div className="productShowcaseSection paddingBottom">
-            <h2>{"سرویس‌هایی که از فندق استفاده می‌کنند:"}</h2>
-            {/* <p>This project is used by all these people</p> */}
-            <div className="gridBlock showcases">{showcase}</div>
-        </div>
+      <a
+        className="blockElement showcase fourByGridBlock imageAlignTop"
+        href={user.infoLink}
+        key={i}
+      >
+        <img src={user.image} alt={user.caption} title={user.caption} />
+        <h3>{user.caption}</h3>
+      </a>
     );
+  });
+
+  return (
+    <div className="productShowcaseSection paddingBottom">
+      <h2>{"سرویس‌هایی که از فندق استفاده می‌کنند:"}</h2>
+      {/* <p>This project is used by all these people</p> */}
+      <div className="gridBlock showcases">{showcase}</div>
+    </div>
+  );
 };
 
 const Articles = props => {
-    const articles = siteConfig.articles.map((article, i) => {
-        return (
-            <a className="blockElement article fourByGridBlock imageAlignTop" href={article.url} key={i}>
-                <img src={article.image} alt={article.title} style={{width: '180px', height: '180px'}}></img>
-                <h3>{article.title}</h3>
-                <p>{article.description}</p>
-            </a>
-        )
-    })
+  const articles = siteConfig.articles.map((article, i) => {
     return (
-        <div className="articlesSection paddingBottom">
-            <h2>{"پربازدیدترین مطالب وبلاگ:"}</h2>
-            {/* <p>This project is used by all these people</p> */}
-            <div className="gridBlock showcases">{articles}</div>
-        </div>
+      <a
+        className="blockElement article fourByGridBlock imageAlignTop"
+        href={article.url}
+        key={i}
+      >
+        <img
+          src={article.image}
+          alt={article.title}
+          style={{ width: "180px", height: "180px" }}
+        />
+        <h3>{article.title}</h3>
+        <p>{article.description}</p>
+        <span>{article.date}</span>
+      </a>
     );
-}
+  });
+  return (
+    <div className="articlesSection paddingBottom">
+      <div className="articleHeader">
+        <h2>{"آخرین بلاگ‌پست‌ها"}</h2>
+        <div className="divider"></div>
+        <button>{"مشاهده همه"}</button>
+      </div>
+
+      {/* <p>This project is used by all these people</p> */}
+      <div className="gridBlock showcases">{articles}</div>
+    </div>
+  );
+};
 
 class Index extends React.Component {
-    render() {
-        let language = this.props.language || '';
+  render() {
+    let language = this.props.language || "";
 
-        return (
-            <div>
-                {/* <HomeSplash language={language}/> */}
-                <div className="mainContainer">
-                    <div className="wrapper">
-                        <Documentation/>
-                        {/*<Showcase language={language}/>*/}
-                        <Articles/>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    return (
+      <div>
+        {/* <HomeSplash language={language}/> */}
+        <div className="mainContainer">
+          <div className="wrapper">
+            <Documentation />
+            {/*<Showcase language={language}/>*/}
+            <Articles />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 module.exports = Index;
