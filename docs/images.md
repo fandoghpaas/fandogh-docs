@@ -61,6 +61,8 @@ fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 
 
 ## مدیریت تصاویر
+![ CLI Image](/img/docs/cli_image.png "CLI Image")
+
 دستورات مربوط به بخش image فقط محدود به init یا publish و logs نمی باشد. کلیه دستورات مربوط به بخش image در ادامه توضیح داده شده اند.
 >شما همچنین می توانید با وارد کردن دستور`fandogh image --help`  در CLI لیست دستورات موجود را مشاهده کنید.
 
