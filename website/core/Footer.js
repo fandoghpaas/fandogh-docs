@@ -21,20 +21,29 @@ class Footer extends React.Component {
   render() {
     const currentYear = new Date().getFullYear();
     return (
-      <footer className="nav-footer" id="footer">
-        <section className="sitemap">
-         
+      <footer className="footer-site">
+      <div className="footer-site-top">
+      <div className="footer-site-links">
+          <a className="footer-site-top-link">صفحه اصلی</a>
+          <a className="footer-site-top-link">بلاگ</a>
+          <a className="footer-site-top-link">Contribute</a>
+      </div>  
+        <div className="footer-site-top-social">
+          <a className="footer-site-top-social-item"></a>
+          <a className="footer-site-top-social-item"></a>
+          <a className="footer-site-top-social-item"></a>
+        </div>
+        </div>
+      <div className="footer-site-down">
+      <p>کلیه حقوق این سایت متعلق به شرکت ایده‌نگاران‌بینا می‌باشد</p>
+      </div>
+        {/* <section className="sitemap">
             <div>
-                
                 <a href="https://blog.fandogh.cloud">Blog</a>
-
                 </div>
-
                 <div>
-
                 <a href="https://github.com/fandoghpaas">GitHub</a>
                 </div>
-
                 <div>
                 <a
                   className="github-button"
@@ -62,7 +71,7 @@ class Footer extends React.Component {
             height="45"
           />
         </a>
-        <section className="copyright">{this.props.config.copyright}</section>
+        <section className="copyright">{this.props.config.copyright}</section> */}
       </footer>
     );
   }
