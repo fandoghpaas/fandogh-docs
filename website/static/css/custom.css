@@ -176,7 +176,20 @@ ul {
 .footer-site .footer-site-top {
   height: 220px;
   box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-image: linear-gradient(to bottom, #160074, #0f0050);
+  background-color: #0f0050;
+  background-image :url('../img/group-1935.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 50%;
+  animation: slide 20s linear infinite;
+}
+@keyframes slide {
+  from { background-position: 0 0; }
+  to { background-position: -400px 0; }
+}
+@keyframes slide-reverse {
+  from { background-position: 0 0; }
+  to { background-position: 400px 0; }
 }
 .footer-site .footer-site-links {
   justify-content: center;
@@ -192,34 +205,33 @@ ul {
   background-color: #ffffff;
   color: #000000;
   font-size: 16px;
-  margin-left:45px;
+  margin-left: 45px;
   text-align: center;
 }
 .footer-site .footer-site-top-social {
   justify-content: center;
   display: flex;
   padding-top: 45px;
-
 }
 .footer-site .footer-site-top-social-item {
   width: 46px;
   height: 46px;
   background-color: #ffffff;
   border-radius: 100%;
-  margin-left:45px;
+  margin-left: 45px;
 }
 
 .footer-site .footer-site-top-social:last-child,
 .footer-site .footer-site-top-social-item:last-child {
   margin-left: 0;
 }
-.footer-site-down{
+.footer-site-down {
   height: 45px;
   background-color: #2a1975;
   line-height: 45px;
 }
-.footer-site-down p{
-  color : #fff;
+.footer-site-down p {
+  color: #fff;
   text-align: center;
   line-height: 45px;
   margin: 0;
@@ -232,6 +244,13 @@ ul {
   height: 180px;
   display: flex;
   align-items: center;
+  position: static;
+  background-color: #0f0050;
+  background-image :url('../img/group-1935.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 50%;
+  animation: slide-reverse 20s linear infinite;
 }
 
 .fixedHeaderContainer .wrapper {
@@ -312,6 +331,7 @@ ul {
   flex: 1 1;
   justify-content: center;
   height: 180px;
+  max-width: 195px;
   border-radius: 10px;
   box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
   background-color: #ffffff;
@@ -352,7 +372,7 @@ ul {
   margin: 0;
 }
 .articleHeader .divider {
-  width: 50%;
+  width: 768px;
   height: 2px;
   border-radius: 4px;
   background-color: #4f4f4f;
@@ -376,6 +396,7 @@ ul {
 }
 .articlesSection .article img {
   padding: 5px 0;
+  border-radius: 10px;
 }
 .articlesSection .article {
   margin: 30px;
@@ -414,7 +435,7 @@ ul {
 /* Docs Navbar */
 .docsNavContainer {
   background: #f2f2f2;
-  flex: 0 0 275px;
+  flex: 0 0 275px !important;
 }
 .navGroupCategoryTitle {
   background-color: #f6f6f6;
@@ -522,9 +543,9 @@ ul {
   margin: 0 auto;
   max-width: 700px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .navPusher {
-    padding-top: 140px;
+    padding-top: 0;
   }
 }
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
@@ -535,9 +556,72 @@ ul {
 
 @media only screen and (max-width: 1023px) {
 }
+@media screen and (max-width: 1200px) {
+  .navPusher {
+    padding-top: 0;
+  }
+}
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (max-width: 1400px) {
+  .articleHeader .divider {
+    width: 480px;
+  }
+  .fixedHeaderContainer {
+    height: 130px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .articlesSection .article{
+    padding: 5px;
+    margin: 10px;
+  }
+  .articlesSection .article h3{
+    font-size: 16px;
+  }
+  .fixedHeaderContainer {
+    height: 100px;
+  }
+  .fixedHeaderContainer header img {
+    margin-right: 0;
+  }
+  .fixedHeaderContainer a {
+    width: 144px;
+  }
+  .navPusher {
+    padding-top: 0;
+  }
+  .articleHeader .divider {
+    width: 340px;
+  }
+  .articleHeader h2 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .articleHeader .divider {
+    width: 50%;
+    margin: 15px 0;
+  }
+  .articleHeader {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .documentation-wrapper {
+    flex-flow: row wrap;
+  }
+  .documentation-item {
+    flex: 0;
+    min-width: 180px;
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
+}
+
+@media only screen and (min-width: 1024px){
+  .onPageNav{
+      flex: 0 0 280px;
+  }
+
 }

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1736 543.815">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2a1975;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #2a1975;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 2 2;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_1935" data-name="Group 1935" transform="translate(-113 -2213)">
+    <circle id="Ellipse_184" data-name="Ellipse 184" class="cls-1" cx="16" cy="16" r="16" transform="translate(113 2411)"/>
+    <path id="Path_1125" data-name="Path 1125" class="cls-1" d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z" transform="translate(385 2242)"/>
+    <rect id="Rectangle_858" data-name="Rectangle 858" class="cls-1" width="2" height="267" transform="translate(128.84 2428.982) rotate(-60)"/>
+    <rect id="Rectangle_860" data-name="Rectangle 860" class="cls-1" width="2" height="140" transform="translate(487.113 2497.885) rotate(60)"/>
+    <rect id="Rectangle_861" data-name="Rectangle 861" class="cls-1" width="2" height="204" transform="translate(505.093 2434.137) rotate(150)"/>
+    <rect id="Rectangle_862" data-name="Rectangle 862" class="cls-1" width="2" height="229" transform="translate(785.42 2574.106) rotate(111)"/>
+    <rect id="Rectangle_863" data-name="Rectangle 863" class="cls-1" width="2" height="183" transform="matrix(-0.996, 0.087, -0.087, -0.996, 839.837, 2534.167)"/>
+    <rect id="Rectangle_864" data-name="Rectangle 864" class="cls-1" width="2" height="183" transform="translate(900.872 2557.51) rotate(-135)"/>
+    <rect id="Rectangle_865" data-name="Rectangle 865" class="cls-1" width="2" height="107" transform="translate(1096.981 2343.845) rotate(-150)"/>
+    <rect id="Rectangle_866" data-name="Rectangle 866" class="cls-1" width="2" height="146" transform="translate(1401.742 2575.55) rotate(-135)"/>
+    <rect id="Rectangle_868" data-name="Rectangle 868" class="cls-1" width="2" height="198" transform="translate(1734.02 2609.944) rotate(-150)"/>
+    <rect id="Rectangle_867" data-name="Rectangle 867" class="cls-1" width="2" height="187" transform="matrix(-0.966, 0.259, -0.259, -0.966, 1504.514, 2470.478)"/>
+    <rect id="Rectangle_859" data-name="Rectangle 859" class="cls-1" width="2" height="226" transform="translate(250.536 2756.815) rotate(-149)"/>
+    <circle id="Ellipse_185" data-name="Ellipse 185" class="cls-1" cx="16" cy="16" r="16" transform="translate(350 2548)"/>
+    <g id="Ellipse_186" data-name="Ellipse 186" class="cls-2" transform="translate(480 2427)">
+      <circle class="cls-4" cx="48" cy="48" r="48"/>
+      <circle class="cls-5" cx="48" cy="48" r="47"/>
+    </g>
+    <g id="Ellipse_188" data-name="Ellipse 188" class="cls-2" transform="translate(778 2533)">
+      <circle class="cls-4" cx="70" cy="70" r="70"/>
+      <circle class="cls-5" cx="70" cy="70" r="69"/>
+    </g>
+    <g id="Ellipse_190" data-name="Ellipse 190" class="cls-2" transform="translate(749 2213)">
+      <circle class="cls-4" cx="70" cy="70" r="70"/>
+      <circle class="cls-5" cx="70" cy="70" r="69"/>
+    </g>
+    <g id="Ellipse_191" data-name="Ellipse 191" class="cls-2" transform="translate(1014 2335)">
+      <circle class="cls-4" cx="55" cy="55" r="55"/>
+      <circle class="cls-5" cx="55" cy="55" r="54"/>
+    </g>
+    <circle id="Ellipse_193" data-name="Ellipse 193" class="cls-1" cx="16" cy="16" r="16" transform="translate(1053 2374)"/>
+    <circle id="Ellipse_194" data-name="Ellipse 194" class="cls-1" cx="16" cy="16" r="16" transform="translate(1340 2602)"/>
+    <circle id="Ellipse_197" data-name="Ellipse 197" class="cls-1" cx="16" cy="16" r="16" transform="translate(1489 2455)"/>
+    <circle id="Ellipse_199" data-name="Ellipse 199" class="cls-1" cx="16" cy="16" r="16" transform="translate(1716 2594)"/>
+    <circle id="Ellipse_200" data-name="Ellipse 200" class="cls-1" cx="16" cy="16" r="16" transform="translate(1817 2422)"/>
+    <circle id="Ellipse_198" data-name="Ellipse 198" class="cls-1" cx="16" cy="16" r="16" transform="translate(1438 2274)"/>
+    <g id="Ellipse_195" data-name="Ellipse 195" class="cls-2" transform="translate(1308 2570)">
+      <circle class="cls-4" cx="48" cy="48" r="48"/>
+      <circle class="cls-5" cx="48" cy="48" r="47"/>
+    </g>
+    <g id="Ellipse_196" data-name="Ellipse 196" class="cls-2" transform="translate(1292 2554)">
+      <circle class="cls-4" cx="64" cy="64" r="64"/>
+      <circle class="cls-5" cx="64" cy="64" r="63"/>
+    </g>
+    <g id="Ellipse_192" data-name="Ellipse 192" class="cls-3" transform="translate(791 2255)">
+      <circle class="cls-4" cx="28" cy="28" r="28"/>
+      <circle class="cls-5" cx="28" cy="28" r="27"/>
+    </g>
+    <g id="Ellipse_189" data-name="Ellipse 189" class="cls-2" transform="translate(816 2571)">
+      <circle class="cls-4" cx="32" cy="32" r="32"/>
+      <circle class="cls-5" cx="32" cy="32" r="31"/>
+    </g>
+    <g id="Ellipse_187" data-name="Ellipse 187" class="cls-2" transform="translate(496 2443)">
+      <circle class="cls-4" cx="32" cy="32" r="32"/>
+      <circle class="cls-5" cx="32" cy="32" r="31"/>
+    </g>
+  </g>
+</svg>

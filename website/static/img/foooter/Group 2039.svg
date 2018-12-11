@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_2039" data-name="Group 2039" transform="translate(-801 -1569)">
+    <path id="Path_1161" data-name="Path 1161" class="cls-1" d="M23,0A23,23,0,1,1,0,23,23,23,0,0,1,23,0Z" transform="translate(801 1569)"/>
+    <g id="mail-black-envelope-symbol" transform="translate(812 1522.349)">
+      <path id="Path_1155" data-name="Path 1155" d="M24,75.653a2.974,2.974,0,0,1-.385,1.443l-7.579-8.48,7.5-6.559A2.978,2.978,0,0,1,24,63.652v12Zm-12-5.5,10.432-9.127A2.963,2.963,0,0,0,21,60.651H3a2.953,2.953,0,0,0-1.429.378ZM14.91,69.6,12.5,71.718a.753.753,0,0,1-.987,0L9.093,69.6,1.418,78.192A2.964,2.964,0,0,0,3,78.654H21a2.964,2.964,0,0,0,1.582-.462ZM.467,62.058A2.979,2.979,0,0,0,0,63.652v12A2.964,2.964,0,0,0,.385,77.1l7.578-8.481Z" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>
