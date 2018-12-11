@@ -12,7 +12,7 @@ Secret ها می توانند شامل اطلاعاتی همچون توکن ها
 
 # انواع Secret
 
-![Docker Secret](/img/docs/docker_secret.png "Docker Secret")
+![Docker Secret](/img/docs/secret_docker.png "Docker Secret")
 
 ## Docker-registry
 Registry های داکر می‌توانند **public** یا **private** باشند، در صورتی که یک رجیستری خصوصی یا private باشد برای pull کردن تصاویر از روی آن نیاز به داشتن نام کاربری و رمز عبور است.
