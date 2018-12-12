@@ -4,8 +4,11 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
+const siteConfig = require(process.cwd() + "/siteConfig.js");
 const React = require('react');
+function imgUrl(img) {
+  return siteConfig.baseUrl + "img/" + img;
+}
 
 class Footer extends React.Component {
   docUrl(doc, language) {
@@ -24,18 +27,27 @@ class Footer extends React.Component {
       <footer className="footer-site">
       <div className="footer-site-top">
       <div className="footer-site-links">
-          <a className="footer-site-top-link">صفحه اصلی</a>
-          <a className="footer-site-top-link">بلاگ</a>
+          <a href="/" className="footer-site-top-link">صفحه اصلی</a>
+          <a href="https://blog.fandogh.cloud" className="footer-site-top-link">بلاگ</a>
           <a className="footer-site-top-link">Contribute</a>
       </div>  
         <div className="footer-site-top-social">
-          <a className="footer-site-top-social-item"></a>
-          <a className="footer-site-top-social-item"></a>
-          <a className="footer-site-top-social-item"></a>
+          <a className="footer-site-top-social-item">
+            <img src={imgUrl('footer/1.svg')} alt="Fandogh" />
+          </a>
+          <a className="footer-site-top-social-item">
+            <img src={imgUrl('footer/2.svg')} alt="Fandogh" />
+          </a>
+          <a className="footer-site-top-social-item">
+            <img src={imgUrl('footer/3.svg')} alt="Fandogh" />
+          </a>
+          <a className="footer-site-top-social-item">
+            <img src={imgUrl('footer/4.svg')} alt="Fandogh" />
+          </a>
         </div>
         </div>
       <div className="footer-site-down">
-      <p>کلیه حقوق این سایت متعلق به شرکت ایده‌نگاران‌بینا می‌باشد</p>
+      <p>کلیه حقوق این سایت متعلق به شرکت <a href="https://inb-co.com/">ایده‌نگاران‌بینا</a> می‌باشد</p>
       </div>
         {/* <section className="sitemap">
             <div>

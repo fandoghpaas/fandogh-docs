@@ -177,19 +177,27 @@ ul {
   height: 220px;
   box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #0f0050;
-  background-image :url('../img/group-1935.svg');
+  background-image: url("../img/group-1935.svg");
   background-attachment: fixed;
   background-position: center;
   background-size: 50%;
   animation: slide 20s linear infinite;
 }
 @keyframes slide {
-  from { background-position: 0 0; }
-  to { background-position: -400px 0; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -400px 0;
+  }
 }
 @keyframes slide-reverse {
-  from { background-position: 0 0; }
-  to { background-position: 400px 0; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
 }
 .footer-site .footer-site-links {
   justify-content: center;
@@ -207,18 +215,27 @@ ul {
   font-size: 16px;
   margin-left: 45px;
   text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.footer-site .footer-site-top-link:hover {
+  box-shadow: 0 3px 26px 0 rgba(255, 255, 255, 0.75);
 }
 .footer-site .footer-site-top-social {
   justify-content: center;
   display: flex;
   padding-top: 45px;
 }
+
 .footer-site .footer-site-top-social-item {
   width: 46px;
   height: 46px;
   background-color: #ffffff;
   border-radius: 100%;
   margin-left: 45px;
+}
+.footer-site .footer-site-top-social-item:hover {
+  box-shadow: 0 3px 26px 0 rgba(255, 255, 255, 0.75);
 }
 
 .footer-site .footer-site-top-social:last-child,
@@ -230,7 +247,7 @@ ul {
   background-color: #2a1975;
   line-height: 45px;
 }
-.footer-site-down p {
+.footer-site-down p , .footer-site-down  a {
   color: #fff;
   text-align: center;
   line-height: 45px;
@@ -246,7 +263,7 @@ ul {
   align-items: center;
   position: static;
   background-color: #0f0050;
-  background-image :url('../img/group-1935.svg');
+  background-image: url("../img/group-1935.svg");
   background-attachment: fixed;
   background-position: center;
   background-size: 50%;
@@ -377,9 +394,10 @@ ul {
   border-radius: 4px;
   background-color: #4f4f4f;
 }
-.articleHeader button {
+.articleHeader a {
   width: 160px;
   height: 46px;
+  line-height: 46px;
   border-radius: 23px;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
@@ -401,11 +419,16 @@ ul {
 .articlesSection .article {
   margin: 30px;
   display: block;
-  transition: all ease 0.4s;
   padding: 25px;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
+  transition: all ease 0.4s;
+}
+.articlesSection .article:hover {
+  border-radius: 10px;
+  box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
+  background-color: #e7e8ea;
 }
 .articlesSection .article span {
   position: absolute;
@@ -571,11 +594,11 @@ ul {
   }
 }
 @media only screen and (max-width: 992px) {
-  .articlesSection .article{
+  .articlesSection .article {
     padding: 5px;
     margin: 10px;
   }
-  .articlesSection .article h3{
+  .articlesSection .article h3 {
     font-size: 16px;
   }
   .fixedHeaderContainer {
@@ -619,9 +642,8 @@ ul {
 @media only screen and (min-width: 1500px) {
 }
 
-@media only screen and (min-width: 1024px){
-  .onPageNav{
-      flex: 0 0 280px;
+@media only screen and (min-width: 1024px) {
+  .onPageNav {
+    flex: 0 0 280px;
   }
-
 }

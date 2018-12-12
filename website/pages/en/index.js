@@ -169,13 +169,13 @@ const Description = props => (
 );
 
 const Document = props => (
-  <div className="documentation-item">
-    <a href={props.url}>
+  <a href={props.url} className="documentation-item">
+    <div>
       <img src={imgUrl(props.image)} alt={props.title} />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
-    </a>
-  </div>
+    </div>
+  </a>
 );
 const Documentation = props => {
   let documentations = [
@@ -188,22 +188,22 @@ const Documentation = props => {
     {
       image: "settings.svg",
       title: "آموزش‌ها",
-      url: "https://fandogh.cloud/contact-us"
+      url: "/docs/getting-started.html"
     },
     {
       image: "project-management.svg",
       title: "مفاهیم",
-      url: "https://fandogh.cloud/contact-us"
+      url: "/docs/getting-started.html"
     },
     {
       image: "blogger.svg",
       title: "بلاگ",
-      url: "https://fandogh.cloud/contact-us"
+      url: "https://blog.fandogh.cloud/"
     },
     {
       image: "loupe.svg",
       title: "منابع",
-      url: "https://fandogh.cloud/contact-us"
+      url: "/docs/getting-started.html"
     }
   ];
 
@@ -266,7 +266,7 @@ const Articles = props => {
       <div className="articleHeader">
         <h2>{"آخرین بلاگ‌پست‌ها"}</h2>
         <div className="divider"></div>
-        <button>{"مشاهده همه"}</button>
+        <a href="https://blog.fandogh.cloud/">{"مشاهده همه"}</a>
       </div>
 
       {/* <p>This project is used by all these people</p> */}
