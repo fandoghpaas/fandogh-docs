@@ -35,13 +35,13 @@ class Footer extends React.Component {
           <a className="footer-site-top-social-item">
             <img src={imgUrl('footer/1.svg')} alt="Fandogh" />
           </a>
-          <a className="footer-site-top-social-item">
+          <a href="https://github.com/fandoghpaas" className="footer-site-top-social-item">
             <img src={imgUrl('footer/2.svg')} alt="Fandogh" />
           </a>
-          <a className="footer-site-top-social-item">
+          <a href="https://twitter.com/fandoghpaas?s=09" className="footer-site-top-social-item">
             <img src={imgUrl('footer/3.svg')} alt="Fandogh" />
           </a>
-          <a className="footer-site-top-social-item">
+          <a href="support@fandogh.cloud" className="footer-site-top-social-item">
             <img src={imgUrl('footer/4.svg')} alt="Fandogh" />
           </a>
         </div>

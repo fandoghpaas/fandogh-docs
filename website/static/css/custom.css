@@ -1,7 +1,7 @@
 /* your custom css */
 @font-face {
   font-family: Yekan;
-  src: url(../fonts/yekan-regular.ttf);
+  src: url(../fonts/iranyekanwebregular.ttf);
 }
 
 p {
@@ -417,13 +417,16 @@ ul {
   border-radius: 10px;
 }
 .articlesSection .article {
-  margin: 30px;
+  margin-left:45px;
   display: block;
-  padding: 25px;
+  padding: 30px;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.16);
   transition: all ease 0.4s;
+}
+.articlesSection .article:last-child {
+  margin-left: 0;
 }
 .articlesSection .article:hover {
   border-radius: 10px;
@@ -448,7 +451,7 @@ ul {
 .articlesSection .article h3 {
   color: #4f4f4f;
   padding-bottom: 30px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .articlesSection .article:hover {
   border-radius: 10px;

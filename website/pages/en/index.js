@@ -26,7 +26,10 @@ function docUrl(doc, language) {
 function pageUrl(page, language) {
   return siteConfig.baseUrl + (language ? language + "/" : "") + page;
 }
-
+function elipsText(text, count) {
+  if (!text) return "";
+  return text.slice(0, count) + (text.length > count ? "..." : "");
+}
 class Button extends React.Component {
   render() {
     return (
@@ -185,26 +188,26 @@ const Documentation = props => {
       url: "/docs/getting-started.html"
     },
 
-    {
-      image: "settings.svg",
-      title: "آموزش‌ها",
-      url: "/docs/getting-started.html"
-    },
-    {
-      image: "project-management.svg",
-      title: "مفاهیم",
-      url: "/docs/getting-started.html"
-    },
+    // {
+    //   image: "settings.svg",
+    //   title: "آموزش‌ها",
+    //   url: "/docs/getting-started.html"
+    // },
+    // {
+    //   image: "project-management.svg",
+    //   title: "مفاهیم",
+    //   url: "/docs/getting-started.html"
+    // },
     {
       image: "blogger.svg",
       title: "بلاگ",
       url: "https://blog.fandogh.cloud/"
-    },
-    {
-      image: "loupe.svg",
-      title: "منابع",
-      url: "/docs/getting-started.html"
     }
+    // {
+    //   image: "loupe.svg",
+    //   title: "منابع",
+    //   url: "/docs/getting-started.html"
+    // }
   ];
 
   let docs = documentations.map(item => <Document {...item} />);
@@ -256,7 +259,7 @@ const Articles = props => {
           style={{ width: "180px", height: "180px" }}
         />
         <h3>{article.title}</h3>
-        <p>{article.description}</p>
+        <p>{elipsText(article.description,91)}</p>
         <span>{article.date}</span>
       </a>
     );
@@ -265,7 +268,7 @@ const Articles = props => {
     <div className="articlesSection paddingBottom">
       <div className="articleHeader">
         <h2>{"آخرین بلاگ‌پست‌ها"}</h2>
-        <div className="divider"></div>
+        <div className="divider" />
         <a href="https://blog.fandogh.cloud/">{"مشاهده همه"}</a>
       </div>
 
