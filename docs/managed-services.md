@@ -11,10 +11,8 @@ sidebar_label: سرویس‌های مدیریت شده
 برای مشاهده انواع managed-service می‌توانید از دستور `fandogh managed-service help` استفاده کنید و سپس با استفاده از دستور `fandogh managed-service deploy` سرویس مورد نظر خود را دیپلوی کنید.
 هر managed-service بسته به نوع آن٬ حاوی مجموعه‌ای از پارامتر‌های قابل تنظیم است که می‌توانید از طریق سویچ `c-`  مشخص کنید، در اینجا به طور کامل تمام managed-service‌ها را بررسی می‌کنیم و پارامتر‌های قابل تنظیم هر کدام را توضیح می‌دهیم.
 
-### MySQL + PHPMyAdmin
 
-
-![MySQL + PHPMyAdmin](/img/docs/mysql-phpmyadmin.png "MySQL + PHPMyAdmin")
+### ![MySQL + PHPMyAdmin](/img/docs/mysql-phpmyadmin.png "MySQL + PHPMyAdmin")
 
 MySQL یکی از محبوب‌ترین RDBMS‌های امروزی است که طرفداران زیادی در ایران داد، به همین دلیل MySQL به عنوان اولین managed-service به فندق اضافه شد.\
 این managed-service از دو image متفاوت تشکیل شده، یکی خود MySQL و دیگری PHPMyAdmin که یک رابط کاربری تحت وب برای MySQL است.\
@@ -40,10 +38,7 @@ fandogh managed-service deploy mysql 9.1 \
 * رمز عبور root آن 12341234 است.
 *  PHPMyAdmin هم در آن غیر‌فعال شده است.
 
-### Postgresql + Adminer
-
-
-![Postgresql + Adminer](/img/docs/postgresql-adminer.png "Postgresql + Adminer")
+### ![Postgresql + Adminer](/img/docs/postgresql-adminer.png "Postgresql + Adminer")
 
 Postgresql یکی دیگر از RDBMS‌های معروف و پرطرفداری است که می‌توانید به سادگی به عنوان یک managed-service روی Namespace خود دیپلوی کنید.
 هنگام دیپلوی کردن Postgresql پارامتر‌های زیر را می‌توانید مشخص کنید:
