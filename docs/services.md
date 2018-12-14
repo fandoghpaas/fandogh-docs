@@ -34,7 +34,7 @@ sidebar_label: سرویس‌ها
 برای ساخت سرویس‌ها شما نیاز دارید از دستور fandogh service deploy استفاده کنید، با انتخاب یک ایمیج بخصوص و یک ورژن بخصوص از‌ آن تصویر و انتخاب یک نام برای سرویس، سرویس شما ساخته خواهد شد.
 نامی که برای سرویس انتخاب می‌کنید همان نامی است که بعدا به شما کمک می‌کند در شبکه خصوصی فضانام آن سرویس را پیدا کنید، به علاوه برای سرویس‌هایی که  internal-- نیستند یک hostname به شکل زیر نیز در نظر گرفته می‌شود که می‌توانید از طریق آن به سرویس خود دسترسی پیدا کنید.
 
-![Fandogh Service](/img/docs/service_deploy.png "Fandogh Service")
+![Fandogh Service](/img/docs/deploy_service.png "Fandogh Service")
 
 ```
 ServiceName-Namespace.fandogh.cloud
