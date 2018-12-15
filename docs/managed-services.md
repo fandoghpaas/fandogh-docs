@@ -22,7 +22,7 @@ MySQL یکی از محبوب‌ترین RDBMS‌های امروزی است که 
 |service_name| string| mysql| نامی که برای سرویس مایلید در نظر گرفته شود|
 |phpmyadmin_enabled|boolean | true | فعال یا غیرفعال بودن PHPMyAdmin
 |mysql_root_password| string| root| رمز عبور یوزر root دیتابیس|
-|volume_name| None| root| نام volumeای که به سرویس وصل می شود|
+|volume_name| string| None| نام volumeای که به سرویس وصل می شود|
 
 > توجه داشته باشید که اگر میخواهید سرعت I/O در سرویس دیتابیس شما بیشتر شود٬ می‌توانید از volume‌ها استفاده کنید و نام آن را به صورت `c volume_name=VOLUME_NAME-` موقع ساخت Managed Service در cli وارد نمایید. ( VOLUME_NAME نام volume‌ای است که موقع ساخت آن تعیین کرده‌اید).
 
@@ -47,7 +47,7 @@ Postgresql یکی دیگر از RDBMS‌های معروف و پرطرفداری 
 |service_name| string| postgresql| نامی که برای سرویس مایلید در نظر گرفته شود|
 |adminer_enabled|boolean | true | فعال یا غیرفعال بودن Adminer
 |postgres_password| string| postgres| رمز عبور دیتابیس|
-|volume_name| None| root| نام volumeای که به سرویس وصل می شود|
+|volume_name| string| None| نام volumeای که به سرویس وصل می شود|
 
 > توجه داشته باشید که اگر میخواهید سرعت I/O در سرویس دیتابیس شما بیشتر شود٬ می‌توانید از volume‌ها استفاده کنید و نام آن را به صورت `c volume_name=VOLUME_NAME-` موقع ساخت Managed Service در cli وارد نمایید. ( VOLUME_NAME نام volume‌ای است که موقع ساخت آن تعیین کرده‌اید).
 > 
