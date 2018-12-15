@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="loupe" viewBox="0 0 63.995 63.995">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:url(#linear-gradient-2)}.cls-3{fill:url(#linear-gradient-3)}.cls-4{fill:url(#linear-gradient-4)}
+        </style>
+        <linearGradient id="linear-gradient" x1="10.705" x2="-15.071" y1="1" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#220286"/>
+            <stop offset="1" stop-color="#00e3dc"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="1" x2="0" y1=".5" y2=".5" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-3" x1="1.482" x2="-.131" y1=".5" y2=".5" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-4" x1="2.642" x2="-1.557" y1="1" y2="1" xlink:href="#linear-gradient"/>
+    </defs>
+    <g id="Group_1960" data-name="Group 1960" transform="translate(37.497 23.748)">
+        <g id="Group_1959" data-name="Group 1959">
+            <path id="Path_1134" d="M301.25 190a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25z" class="cls-1" data-name="Path 1134" transform="translate(-300 -190)"/>
+        </g>
+    </g>
+    <g id="Group_1962" data-name="Group 1962">
+        <g id="Group_1961" data-name="Group 1961">
+            <path id="Path_1135" d="M62.53 55.461L45.847 38.777A24.774 24.774 0 0 0 50 25a25 25 0 1 0-25 25 24.775 24.775 0 0 0 13.779-4.149l4.612 4.612 12.07 12.07a5 5 0 1 0 7.07-7.07zM38.189 43.213a22.521 22.521 0 1 1 5.024-5.024 22.607 22.607 0 0 1-5.024 5.024zm2.622 1.133a25.082 25.082 0 0 0 3.534-3.534l3.546 3.546a30.338 30.338 0 0 1-3.534 3.534zm19.952 16.417a2.5 2.5 0 0 1-3.534 0l-11.1-11.1a32.847 32.847 0 0 0 3.534-3.534l11.1 11.1a2.5 2.5 0 0 1 0 3.534z" class="cls-2" data-name="Path 1135"/>
+        </g>
+    </g>
+    <g id="Group_1964" data-name="Group 1964" transform="translate(5 5)">
+        <g id="Group_1963" data-name="Group 1963">
+            <path id="Path_1136" d="M60 40a20 20 0 1 0 20 20 20.021 20.021 0 0 0-20-20zm0 37.5A17.5 17.5 0 1 1 77.5 60 17.519 17.519 0 0 1 60 77.5z" class="cls-3" data-name="Path 1136" transform="translate(-40 -40)"/>
+        </g>
+    </g>
+    <g id="Group_1966" data-name="Group 1966" transform="translate(23.748 9.999)">
+        <g id="Group_1965" data-name="Group 1965">
+            <path id="Path_1137" d="M205.257 89.633A15.022 15.022 0 0 0 191.25 80a1.25 1.25 0 1 0 0 2.5 12.584 12.584 0 0 1 11.674 8.03 1.25 1.25 0 1 0 2.333-.9z" class="cls-4" data-name="Path 1137" transform="translate(-190 -80)"/>
+        </g>
+    </g>
+</svg>

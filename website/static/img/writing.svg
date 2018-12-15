@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57.359 64.003">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:url(#linear-gradient-2)}.cls-3{fill:url(#linear-gradient-3)}.cls-4{fill:url(#linear-gradient-4)}
+        </style>
+        <linearGradient id="linear-gradient" x1="1.537" x2="-.304" y1="1" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#220286"/>
+            <stop offset="1" stop-color="#00e3dc"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="2.31" x2="-.481" y1="1" y2="1" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-3" x1="1.15" x2="0" y1=".5" y2=".5" xlink:href="#linear-gradient"/>
+        <linearGradient id="linear-gradient-4" x1="1.019" x2="-.907" xlink:href="#linear-gradient"/>
+    </defs>
+    <g id="writing" transform="translate(-26.571)">
+        <g id="Group_1990" data-name="Group 1990" transform="translate(26.57)">
+            <g id="Group_1989" data-name="Group 1989">
+                <path id="Path_1143" d="M137.21 202.5a2.5 2.5 0 0 0-2.5-2.5h-25.751a2.5 2.5 0 0 0 0 5h25.751a2.5 2.5 0 0 0 2.5-2.5z" class="cls-1" data-name="Path 1143" transform="translate(-96.472 -174.999)"/>
+                <path id="Path_1144" d="M108.959 280a2.5 2.5 0 0 0 0 5H124.6a2.5 2.5 0 0 0 0-5z" class="cls-2" data-name="Path 1144" transform="translate(-96.472 -244.998)"/>
+                <path id="Path_1145" d="M44.932 59H36.57a5.006 5.006 0 0 1-5-5V10a5.006 5.006 0 0 1 5-5h30.738a5.006 5.006 0 0 1 5 5v15.376a2.5 2.5 0 1 0 5 0V10a10.012 10.012 0 0 0-10-10H36.57a10.012 10.012 0 0 0-10 10v44a10.012 10.012 0 0 0 10 10h8.362a2.5 2.5 0 1 0 0-5z" class="cls-3" data-name="Path 1145" transform="translate(-26.57)"/>
+                <path id="Path_1146" d="M271.512 274.218a7.508 7.508 0 0 0-10.605 0l-13.726 13.7a2.5 2.5 0 0 0-.626 1.043l-2.989 9.841a2.5 2.5 0 0 0 3.06 3.136l10.091-2.8a2.5 2.5 0 0 0 1.1-.64l13.7-13.672a7.509 7.509 0 0 0-.005-10.608zm-16.764 20.275l-5.077 1.406 1.486-4.891 9.262-9.241 3.536 3.536zm13.231-13.205l-.484.483-3.536-3.536.483-.482a2.5 2.5 0 0 1 3.537 3.534z" class="cls-4" data-name="Path 1146" transform="translate(-216.345 -238.02)"/>
+                <path id="Path_1147" d="M134.71 120h-25.751a2.5 2.5 0 1 0 0 5h25.751a2.5 2.5 0 1 0 0-5z" class="cls-1" data-name="Path 1147" transform="translate(-96.472 -104.999)"/>
+            </g>
+        </g>
+    </g>
+</svg>
