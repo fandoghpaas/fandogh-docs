@@ -248,7 +248,8 @@ ul {
   background-color: #2a1975;
   line-height: 45px;
 }
-.footer-site-down p , .footer-site-down  a {
+.footer-site-down p,
+.footer-site-down a {
   color: #fff;
   text-align: center;
   line-height: 45px;
@@ -418,7 +419,7 @@ ul {
   border-radius: 10px;
 }
 .articlesSection .article {
-  margin-left:45px;
+  margin-left: 45px;
   display: block;
   padding: 30px;
   position: relative;
@@ -488,7 +489,7 @@ ul {
 }
 .onPageNav {
   border-right: 1px dashed #c8c8c8;
-  padding: 0 30px;
+  padding: 0 0;
 }
 .onPageNav > .toc-headings {
   border-left: none;
@@ -650,4 +651,9 @@ ul {
   .onPageNav {
     flex: 0 0 280px;
   }
+  .docsNavContainer {
+    top: 0;
+    height: calc(100vh);
+  }
+  
 }
