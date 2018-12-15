@@ -228,6 +228,7 @@ ul {
 }
 
 .footer-site .footer-site-top-social-item {
+  transition: all 0.4s ease;
   width: 46px;
   height: 46px;
   background-color: #ffffff;
