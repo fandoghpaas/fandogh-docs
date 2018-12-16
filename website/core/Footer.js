@@ -29,7 +29,7 @@ class Footer extends React.Component {
       <div className="footer-site-links">
           <a href="/" className="footer-site-top-link">صفحه اصلی</a>
           <a href="https://blog.fandogh.cloud" className="footer-site-top-link">بلاگ</a>
-          <a className="footer-site-top-link">Contribute</a>
+          <a href="https://github.com/fandoghpaas" className="footer-site-top-link">Contribute</a>
       </div>  
         <div className="footer-site-top-social">
           <a className="footer-site-top-social-item">
