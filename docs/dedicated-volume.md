@@ -1,3 +1,4 @@
+
 ---
 layout: fandogh
 id: dedicated-volume
@@ -134,7 +135,25 @@ spec:
    - mount_path: /data
      volume_name: vol1  
 ```
+یا برای یک managed-service می‌توانید بسته به نوع آن از parameter مربوط به volume استفاده کنید:
+```
+kind: ManagedService
+name: db
+spec:
+  service_name: mysql
+  version: 5.7
+  parameters:
+    - name: phpmyadmin_enabled
+      value: true
+    - name: mysql_root_password
+      value: some_long_unpredictable_string
+    - name: volume_name
+      value: name_of_volme
+  resources:
+      memory: 500Mi
 
+
+```
 
 حال با استفاده از دستور service apply می توانید سرویس خود را اجاره کرده و در آخر ببینید که سرویس شما به درستی به volume متصل شده و اطلاعات مورد نیاز از مسیر data/ را در volume با نام vol1 ذخیره سازی می کند.
 
