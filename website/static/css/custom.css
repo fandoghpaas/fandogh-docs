@@ -172,6 +172,7 @@ ul {
 .footer-site {
   display: flex;
   flex-direction: column;
+  margin-top: 42px;
 }
 .footer-site .footer-site-top {
   height: 220px;
@@ -526,9 +527,14 @@ ul {
 .mainContainer .wrapper .post .postHeader {
   border-bottom: 1px dashed #c8c8c8;
 }
-.postHeader .postHeader h1 {
+.post span a {
+  color : #26c6ec;
 }
+.post li,
+.post p a {
 
+  text-align: justify;
+}
 .breadcrumb {
   border-bottom: 1px dashed #c8c8c8;
   padding: 0 112px 24px 112px;
