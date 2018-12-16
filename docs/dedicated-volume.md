@@ -126,13 +126,13 @@ volume_mounts:
 ```
 kind: InternalService  
 name: cache  
-  spec:  
-    image: library/redis:latest  
-    image_pull_policy: IfNotPresent  
-    replicas: 1  
-    volume_mounts:  
-     - mount_path: /data
-      volume_name: vol1  
+spec:  
+  image: library/redis:latest  
+  image_pull_policy: IfNotPresent  
+  replicas: 1  
+  volume_mounts:  
+   - mount_path: /data
+     volume_name: vol1  
 ```
 
 
