@@ -1,3 +1,4 @@
+
 ---
 layout: fandogh
 id: service-manifest
@@ -328,7 +329,7 @@ spec:
       path: "/are-you-ready"
       port: 80
 ```
-### نمونه مانیفست برای ManagedService
+### نمونه مانیفست برای ManagedService روی shared-storage
 ```
 
 kind: ManagedService
@@ -344,5 +345,24 @@ spec:
 
   resources:
       memory: 800Mi
+
+```
+### نمونه مانیفست برای ManagedService روی dedicated-volume
+```
+kind: ManagedService
+name: db
+spec:
+  service_name: mysql
+  version: 5.7
+  parameters:
+    - name: phpmyadmin_enabled
+      value: true
+    - name: mysql_root_password
+      value: some_long_unpredictable_string
+    - name: volume_name
+      value: vol
+  resources:
+      memory: 500Mi
+
 
 ```
