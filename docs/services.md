@@ -11,8 +11,8 @@ sidebar_label: مقدمه
 ## انواع سرویس ها
 سرویس ها در فندق ۳ نوع و به شرح زیر هستند:
 
-**۱- سرویس های داخلی (Internal Service)**
-**۲- سرویس های خارجی (External Service)**
+**۱- سرویس های داخلی (Internal Service)**<br>
+**۲- سرویس های خارجی (External Service)**<br>
 **۳- سرویس های مدیریت شده (Managed Service)**
 
 ### ۱- سرویس های داخلی یا Internal Service : 
