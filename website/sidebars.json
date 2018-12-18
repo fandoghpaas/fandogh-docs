@@ -4,10 +4,16 @@
       "getting-started",
       "namespaces",
       "images",
-      "services",
-      "managed-services",
-      "service-manifest",
-      "exec", 
+      {
+        "type": "subcategory",
+        "label": "سرویس‌ها",
+        "ids": [
+          "services",
+          "managed-services",
+          "service-manifest",
+          "exec"
+        ]
+      },
       "custom-domains",
       "ssl-certificate",
       "secret",
