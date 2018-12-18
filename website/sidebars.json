@@ -10,7 +10,8 @@
         "ids": [
           "services",
           "managed-services",
-          "service-manifest"
+          "service-manifest",
+          "exec"
         ]
       },
       "custom-domains",
