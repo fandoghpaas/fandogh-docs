@@ -4,12 +4,18 @@
       "getting-started",
       "namespaces",
       "images",
-      "services",
-      "managed-services",
+      {
+        "type": "subcategory",
+        "label": "سرویس‌ها",
+        "ids": [
+          "services",
+          "managed-services",
+          "service-manifest"
+        ]
+      },
       "custom-domains",
       "ssl-certificate",
       "secret",
-      "service-manifest",
       "dedicated-volume"
     ]
   }
