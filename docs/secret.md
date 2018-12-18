@@ -60,15 +60,15 @@ fandogh secret list
 
 >شما همچنین می توانید با وارد کردن دستور`fandogh secret --help` در CLI لیست دستورات موجود را مشاهده کنید.
 
-###  create :
+###  create
 با استفاده از دستور `fandogh secret create --name SECRET_NAME -t SECRET_TYPE -f KEY=VALUE ... -f KEY=VALUE` می توانید یک secret ایجاد کنید.
 
-* name-- :
+* **name--**
 پارامتر name نمایانگر نام secret ای می باشد که میخواهید بسازید.
-* t- :
+* **t-**
 پارامتر t نمایانگر نوع secret ای می باشد که می خواهید ایجاد کنید.
-* f- :
+* **f-**
 پارامتر f مخفف واژه field می باشد و به فلدهایی که برای هر Secret نیاز است وارد شود اشاره دارد.
 
-###  list :
+###  list
 با استفاده از دستور `fandogh secret list` می توانید تمامی secret های موجود در namespace خود را مشاهده کنید.
