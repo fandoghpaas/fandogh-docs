@@ -249,6 +249,45 @@ fandogh service apply \
 -p DB_PASSWORD
 ```
 
+### قابلیت دیپلوی چند سرویس از طریق یک مانیفست 
+
+در صورتی که پروژه شمااز چند سرویس تشکیل شده‌اند و این سرویس‌ها رابطه نزدیگی با یکدیگر دارند٬ شاید بهتر باشد که به جای داشتن فایل مانیفست به تعداد سرویس‌ها٬ یک فایل مانبفست داشته باشید که شامل تمام این سرویس‌ها باشند.
+در مانیفست فندق شما می‌توانید تعریف سرویس‌های را با جدا کننده ‍`---` از یکدیگر جدا کنید و بدین شکل چند سرویس  را داخل یک مانیفست تعریف کنید.
+
+>   توجه داشته باشید که تنها سرویس‌هایی که تغییری در تعریف مانیفست‌ آنها وجود داشته redeploy خواهند شد و سرویس‌هایی که تغییری در مانیفست‌ آنها رخ نداده به اجرای خود ادامه خواهند داد.
+
+برای مثال اگر قصد راه اندازی یک CMD مانند wordpress بر روی فندق را داشته باشید کافی است مانیفست زیر را apply کنید:
+
+```
+kind: ManagedService
+name: wordpress-db
+spec:
+  service_name: mysql
+  version: 5.7
+  parameters:
+    - name: phpmyadmin_enabled
+      value: true
+    - name: mysql_root_password
+      value: some_long_unpredictable_string
+
+  resources:
+      memory: 200Mi
+
+---
+
+kind: ExternalService
+name: my-blog
+spec:
+  image: library/wordpress:latest
+  port: 80
+  env:
+    - name: WORDPRESS_DB_HOST
+      value: wordpress-db
+    - name: WORDPRESS_DB_PASSWORD
+      value: some_long_unpredictable_string
+```
+
+
 ## نمونه مانیفست برای انواع سرویس
 
 ### نمونه مانیفست برای ExternalService
