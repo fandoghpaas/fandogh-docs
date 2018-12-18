@@ -15,7 +15,7 @@ sidebar_label: گواهینامه رایگان SSL
 ```
 fandogh domain request-certificate --name my-domain.com
 ```
-* name-- :
+* **name--**
 پارامتر name نمایانگر نام دامنه ای می باشد که میخواهید برای آن درخواست گواهینامه کنید.
 
 بعد از اجرای این دستور، اگر با خطای خاصی مواجه نشوید، ما کار صدور گواهینامه SSL را برای شما شروع می‌کنیم، و با توجه به تعداد درخواست‌های هم‌زمان و محدودیت‌های Let's Encrypt  ممکن است تا چند دقیقه زمان لازم باشد که گواهینامه شما صادر شود.
@@ -32,7 +32,7 @@ fandogh domain request-certificate --name my-domain.com
 ```
 fandogh domain details --name my-domain.com
 ```
-* name-- :
+* **name--**
 پارامتر name نمایانگر نام دامنه ای می باشد که میخواهید وضعیت آن را مشاهده کنید.
 
 هر دامنه می‌تواند در یکی از این وضعیت‌ها باشد:
@@ -48,13 +48,13 @@ fandogh domain details --name my-domain.com
 
 >شما همچنین می توانید با وارد کردن دستور`fandogh domain --help` در CLI لیست دستورات موجود را مشاهده کنید.
 
-###  request-certificate :
+###  request-certificate
 با استفاده از دستور `fandogh domain request-certificate --name DOMAIN_NAME`  برای هر کدام از دامنه های خود درخواست صدور گواهینامه SSL ثبت کنید.
 > توجه داشته باشید این روند چند دقیقه به طول می انجامد٬لذا اگر در ابتدا تغییری مشاهده نکردید دلیل بر انجام نشدن نمی باشد.
-* name-- :
+* **name--**
 پارامتر name نمایانگر نام دامنه ای می باشد که میخواهید بر آن گواهینامه SSL صادر شود.
-###  revoke-certificate :
+###  revoke-certificate
 با استفاده از دستور `fandogh domain revoke-certificate --name DOMAIN_NAME` می توانید تمامی گواهینامه های صادر شده برای یک دامنه را حذف کنید.
-* name-- :
+* **name--**
 پارامتر name نمایانگر نام دامنه ای می باشد که میخواهید گواهینامه های آن حذف گردد.
 

@@ -19,7 +19,7 @@ sidebar_label: تصاویر در فندق
 ```
 fandogh image init --name HelloApplication
 ```
-* name-- یا n- :
+* **name--** یا **n-**
 پارامتر name یا n نمایانگر نام پروژه ای می باشد که میخواهید بارگذاری کنید.
 <br>
 
@@ -33,7 +33,7 @@ fandogh image init --name HelloApplication
 ```
 fandogh image publish --version 1.0
 ```
-* version-- یا v- :
+* **version--** یا **v-**
 پارامتر version یا v نمایانگر ورژن پروژه ای می باشد که میخواهید بارگذاری کنید.
 <br>
 
@@ -45,7 +45,7 @@ fandogh image publish --version 1.0
 ```
 fandogh image publish --version 1.0 -d
 ```
-* detach یا d- :
+* **detach** یا **d-**
 این پارامتر به CLI میگوید که همه کارها را در background انجام دهد تا کاربر بتواند از CLI استفاده کرده و منتظر پایان کار سرور نماند.
 <br>
 
@@ -53,10 +53,10 @@ fandogh image publish --version 1.0 -d
 ```
 fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 ```
-* image-- یا i- :
+* **image--** یا **i-**
 پارامتر image یا i نمایانگر نام imageای می باشد که میخواهید لاگ های آن را مشاهده کنید.
 
-* version-- یا v- :
+* **version--** یا **v-**
 پارامتر version یا v نمایانگر ورژن imageای می باشد که میخواهید لاگ های آن را مشاهده کنید.
 
 
@@ -66,37 +66,37 @@ fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 دستورات مربوط به بخش image فقط محدود به init یا publish و logs نمی باشد. کلیه دستورات مربوط به بخش image در ادامه توضیح داده شده اند.
 >شما همچنین می توانید با وارد کردن دستور`fandogh image --help`  در CLI لیست دستورات موجود را مشاهده کنید.
 
-### init :
+### init
 با وارد کردن دستور `fandogh image init --name IMAGE_NAME` شما سمت سرور پروژه ای با نام IMAGE_NAME بر روی فندق میسازید تا بتوانید محتوای پروژه خود را با دستور publish بر روی آن منتقل کنید.
 
-* name-- یا n- :
+* **name--** یا **n-**
 پارامتر name یا n نمایانگر نام پروژه ای می باشد که میخواهید بارگذاری کنید.
 
-### publish :
+### publish
 با وارد کردن دستور `fandogh image publish --version IMAGE_VERSION` می توانید پروژه خود را به سرور فندق ارسال کنید.
-* version-- یا v- :
+* **version--** یا **v-**
 پارامتر version یا v نمایانگر ورژن پروژه ای می باشد که میخواهید بارگذاری کنید.
-* detach یا d- :
+* **detach** یا **d-**
 این پارامتر به CLI میگوید که همه کارها را در background انجام دهد تا کاربر بتواند از CLI استفاده کرده و منتظر پایان کار سرور نماند.
 
-### logs :
+### logs
 با استفاده از دستور `fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION` می توانید لاگ های ساخت image مربوط به هر ورژن از یک image مشخص را مشاهده کنید.
 
-* image-- یا i- :
+* **image--** یا **i-**
 پارامتر image یا i نمایانگر نام imageای می باشد که میخواهید لاگ های آن را مشاهده کنید.
 
-* version-- یا v- :
+* **version--** یا **v-** :
 پارامتر version یا v نمایانگر ورژن imageای می باشد که میخواهید لاگ های آن را مشاهده کنید.
 
-### list :
+### list
 با استفاده از دستور `fandogh image list` می توانید لیست تمام imageهایی که تا به حال ساخته اید را مشاهده کنید.
 
-### delete :
+### delete
 با استفاده از دستور `fandogh image delete --image IMAGE_NAME` ٬ image با نام IMAGE_NAME را از پاک کنید.
 
 >  توجه داشته باشید که حذف image منجر به حذف تمام ورژن‌ها و لاگ‌های build آن image خواهد شد.
 
-### versions :
+### versions
 با وارد کردن دستور `fandogh image versions --name IMAGE_NAME` لیست ورژن های مربوط به هر image را مشاهده کنید.
-* image-- یا i- :
+* **image--** یا **i-** :
 این پارامتر نمایانگر نام imageای می باشد که میخواهید لیست ورژن های آن را مشاهده کنید.
