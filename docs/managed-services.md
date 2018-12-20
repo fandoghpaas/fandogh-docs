@@ -69,7 +69,7 @@ Postgresql یکی دیگر از RDBMS‌های معروف و پرطرفداری 
   برای **deploy** کردن این سرویس کافی است به ترتیب زیر عمل کنید.
   ۱- ابتدا مانیفست زیر را کپی کرده و بر روی سیستم خود در یک فایل جدید با فرمت **yml.** ذخیره نمایید.
   ```
-  kind: ManagedService
+kind: ManagedService
 name: chat-db
 spec:
   service_name: postgresql
