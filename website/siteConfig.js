@@ -9,84 +9,92 @@
 // site configuration options.
 
 /* List of projects/orgs using your project for the users page */
-const articles = require('./articles')
-const docLayou = require('./layouts/custom')
-const fs = require('fs')
+const articles = require("./articles");
+const docLayou = require("./layouts/custom");
+const fs = require("fs");
 
 const users = [
   {
-    caption: 'پلتفرم فندق',
+    caption: "پلتفرم فندق",
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/fandogh.svg',
-    infoLink: 'https://www.fandogh.cloud',
+    image: "/img/fandogh.svg",
+    infoLink: "https://www.fandogh.cloud"
   },
-	{
-		caption: 'فندق',
-		// You will need to prepend the image path with your baseUrl
-		// if it is not '/', like: '/test-site/img/docusaurus.svg'.
-		image: '/img/fandogh.svg',
-		infoLink: 'https://www.fandogh.cloud',
-	},{
-		caption: 'فندق',
-		// You will need to prepend the image path with your baseUrl
-		// if it is not '/', like: '/test-site/img/docusaurus.svg'.
-		image: '/img/fandogh.svg',
-		infoLink: 'https://www.fandogh.cloud',
-	},{
-		caption: 'فندق',
-		// You will need to prepend the image path with your baseUrl
-		// if it is not '/', like: '/test-site/img/docusaurus.svg'.
-		image: '/img/fandogh.svg',
-		infoLink: 'https://www.fandogh.cloud',
-
-	}
+  {
+    caption: "فندق",
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: "/img/fandogh.svg",
+    infoLink: "https://www.fandogh.cloud"
+  },
+  {
+    caption: "فندق",
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: "/img/fandogh.svg",
+    infoLink: "https://www.fandogh.cloud"
+  },
+  {
+    caption: "فندق",
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: "/img/fandogh.svg",
+    infoLink: "https://www.fandogh.cloud"
+  }
 ];
 
 const siteConfig = {
-  title: 'فندق' /* title for your website */,
-  tagline: 'مستندات فندق',
-  url: 'https://docs.fandogh.cloud' /* your website url */,
-  baseUrl: '/' /* base url for your project */,
+  title: "فندق" /* title for your website */,
+  tagline: "مستندات فندق",
+  url: "https://docs.fandogh.cloud" /* your website url */,
+  baseUrl: "/" /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
-	layouts: {
-		'fandogh': function({React, MarkdownBlock}) {
-			return class extends React.Component {
-				render() {
-					let md = fs.readFileSync("../docs/"+this.props.source, "utf8");
-					md = md.replace(/---((?:\\.|[^"\\])*)---/, '')
-					let e = React.createElement
-					// create breadcrumb dom
-					let category = this.props.metadata.category
-					let breadCrumb = e('div' ,{className:'breadcrumb'},
-							[e('a',{href: '/'}, 'خانه'), e('a',{href: '/'}, ' > ') , e('a',{href: '#'}, category ), e('a',{href: '/'},' > ') , e('span',{}, this.props.metadata.sidebar_label)]
-						)
-					return e('div', {}, [breadCrumb,e('div', {className: 'documentInner'}, e(MarkdownBlock ,{}, md))]);
-				}
-			}
-		}
-	},
+  layouts: {
+    fandogh: function({ React, MarkdownBlock }) {
+      return class extends React.Component {
+        render() {
+          let md = fs.readFileSync("../docs/" + this.props.source, "utf8");
+          md = md.replace(/---((?:\\.|[^"\\])*)---/, "");
+          let e = React.createElement;
+          // create breadcrumb dom
+          let category = this.props.metadata.category;
+          let breadCrumb = e("div", { className: "breadcrumb" }, [
+            e("a", { href: "/" }, "خانه"),
+            e("a", { href: "/" }, " > "),
+            e("a", { href: "#" }, category),
+            e("a", { href: "/" }, " > "),
+            e("span", {}, this.props.metadata.sidebar_label)
+          ]);
+          return e("div", {}, [
+            breadCrumb,
+            e("div", { className: "documentInner" }, e(MarkdownBlock, {}, md))
+          ]);
+        }
+      };
+    }
+  },
 
-	markdownPlugins: [
-		function foo(md) {
-			md.renderer.rules.fence_custom.foo = function(
-				tokens,
-				idx,
-				options,
-				env,
-				instance
-			) {
-				return '<div class="foo">bar</div>';
-			};
-		},
-	],
+  markdownPlugins: [
+    function foo(md) {
+      md.renderer.rules.fence_custom.foo = function(
+        tokens,
+        idx,
+        options,
+        env,
+        instance
+      ) {
+        return '<div class="foo">bar</div>';
+      };
+    }
+  ],
 
   // Used for publishing and more
-  projectName: 'fandogh',
-  organizationName: 'ایده نگاران بینا',
+  projectName: "fandogh",
+  organizationName: "ایده نگاران بینا",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -98,17 +106,17 @@ const siteConfig = {
 
   // If you have users set above, you add it here:
   users,
-	articles,
+  articles,
 
   /* path to images for header/footer */
-  headerIcon: 'img/logo-header.svg',
-  footerIcon: 'img/fandogh.svg',
-  favicon: 'img/fandogh.png',
+  headerIcon: "img/logo-header.svg",
+  footerIcon: "img/fandogh.svg",
+  favicon: "img/fandogh.png",
 
   /* colors for website */
   colors: {
-    primaryColor: '#4f4f4f',
-    secondaryColor: '#4f4f4f',
+    primaryColor: "#4f4f4f",
+    secondaryColor: "#4f4f4f"
   },
 
   /* custom fonts for website */
@@ -124,29 +132,26 @@ const siteConfig = {
   },*/
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright:
-    'Copyright © ' +
-    new Date().getFullYear() +
-    ' INB',
+  copyright: "Copyright © " + new Date().getFullYear() + " INB",
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    theme: "default"
   },
 
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ["https://buttons.github.io/buttons.js"],
 
   /* On page navigation for the current documentation page */
-  onPageNav: 'separate',
+  onPageNav: "separate",
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/fandogh.png',
-  twitterImage: 'img/fandogh.png',
+  ogImage: "img/fandogh.png",
+  twitterImage: "img/fandogh.png",
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-   repoUrl: 'https://github.com/fandoghpaas/fandogh-cli',
+  repoUrl: "https://github.com/fandoghpaas/fandogh-cli"
 };
 
 module.exports = siteConfig;

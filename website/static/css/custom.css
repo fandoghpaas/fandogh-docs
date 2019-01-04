@@ -528,11 +528,10 @@ ul {
   border-bottom: 1px dashed #c8c8c8;
 }
 .post span a {
-  color : #26c6ec;
+  color: #26c6ec;
 }
 .post li,
 .post p a {
-
   text-align: justify;
 }
 .breadcrumb {
@@ -584,7 +583,7 @@ ul {
 }
 
 @media only screen and (max-width: 1023px) {
-  .fixedHeaderContainer{
+  .fixedHeaderContainer {
     height: 80px;
     position: fixed;
   }
@@ -618,7 +617,7 @@ ul {
   .fixedHeaderContainer a {
     width: 144px;
   }
-  
+
   .articleHeader .divider {
     width: 340px;
   }
@@ -661,11 +660,9 @@ ul {
     top: 0;
     height: calc(100vh);
   }
-  
 }
 
-.wrapper-controller a{
-
+.wrapper-controller a {
 }
 
 .wrapper-controller a {
@@ -675,7 +672,7 @@ ul {
   background-image: linear-gradient(to left, #ffa7ad, #ff628f);
   padding: 10px 30px;
   font-size: 16px;
-  color : #fff;
+  color: #fff;
   line-height: 1.7;
   transition: all ease 0.6s;
 }
@@ -687,43 +684,50 @@ ul {
   color: #00b1d7;
 }
 
-
-
 /* /////////////////////// */
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border-bottom: 1px solid #220286;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
-  float: left;
+  float: right;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  font-family: Yekan;
+  border: 1px solid #220286;
+  border-bottom: none;
+}
+.tab button:first-child {
+  border-top-right-radius: 8px;
+}
+.tab button:last-child {
+  border-top-left-radius: 8px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: #220286;
+  color: #fff;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color: #220286;
+  color: #fff;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
 }
