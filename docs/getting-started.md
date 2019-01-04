@@ -5,6 +5,22 @@ title: شروع به کار
 sidebar_label: شروع سریع فندق
 ---
 
+<!-- <div class="wrapper-controller">
+  <span class="btn">
+    <a href="getting-started-short">short hand</a>
+  </span>
+</div>
+ -->
+
+
+ 
+
+<div class="tab">
+  <button class="tablinks active" onclick="openTab(event, 'guide')">guide</button>
+  <button class="tablinks" onclick="openTab(event, 'quickstart')">quickstart</button>
+</div>
+
+<div id="guide" class="tabcontent" style="display: block;">
 
 ## فندق چیست؟
 
@@ -14,6 +30,9 @@ sidebar_label: شروع سریع فندق
 به طور خلاصه با استفاده از فندق شما فقط کافیست پروژه‌های خود را [داکرایز کنید](https://hackernoon.com/how-to-dockerize-any-application-b60ad00e76da) تا فندق آن‌ها را تبدیل به سرویس‌های در حال اجرا کند.
 
 ## شروع کار با فندق
+
+</div>
+<div id="quickstart"  class="tabcontent">
 
 ### عضویت
 
@@ -89,3 +108,20 @@ Your service is accessible using the following URLs:
  - https://hello-buddy-YOUR-NAMESPACE.fandogh.cloud
 
 ```
+</div>
+
+<script>
+ function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
