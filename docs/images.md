@@ -97,6 +97,6 @@ fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 >  توجه داشته باشید که حذف image منجر به حذف تمام ورژن‌ها و لاگ‌های build آن image خواهد شد.
 
 ### versions
-با وارد کردن دستور `fandogh image versions --name IMAGE_NAME` لیست ورژن های مربوط به هر image را مشاهده کنید.
+با وارد کردن دستور `fandogh image versions --image IMAGE_NAME` لیست ورژن های مربوط به هر image را مشاهده کنید.
 * **image--** یا **i-** :
 این پارامتر نمایانگر نام imageای می باشد که میخواهید لیست ورژن های آن را مشاهده کنید.
