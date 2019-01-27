@@ -1,6 +1,6 @@
 ---
 layout: fandogh
-id: postgresql-managed-services
+id: postgresql-managed-service
 title: PostgreSQL + Adminer
 sidebar_label: PostgreSQL + Adminer
 ---
