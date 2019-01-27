@@ -1,6 +1,6 @@
 ---
 layout: fandogh
-id: proxy-managed-services
+id: proxy-managed-service
 title: Proxy
 sidebar_label: Proxy
 ---
