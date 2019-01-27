@@ -528,11 +528,10 @@ ul {
   border-bottom: 1px dashed #c8c8c8;
 }
 .post span a {
-  color : #26c6ec;
+  color: #26c6ec;
 }
 .post li,
 .post p a {
-
   text-align: justify;
 }
 .breadcrumb {
@@ -584,7 +583,7 @@ ul {
 }
 
 @media only screen and (max-width: 1023px) {
-  .fixedHeaderContainer{
+  .fixedHeaderContainer {
     height: 80px;
     position: fixed;
   }
@@ -618,7 +617,7 @@ ul {
   .fixedHeaderContainer a {
     width: 144px;
   }
-  
+
   .articleHeader .divider {
     width: 340px;
   }
@@ -661,11 +660,9 @@ ul {
     top: 0;
     height: calc(100vh);
   }
-  
 }
 
-.wrapper-controller a{
-
+.wrapper-controller a {
 }
 
 .wrapper-controller a {
@@ -675,7 +672,7 @@ ul {
   background-image: linear-gradient(to left, #ffa7ad, #ff628f);
   padding: 10px 30px;
   font-size: 16px;
-  color : #fff;
+  color: #fff;
   line-height: 1.7;
   transition: all ease 0.6s;
 }
@@ -685,4 +682,16 @@ ul {
   background-color: #ffffff;
   box-shadow: 0 3px 26px 0 rgba(255, 255, 255, 0.7);
   color: #00b1d7;
+}
+
+.toc .toggleNav .navGroup .navGroupSubcategoryTitle {
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+}
+.toc .toggleNav .navGroup .navGroupSubcategoryTitle:after {
+  content: url(../img/ic-arrow-d.png);
+  position: absolute;
+  top: calc(50% - 11px);
+  left: 15px;
 }
