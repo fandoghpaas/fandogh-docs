@@ -1,8 +1,8 @@
 ---
 layout: fandogh
 id: managed-services-intro
-title: معرف سرویس‌های مدیریت شده
-sidebar_label: معرف سرویس‌های مدیریت شده
+title: مقدمه
+sidebar_label: مقدمه
 ---
 ## managed-service چیست؟
 ![Managed Service Intro](/img/docs/managed-service-intro.png "Managed Service Intro")<br><br>
