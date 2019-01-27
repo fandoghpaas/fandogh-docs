@@ -17,8 +17,9 @@
         "type": "subcategory",
         "label": "سرویس های مدیریت شده",
         "ids": [
-          "managed-services",
-          "managed-services-intro"
+          "managed-services-intro",
+	  "redis-managed-service",
+          "mysql-managed-service"
         ]
       },
       "custom-domains",
