@@ -17,7 +17,8 @@
         "type": "subcategory",
         "label": "سرویس های مدیریت شده",
         "ids": [
-          "managed-services"
+          "managed-services",
+          "managed-services-intro"
         ]
       },
       "custom-domains",
