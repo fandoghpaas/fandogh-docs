@@ -1,6 +1,6 @@
 ---
 layout: fandogh
-id: mysql-managed-services
+id: mysql-managed-service
 title: Mysql + phpMyAdmin
 sidebar_label: Mysql + phpMyAdmin
 ---
