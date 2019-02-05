@@ -166,18 +166,20 @@ volume_mounts:
   liveness_probe:
     initial_delay_seconds: 12
     period_seconds: 60
+    timeout_seconds: 12
     http_get:
       path: "/are-you-live"
       port: 80
   readiness_probe:
     initial_delay_seconds: 5
     period_seconds: 10
+    timeout_seconds: 12
     http_get:
       path: "/are-you-ready"
       port: 80
 ```
 در مثال بالا در ابتدا قبل از اینکه فندق ترافیک را به سمت سرویس شما هدایت کند، از طریق فراخوانی pathای که در قسمت readiness_probe مشخص کردید از آمادگی سرویس شما برای دریافت ترافیک اطمینان حاصل می‌کند.
-سپس بعد از راه‌اندازی سرویس به اندازه `initial_delay_seconds` صبر می‌کند و سپس در بازه های زمانی مشخص شده توسط `period_seconds`  بر حسب ثانیه، از طریق فراخوانی path ، مثلا  `/are-you-live` ، سلامت سرویس را بررسی می‌کند، در صورتی که با کدی غیر از ۲۰۰ پاسخ دریافت کند سرویس را restart می‌کند.
+سپس بعد از راه‌اندازی سرویس به اندازه `initial_delay_seconds` صبر می‌کند و سپس در بازه های زمانی مشخص شده توسط `period_seconds`  بر حسب ثانیه، از طریق فراخوانی path ، مثلا  `/are-you-live` ، سلامت سرویس را بررسی می‌کند و در صورتی که بعد از گذشت `timeout_seconds`  در صورتی که پاسخ٬ با کدی غیر از ۲۰۰ دریافت کند سرویس را restart می‌کند.
 
 > readiness_probe برای سرویس‌هایی که زمان نیاز دارند تا به طور کامل لود شوند، بسیار کاربردی است.
 
@@ -324,12 +326,14 @@ spec:
   liveness_probe:
     initial_delay_seconds: 12
     period_seconds: 60
+    timeout_seconds: 12
     http_get:
       path: "/are-you-live"
       port: 80
   readiness_probe:
     initial_delay_seconds: 5
     period_seconds: 10
+    timeout_seconds: 12
     http_get:
       path: "/are-you-ready"
       port: 80
@@ -357,12 +361,14 @@ spec:
   liveness_probe:
     initial_delay_seconds: 12
     period_seconds: 60
+    timeout_seconds: 12
     http_get:
       path: "/are-you-live"
       port: 80
   readiness_probe:
     initial_delay_seconds: 5
     period_seconds: 10
+    timeout_seconds: 12
     http_get:
       path: "/are-you-ready"
       port: 80
