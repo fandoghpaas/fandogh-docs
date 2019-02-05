@@ -20,8 +20,7 @@
           "managed-services-intro",
 	  "redis-managed-service",
           "mysql-managed-service",
-          "postgresql-managed-service",
-          "proxy-managed-service"
+          "postgresql-managed-service"
         ]
       },
       "custom-domains",
