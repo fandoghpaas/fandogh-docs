@@ -9,9 +9,18 @@
         "label": "سرویس‌ها",
         "ids": [
           "services",
-          "managed-services",
           "service-manifest",
           "exec"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "سرویس های مدیریت شده",
+        "ids": [
+          "managed-services-intro",
+	  "redis-managed-service",
+          "mysql-managed-service",
+          "postgresql-managed-service"
         ]
       },
       "custom-domains",
