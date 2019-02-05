@@ -23,7 +23,6 @@ sidebar_label: مقدمه
 | phpMyAdmin| latest |[مشاهده](https://docs.fandogh.cloud/docs/mysql-managed-service.html)
 | PostgreSQL| 10.4 |[مشاهده](https://docs.fandogh.cloud/docs/postgresql-managed-service.html)
 | Adminer| latest |[مشاهده](https://docs.fandogh.cloud/docs/postgresql-managed-service.html)
-| Proxy| latest |[مشاهده](https://docs.fandogh.cloud/docs/proxy-managed-service.html)
 <br>
 
 ### نحوه دیپلوی کردن ManagedServiceها
