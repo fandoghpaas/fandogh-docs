@@ -71,6 +71,7 @@ spec:
  - **command_args**  <br>
  در برخی موارد ممکن است `command` دارای یک یا چند آرگمان باشد٬ به همین دلیل برای آنکه آرگمان‌ها را به `command` پاس دهیم نیاز است تا به صورت آرایه آن‌ها را در مانیفست بنویسیم.
  برای مثال دستور `printenv` را در نظر بگیرید:
+ 
   ```
  command:
   - python
@@ -84,7 +85,7 @@ spec:
 > چند نکته مهم در رابطه با استفاده از command <br>
 >  اگر از دستور command و command_args استفاده نکنید٬ دستور پیش فرض موجود در Docker Image اجرا خواهد شد.<br>
 > اگر از دستور command استفاده کنید ولی command_args را وارد نکنید٬ command اجرا خواهد شد و CMD و ENTRYPOINT تعریف شده در Docker Image نادیده گرفته خواهند شد. <br>
-> اگر تنها command_args را وارد نمایید٬ دستور ENTRYPOINT داخل Docker Image شما با argهای جدید اجرا می‌شود. <br>
+> اگر تنها command_args را وارد نمایید٬ دستور ENTRYPOINT داخل Docker Image شما با argهای جدید اجرا می‌شود. 
 > اگر از هر دو دستور command و command_args استفاده نمایید٬‌آنگاه دستورات CMD و ENTRYPOINT  تعریف شده در Docker Image شما نادیده گرفته شده و command جدید با command_argsهایی که تعریف کرده‌اید اجرا خواهند شد.
 
  - **path**
