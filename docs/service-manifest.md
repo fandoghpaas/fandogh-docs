@@ -76,8 +76,7 @@ spec:
  
   ```
  command:
-  - python
-  - main.py
+  - printenv
  command_args:
   - FANDOGH_ENV
   - MY_ENV
