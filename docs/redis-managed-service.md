@@ -42,9 +42,9 @@ sidebar_label: Redis
 
 ```
 kind: ManagedService
-name: redis
+name: test-redis
 spec:
-  service_name: test-redis
+  service_name: redis
   version: 5.0.3
   parameters:
     - name: redis_password
