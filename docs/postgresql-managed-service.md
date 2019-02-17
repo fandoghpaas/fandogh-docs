@@ -27,6 +27,7 @@ Postgresql یک ORDBMS معروف و پرطرفدار است که می‌توا�
 این دستور یک سرویس Postgresql ایجاد می‌کند که:
 * نام سرویس آن test-dbms ( یعنی در شبکه داخلی فضانام شما باقی سرویس‌ها از طریق نام test-dbms می‌توانند به آن متصل شوند) .
 * رمز عبور آن test123 است.
+* نام کاربری نیز postgres می‌باشد
 *  Adminer هم در آن غیر‌فعال شده است.
 
 ### Deploy With Manifest
@@ -40,9 +41,9 @@ spec:
   service_name: postgresql
   version: 10.4
   parameters:
-    - name: phpmyadmin_enabled
+    - name: adminer_enabled
       value: true
-    - name: mysql_root_password
+    - name: postgres_password
       value: some_long_unpredictable_string
     - name: volume_name
       value: YOUR_VOLUME_NAME
