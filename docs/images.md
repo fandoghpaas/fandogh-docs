@@ -17,7 +17,7 @@ sidebar_label: تصاویر در فندق
 <br>
 وقتی مطمئن شدید در آدرس مورد نظر هستید٬ از طریق دستور init پروژه خود را برای بارگذاری بر روی سرور فندق آماده میکنید.
 ```
-fandogh image init --name HelloApplication
+fandogh image init --name hello_application
 ```
 * **name--** یا **n-**
 پارامتر name یا n نمایانگر نام پروژه ای می باشد که میخواهید بارگذاری کنید.
