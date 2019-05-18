@@ -12,5 +12,6 @@ install:
 script:
   - echo $TRAVIS_COMMIT
   - COLLECT_ERROR=True fandogh login --username=$FANDOGH_USERNAME --password=$FANDOGH_PASSWORD
+  - fandogh namespace active --name default
   - fandogh image publish --version=$TRAVIS_COMMIT
   - fandogh service deploy --version=$TRAVIS_COMMIT --name=docs
