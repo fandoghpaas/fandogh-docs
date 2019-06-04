@@ -4,6 +4,7 @@ id: source
 title: Django
 sidebar_label: Django 
 ---
+## Django Source
 دیپلوی کردن سرویس ها بر روی فندق برای کاربرانی که با docker کار نکرده‌اند ممکن است مقداری مبهم باشد٬ همینطور معمولا آماده سازی پروژه‌ها برای اجرا در محیط واقعی نیاز به تنظیماتی دارد که باعث پیچیده شدن کار برنامه‌نویس می‌شوند.
 به همین منظور شما می‌توانید با استفاده از کامند لاین فندق بدون دانش Docker پروژهای جنگو را بر روی فندق دیپلوی کنید.
 .
@@ -71,3 +72,90 @@ Media Path []:
 
 اکنون با نوشتن دستور ``` fandogh source run ``` می توانید پروژه خودتون رو بر روی فندق دیپلوی کنید ^-^
  
+### راه اندازی Django به همراه Mysql
+استفاده از پایگاه داده Mysql در بسیاری از پروژه ها یکی از نیاز های اولیه است. بسیاری از کاربران برای استفاده از پایگاه داده خود از این  RDBMS ها استفاده می‌کنند. در فندق شما می توانید از با کمک سرویس‌های مدیریت شده توسط فندق به راحتی  Mysql Server مختص به خودتون رو اجرا کنید. 
+برای راه اندازی سرویس Mysql میتونید [mysql-managed-service] رو مطالعه کنید. 
+
+
+#### نحوه راه اندازی Mysql در تنظیمات پروژه Django 
+
+> برای اتصال به Mysql شما نیاز به پکیج mysqlclient دارید . در نظر داشته باشید حتما این پکیج در لیست requirements.txt خودتون وجود داشته باشه.
+
+<br>
+قبل از دیپلوی کردن پروژه خود بر روی فندق باید مقادیری که در راه اندازی سرویس Mysql خود در فندق وارد کرده اید رو در Setting پروژه خودتون وارد کنید. 
+فرض کنید شما برای راه اندازی سرویس Mysql از دستوری مانند زیر استفاده کرده اید : 
+
+```
+fandogh managed-service deploy mysql 9.1 
+-c service_name=db 
+-c mysql_root_password=123456
+-c phpmyadmin_enabled=true
+
+```
+
+> حتما در نظر داشته باشید پس از ساخت سرویس Mysql از قسمت PhpMyadmin دیتابیس مورد نظر خود را بسازید
+
+<br>
+
+حالا کافیه توی تنظیمات پروژه جانگو خود مقادیر را وارد کنید.
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myDatabaseName',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'db',
+        'PORT': '3306'
+    }
+}
+```
+
+اگر نمیخواهید این کدها در دسترس سایر افرادی که بر روی پروژه کار میکنند قرار بگیرد.
+شما می توانید مقادیر را در فایل fandogh.yaml که پس از دستور fandogh source init زده اید به عنوان environment variable وارد 
+ کنید و در این قسمت از آنها استفاده کنید. 
+
+```
+kind: ExternalService
+name: mywebsite
+spec:
+  image_pull_policy: Always
+  port: 80
+  source:
+    context: .
+    media_path: ''
+    project_type: django
+    python_version: '3.5'
+    static_path: static
+    wsgi: fandoghapp.wsgi
+  env:
+    - name: Mysql_Host
+        value: db
+    - name: Mysql_Password
+        value: 123456
+    - name: Mysql_User
+        value: root
+    - name: DB_Name
+        value: myDatabaseName     
+```
+که این مقادیر به صورت زیر در سیتنگ پروژه جانگو اضافه می شوند.
+
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('Mysql_Host', 'local_name'),
+        'USER': os.environ.get('Mysql_User', 'local_user'),
+        'PASSWORD': os.environ.get('Mysql_Password', 'local_pass'),
+        'HOST': os.environ.get('Mysql_Host', 'local_host'),
+        'PORT': '3306'
+    }
+}
+```
+
+<br>
+اکنون با دستور fandogh source run پروژه خودتون رو به همراه Mysql می تونید deploy کنید ^-^
+
+> حتما در نظر داشته باشید بعد از تغییرات پایگاه داده فایل های migration خودتون را دوباره بسازید که به سرور های فندق انتقال پیدا کنند و تغییرات جدید شما لحاظ بشود.
+   
