@@ -1,6 +1,6 @@
 ---
 layout: fandogh
-id: source
+id: django
 title: Django
 sidebar_label: Django 
 ---

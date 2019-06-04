@@ -32,7 +32,8 @@
         "type": "subcategory",
         "label": "Source",
         "ids": [
-          "source"
+          "django",
+          "static"
         ]
       }
     ]
