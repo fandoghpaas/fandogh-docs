@@ -16,5 +16,4 @@ script:
   - cd website
   - yarn build
   - cd ..
-  - fandogh source run --version=$TRAVIS_COMMIT
-
+  - fandogh source run
