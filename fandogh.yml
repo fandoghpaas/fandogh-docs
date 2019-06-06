@@ -1,0 +1,8 @@
+kind: ExternalService
+name: docs
+spec:
+  image_pull_policy: Always
+  port: 80
+  source:
+    context: ./website/build/fandogh
+    project_type: static_website
