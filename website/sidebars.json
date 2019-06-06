@@ -27,15 +27,8 @@
       "custom-domains",
       "ssl-certificate",
       "secret",
-      "dedicated-volume",
-      {
-        "type": "subcategory",
-        "label": "Source",
-        "ids": [
-          "static",
-          "django"
-        ]
-      }
+      "dedicated-volume"
+
     ]
   }
 }
