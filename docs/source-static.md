@@ -1,6 +1,6 @@
 ---
 layout: fandogh
-id: static
+id: source-static
 title: Static WebSite
 sidebar_label: وب سایت‌های ایستا 
 ---
