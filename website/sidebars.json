@@ -15,6 +15,15 @@
       },
       {
         "type": "subcategory",
+        "label": "اجرای مستیم",
+        "ids": [
+          "source-intro",
+          "source-static",
+          "source-django"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "سرویس های مدیریت شده",
         "ids": [
           "managed-services-intro",
