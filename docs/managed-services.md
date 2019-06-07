@@ -28,7 +28,7 @@ MySQL یکی از محبوب‌ترین RDBMS‌های امروزی است که 
 
 به عنوان مثال برای دیپلوی کردن یک MySQL می‌توانیم به این شکل یک سرویس بسازیم:
 ```
-fandogh managed-service deploy mysql 9.1 \
+fandogh managed-service deploy mysql 5.7 \
      -c service_name=mydatabase \
      -c mysql_root_password=12341234\
      -c phpmyadmin_enabled=false
