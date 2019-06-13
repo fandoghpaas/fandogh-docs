@@ -1,8 +1,8 @@
 ---
 layout: fandogh
 id: source-django
-title: Django Project
-sidebar_label: Django Project 
+title: پروژه‌های جنگو
+sidebar_label: پروژه‌های جنگو 
 ---
 
 ### ![Django Project](/img/docs/Django-project-banner.png "Django Project")
