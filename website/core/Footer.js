@@ -47,7 +47,7 @@ class Footer extends React.Component {
         </div>
         </div>
       <div className="footer-site-down">
-      <p>کلیه حقوق این سایت متعلق به شرکت <a href="https://inb-co.com/">ایده‌نگاران‌بینا</a> می‌باشد</p>
+      <p>کلیه حقوق این سایت متعلق به <a href="https://fandogh.cloud/">فندق</a> می‌باشد</p>
       </div>
         {/* <section className="sitemap">
             <div>
