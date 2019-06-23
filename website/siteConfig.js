@@ -48,6 +48,7 @@ const siteConfig = {
   tagline: 'مستندات فندق',
   url: 'https://docs.fandogh.cloud' /* your website url */,
   baseUrl: '/' /* base url for your project */,
+  gaTrackingId: 'UA-120059029-1',
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -86,7 +87,7 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'fandogh',
-  organizationName: 'ایده نگاران بینا',
+  organizationName: 'Fandogh PaaS',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -127,7 +128,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' INB',
+    ' Fandogh',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
