@@ -46,6 +46,37 @@ The context directory [.]:
 > اگر شما از پایگاه داده mysql استفاده میکنید. با استفاده از دستورات فندق می توانید یک سرویس مدیریت شده mysql ران کنید
 و اطلاعات مورد نظر را در کد خود وارد کنید. بهتر است به جای استفاده از hard code در پروژه خود این مقادیر را به عنوان environment variable در فایل fandogh.yml اضافه کنید.  
 
+```
+kind: ExternalService
+name: myshop
+spec:
+  image_pull_policy: Always
+  port: 80
+  source:
+    context: .
+    project_type: laravel
+  env:
+    - name: APP_KEY
+      value: base64:HGT49Mfm6j77W2N6K3GXqJqqNgUromHg41lRF23sEJc=
+    - name: APP_DEBUG
+      value: true
+    - name: APP_URL
+      value: http://localhost
+    - name: DB_CONNECTION
+      value: mysql
+    - name: DB_PORT
+      value: 3306
+    - name: DB_DATABASE
+      value: mydatabsename
+    - name: DB_USERNAME
+      value: dbuser_like_root
+    - name: DB_PASSWORD
+      value: db_password
+    - name: DB_HOST
+      value: mysql_service_on_fandogh
+
+```
+
 >شما برای پروژه های لاراول از app_key استفاده میکنید. این مقدار را نیز به عنوان environment variable میتوانید در فایل fandogh.yml ذخیره کنید
 
 > حتما در نظر داشته باشید سکوی ابری فندق بر روی HTTPS قرار داد و برخی از پروژه ها با http کار میکنند. این اتفاق ممکن است باعث شود که فایل های static شما مانند css,js,img ها در سرویس شما لود نشوند برای این کار در قسمت Providers فایل appserviceprovider کلاس app service
