@@ -76,7 +76,6 @@ speqc:
       value: db_password
     - name: DB_HOST
       value: mysql_service_on_fandogh
-
 ```
 
 
