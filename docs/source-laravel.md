@@ -1,6 +1,6 @@
 ---
 layout: fandogh
-id: laravel
+id: source-laravel
 title: پروژه‌های لاراول
 sidebar_label: پروژه‌های لاراول 
 ---
