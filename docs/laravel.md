@@ -28,7 +28,7 @@ Service Name: mywebsite
 -[3] Laravel Project
 Please choose one of the project types above:
 
-```
+``` 
 
 در قسمت بعدی شما باید context را وارد کنید. context همان پوشه‌ای است که خروجی برنامه شما در آن قراره گرفته است. اگر در حال حاضر در پوشه اصلی نیستید می توانید آدرس آن را وارد کنید یا در غیر این صورت خالی بگذارید و دکمه enter را فشار دهید. 
 
@@ -51,7 +51,7 @@ The context directory [.]:
 ```
 kind: ExternalService
 name: myshop
-speqc:
+spec:
   image_pull_policy: Always
   port: 80
   source:
