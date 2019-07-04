@@ -127,7 +127,7 @@ class AppServiceProvider extends ServiceProvider
 
     
 پس از دیپلوی کردن پروژه بر روی سکوی ابری فندق ششما باید جداول دیتابیس  را بسازید. برای این کار با دستور
-```fandogh exec -i ssh```
+```fandogh exec -i sh```
   به سرویس مورد نظر وصل شوید،پس از وصل شدن می توانید با دستور 
 ```php artisan migrate``` 
   جداول مورد نظر خود را در پایگاه داده مورد نظر بسازید.
