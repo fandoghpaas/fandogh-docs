@@ -53,7 +53,7 @@ kind: ExternalService
 name: myshop
 spec:
   image_pull_policy: Always
-  port: 80
+  port: 80  
   source:
     context: .
     project_type: laravel
@@ -84,13 +84,43 @@ spec:
 تابع boot را به شکل زیر تغییر دهید. 
 
 ```
-public function boot(UrlGenerator $url)
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Routing\UrlGenerator;
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+
+    public function boot(UrlGenerator $url)
+        {
             if (\App::environment() === 'production') {
-                $url->forceScheme('https');           
+                $url->forceScheme('https');
+            }
         }
+
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}
+
+
 ```
 
->برای استفاده از UrlGenerator فراموش نکنید که این کلاس را وارد کنید. 
 
 > پس از هر بار تغییر در پروژه تنها کافیست که دستور fandogh source run را مجددا اجرا کنید. 
 > فایل `fandogh.yml` می‌تواند شامل تمام بخش‌هایی که در [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) فندق است باشد٬ شما به صورت دستی قادر هستید تا بخش‌های مورد نیاز این فایل را تغییر دهید.
