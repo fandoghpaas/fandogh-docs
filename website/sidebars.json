@@ -19,7 +19,8 @@
         "ids": [
           "source-intro",
           "source-static",
-          "source-django"
+          "source-django",
+          "source-laravel"
         ]
       },
       {
