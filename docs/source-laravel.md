@@ -5,7 +5,7 @@ title: پروژه‌های لاراول
 sidebar_label: پروژه‌های لاراول 
 ---
 
-### ![Laravel Project](/img/docs/source-framework-banner.png "Laravel Project")
+### ![Laravel Framework](/img/docs/laravel-framework-banner.png "Laravel Framework")
 
 دیپلوی کردن سرویس‌ها بر روی فندق برای کاربرانی که با docker کار نکرده‌اند ممکن است مقداری مبهم باشد، همینطور معمولا آماده سازی پروژه‌ها برای اجرا در محیط واقعی نیاز به تنظیماتی دارد که باعث پیچیده شدن کار برنامه‌نویس می‌شوند.
 ما در این بخش به توضیح چگونگی دیپلوی کردن سرویس Laravel Project بدون نیاز به دانش docker می‌پردازیم.
