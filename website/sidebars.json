@@ -21,7 +21,6 @@
           "source-static",
           "source-django",
           "source-laravel"
-          "source-aspnetcore"
         ]
       },
       {
