@@ -15,12 +15,13 @@
       },
       {
         "type": "subcategory",
-                  "label": "اجرای مستقیم کدها",
+        "label": "اجرای مستقیم کدها",
         "ids": [
           "source-intro",
           "source-static",
           "source-django",
-          "source-laravel"
+          "source-laravel",
+          "source-aspnetcore"
         ]
       },
       {
@@ -38,7 +39,6 @@
       "ssl-certificate",
       "secret",
       "dedicated-volume"
-
     ]
   }
 }
