@@ -15,7 +15,7 @@
       },
       {
         "type": "subcategory",
-                  "label": "اجرای مستقیم کدها",
+        "label": "اجرای مستقیم کدها",
         "ids": [
           "source-intro",
           "source-static",
@@ -38,7 +38,6 @@
       "ssl-certificate",
       "secret",
       "dedicated-volume"
-
     ]
   }
 }
