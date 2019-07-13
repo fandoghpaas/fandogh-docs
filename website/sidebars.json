@@ -20,7 +20,7 @@
           "source-intro",
           "source-static",
           "source-django",
-          "source-laravel",
+          "source-laravel"
           "source-aspnetcore"
         ]
       },
