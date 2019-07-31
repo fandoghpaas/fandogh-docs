@@ -22,7 +22,8 @@
           "source-django",
           "source-laravel",
           "source-aspnetcore",
-          "source-nodejs"
+          "source-nodejs",
+          "source-spring-boot"
         ]
       },
       {
