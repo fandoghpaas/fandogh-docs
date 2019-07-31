@@ -2,7 +2,7 @@
 layout: fandogh
 id: source-spring-boot
 title: پروژه‌های Spring Boot
-sidebar_label: Spring Boot 
+sidebar_label: پروژه‌های Spring Boot 
 ---
 
 دیپلوی کردن سرویس‌ها بر روی فندق برای کاربرانی که با docker کار نکرده‌اند ممکن است مقداری مبهم باشد، و همینطور معمولا آماده سازی پروژه‌ها برای اجرا در محیط واقعی نیاز به تنظیماتی دارد که باعث پیچیده شدن این روال می‌شوند.  
