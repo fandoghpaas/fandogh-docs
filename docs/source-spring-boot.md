@@ -1,7 +1,7 @@
 ---
 layout: fandogh
 id: source-spring-boot
-title: Spring Boot
+title: پروژه‌های Spring Boot
 sidebar_label: Spring Boot 
 ---
 
