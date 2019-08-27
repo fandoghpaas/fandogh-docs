@@ -67,7 +67,7 @@ fandogh service history delete --name service_name --version history_version
 با استفاده از دستور `fandogh service history delete --name service_name --version history_version` می توانید یک نسخه مشخص از Deployment سرویسی که نام آن را وارد کرده‌اید، حذف کنید.
 
 * **name--**
-پارامتر name نمایانگر نام سرویسی است  که میخواهید نسخه‌ای مشخص از تاریخچه Deploymentهای آن را حذف کنید.
+پارامتر name نمایانگر نام سرویسی است  که می‌خواهید نسخه‌ای مشخص از تاریخچه Deploymentهای آن را حذف کنید.
 * **version--**
 پارامتر version نمایانگر نسخه‌ای از Deployment است که می‌خواهید آن را حذف کنید.
 
@@ -75,3 +75,8 @@ fandogh service history delete --name service_name --version history_version
 
 ###  rollback
 با استفاده از دستور `fandogh service rollback --name service_name --version history_version` می‌توانید به نسخه‌ دلخواه عملیات Rollback را انجام دهید.
+
+* **name--**
+پارامتر name نمایانگر نام سرویسی است  که می‌خواهید عملیات Rollback را بر روی آن انجام دهید.
+* **version--**
+پارامتر version نمایانگر نسخه‌ای از Deployment است که می‌خواهید جایگزین نسخه فعلی شود.
