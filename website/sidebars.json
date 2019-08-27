@@ -10,7 +10,8 @@
         "ids": [
           "services",
           "service-manifest",
-          "exec"
+          "exec",
+          "rollback"
         ]
       },
       {
