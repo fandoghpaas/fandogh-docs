@@ -2,7 +2,14 @@
   "docs": {
     "مستندات": [
       "getting-started",
-      "namespaces",
+      {
+       "type": "subcategory",
+       "label": "فضانام‌ها",
+       "ids": [
+         "namespaces",
+	 "team-management"
+	]
+      },
       "images",
       {
         "type": "subcategory",
