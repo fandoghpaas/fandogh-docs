@@ -6,7 +6,8 @@
        "type": "subcategory",
        "label": "فضانام‌ها",
        "ids": [
-         "namespaces"
+         "namespaces",
+	 "team-management"
 	]
       },
       "images",
