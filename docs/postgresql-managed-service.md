@@ -4,7 +4,7 @@ id: postgresql-managed-service
 title: PostgreSQL + Adminer
 sidebar_label: PostgreSQL + Adminer
 ---
-### ![Postgresql + Adminer](/img/docs/postgresql-adminer.png "Postgresql + Adminer")
+## ![Postgresql + Adminer](/img/docs/postgresql-adminer.png "Postgresql + Adminer")
 
 Postgresql یک ORDBMS معروف و پرطرفدار است که می‌توانید به سادگی به عنوان یک managed-service روی Namespace خود دیپلوی کنید.
 هنگام دیپلوی کردن Postgresql پارامتر‌های زیر را می‌توانید مشخص کنید:
@@ -30,7 +30,7 @@ Postgresql یک ORDBMS معروف و پرطرفدار است که می‌توا�
 * نام کاربری نیز postgres می‌باشد
 *  Adminer هم در آن غیر‌فعال شده است.
 
-### Deploy With Manifest
+## Deploy With Manifest
  
 شما همچنین می توانید برای اجرای راحت تر سرویس های مدیریت شده از [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
 
