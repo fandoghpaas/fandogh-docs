@@ -5,7 +5,7 @@ title: پروژه‌های لاراول
 sidebar_label: پروژه‌های لاراول 
 ---
 
-### ![Laravel Framework](/img/docs/laravel-framework-banner.png "Laravel Framework")
+## ![Laravel Framework](/img/docs/laravel-framework-banner.png "Laravel Framework")
 
 
 دیپلوی کردن سرویس‌ها بر روی فندق برای کاربرانی که با docker کار نکرده‌اند ممکن است مقداری مبهم باشد، همینطور معمولا آماده سازی پروژه‌ها برای اجرا در محیط واقعی نیاز به تنظیماتی دارد که باعث پیچیده شدن کار برنامه‌نویس می‌شوند.
