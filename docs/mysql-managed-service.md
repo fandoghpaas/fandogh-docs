@@ -4,7 +4,7 @@ id: mysql-managed-service
 title: Mysql + phpMyAdmin
 sidebar_label: Mysql + phpMyAdmin
 ---
-### ![MySQL + PHPMyAdmin](/img/docs/mysql-phpmyadmin.png "MySQL + PHPMyAdmin")
+## ![MySQL + PHPMyAdmin](/img/docs/mysql-phpmyadmin.png "MySQL + PHPMyAdmin")
 
 MySQL یکی از محبوب‌ترین RDBMS‌های امروزی است که طرفداران زیادی در ایران داد، به همین دلیل MySQL به عنوان اولین managed-service به فندق اضافه شد.\
 این managed-service از دو image متفاوت تشکیل شده، یکی خود MySQL و دیگری PHPMyAdmin که یک رابط کاربری تحت وب برای MySQL است.\
@@ -30,7 +30,7 @@ fandogh managed-service deploy mysql 9.1 \
 * رمز عبور root آن 12341234 است.
 *  PHPMyAdmin هم در آن غیر‌فعال شده است.
 
-### Deploy With Manifest
+## Deploy With Manifest
   
 
 شما همچنین می توانید برای اجرای راحت تر سرویس های مدیریت شده از [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
