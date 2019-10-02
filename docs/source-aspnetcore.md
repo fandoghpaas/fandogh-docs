@@ -5,7 +5,7 @@ title: پروژهای ASP.NET Core
 sidebar_label: پروژه‌های ASP.NET core 
 ---
 
-### ![Core Framework](/img/docs/asp-core-banner.png "Core Framework")
+## ![Core Framework](/img/docs/asp-core-banner.png "Core Framework")
 
 دیپلوی کردن سرویس‌ها بر روی فندق برای کاربرانی که با docker کار نکرده‌اند ممکن است مقداری مبهم باشد٬ همینطور معمولا آماده سازی پروژه‌ها برای اجرا در محیط واقعی نیاز به تنظیماتی دارد که باعث پیچیده شدن کار برنامه‌نویس می‌شوند.
 ما در این بخش به توضیح چگونگی دیپلوی کردن سرویس ASP.NET Core Project بدون نیاز به دانش docker می‌پردازیم.

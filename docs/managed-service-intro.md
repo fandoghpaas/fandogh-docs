@@ -26,12 +26,12 @@ sidebar_label: مقدمه
 | Proxy| latest |[مشاهده](https://docs.fandogh.cloud/docs/proxy-managed-service.html)
 <br>
 
-### نحوه دیپلوی کردن ManagedServiceها
+## نحوه دیپلوی کردن ManagedServiceها
 برای دیپلوی کردن ManagedServiceها دو راه وجود دارد:
 * استفاده از fandogh-cli
 * استفاده از manifest
 
-#### fandogh-cli
+### fandogh-cli
 برای اینکه بتوانید یک سرویس را از طریق **fandogh-cli**  دیپلوی کنید٬ ابتدا همانند دستور زیر با استفاده از دستور `help` لیست سرویس‌های مدیریت شده را مشاهده کنید.
 ```
 fandogh managed-servce help
@@ -44,7 +44,7 @@ fandogh managed-service deploy mysql 5.7
 ```
 بعد از وارد کردن دستور بالا٬ فندق یک سرویس مدیریت شده از ایمیج Mysql که ورژن آن 5.7 می‌باشد را برای شما دیپلوی می‌کند.
 
-#### manifest
+### manifest
 در قسمت [مانیفست سرویس](https://docs.fandogh.cloud/docs/service-manifest.html) بطور کامل در مورد چگونگی استفاده از مانیفست‌ها برای ساخت سرویس صحبت شده است و در اینجا برای مثال یک مورد را با هم بررسی می‌کنیم. <br>
 به مانیفست زیر توجه کنید:
 

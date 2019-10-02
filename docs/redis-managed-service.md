@@ -6,7 +6,7 @@ sidebar_label: Redis
 ---
 
 
-### ![Redis](/img/docs/redis-managed-service.png "Redis")
+## ![Redis](/img/docs/redis-managed-service.png "Redis")
 
 شاید تا به حال نام پایگاه داده قدرتمند Redis را شنیده باشید.
 طبق توضیحات سایت [Redis.io](https://redis.io) ٬ Redis یک پایگاه داده متن‌باز است که با قابلیت ذخیره داده‌ها به صورت in-memory باعث بالا رفتن سرعت ذخیره و بازیابی داده‌ها می‌شود.
@@ -35,7 +35,7 @@ sidebar_label: Redis
 *  در صورتی که **رمز عبور** یا **redis_password** را وارد نکنید٬ برای اجرای دستورها دیگر  نیازی به رمز عبور نخواهید داشت ولی با این کار **سرویس را در معرض خطرهای بیرونی زیادی** قرار می‌دهید لذا بهتر است که از رمز عبور معتبری استفاده نمایید.<br>
 * برای حفط مسائل امنیتی سرویس Redis به صورت یک [Internal Service](https://docs.fandogh.cloud/docs/services.html#%DB%B2-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-%DB%8C%D8%A7-external-service) عمل می‌کند و شما خارج از namespace خود به آن دسترسی ندارید.
 
-### Deploy With Manifest
+## Deploy With Manifest
   
 
 شما همچنین می توانید برای اجرای راحت تر سرویس های مدیریت شده از [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
