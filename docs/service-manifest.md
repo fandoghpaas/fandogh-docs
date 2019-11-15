@@ -120,7 +120,7 @@ spec:
 
 ```
 * **environment secret**
-در صورتی که نیاز دارید مقدار داده یک environment variable داخل مانیفست در دسترس نباشد و از مخزنی امن دریافت شود، می‌توانید همانند مثال زیر از [environment-secre](https://docs.fandogh.cloud/docs/environment-secret-secret.html) استفاده کنید:
+در صورتی که نیاز دارید مقدار داده یک environment variable داخل مانیفست در دسترس نباشد و از مخزنی امن دریافت شود، می‌توانید همانند مثال زیر از [environment-secret](https://docs.fandogh.cloud/docs/environment-secret-secret.html) استفاده کنید:
 
 ```
   env:
