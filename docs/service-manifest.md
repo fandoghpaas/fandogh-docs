@@ -102,11 +102,11 @@ spec:
 
 ```
   env:
-    - name: some_variable
-      value: some_value
+    - name: VARIABLE_NAME
+      value: VARIABLE_VALUE
 
 ```
-
+* **hidden**
 شما همچنین می توانید با اضافه کردن فیلد hidden به env های خود تعیین کنید که مقادیر تعیین شده نمایش داده بشوند یا خیر.
 
 > توجه داشته باشید که تمام env ها به صورت پیش فرض hidden:false در نظر گرفته می شوند و اگر
@@ -114,11 +114,20 @@ spec:
 
 ```
   env:
-    - name: some_variable
-      value: some_value
+    - name: VARIABLE_NAME
+      value: VARIABLE_VALUE
       hidden: true
 
 ```
+* **environment secret**
+در صورتی که نیاز دارید مقدار داده یک environment variable داخل مانیفست در دسترس نباشد و از مخزنی امن دریافت شود، می‌توانید همانند مثال زیر از [environment-secre](https://docs.fandogh.cloud/docs/environment-secret-secret.html) استفاده کنید:
+
+```
+  env:
+    - name: VARIABLE_NAME
+      secret: SECRET_NAME
+```
+در این حالت مقدار VARIABLE_NAME از سکرت با نام SECRET_NAME خوانده شده و به سرویس در حال استقرار پاس داده می‌شود.
 
  ### domains
 اینجا می‌توانید لیست دامنه‌هایی که می‌خواهید به این سرویس متصل کنید را مشخص کنید. مثلا سرویس مورد نظر فرانت وب‌سایت شماست و مایلید روی domain.com و www.domain.com  در دسترس باشد:
