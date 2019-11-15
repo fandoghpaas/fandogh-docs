@@ -17,7 +17,7 @@ sidebar_label: Environment Secret
 fandogh  secret create  \
           --name SECRET_NAME \
           -t environment-secret \
-          -f field=SECRET_KEY=SECRET_VALUE \
+          -f SECRET_KEY=SECRET_VALUE \
 ```
 پارامتر‌هایی که برای این دستور استفاده شده است عبارتند از:
 
