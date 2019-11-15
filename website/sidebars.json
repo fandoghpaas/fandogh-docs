@@ -47,7 +47,15 @@
       },
       "custom-domains",
       "ssl-certificate",
-      "secret",
+      {
+        "type": "subcategory",
+        "label": "سکرت‌ها",
+        "ids":[
+	  "secret",
+	  "docker-registry-secret",
+	  "environment-secret-secret"
+	]
+      },
       "dedicated-volume"
     ]
   }
