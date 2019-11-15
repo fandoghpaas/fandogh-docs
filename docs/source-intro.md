@@ -18,4 +18,9 @@ sidebar_label: مقدمه
 |---	|---	|
 | Static Website|[مشاهده](https://docs.fandogh.cloud/docs/source-static.html)
 | Django|[مشاهده](https://docs.fandogh.cloud/docs/source-django.html)
+| Laravel|[مشاهده](https://docs.fandogh.cloud/docs/source-laravel.html)
+| ASP.net core|[مشاهده](https://docs.fandogh.cloud/docs/source-aspnetcore.html)
+| Node.js|[مشاهده](https://docs.fandogh.cloud/docs/source-nodejs.html)
+| Spring Boot|[مشاهده](https://docs.fandogh.cloud/docs/source-spring-boot.html)
+
 <br>
