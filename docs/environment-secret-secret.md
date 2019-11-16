@@ -32,3 +32,21 @@ fandogh  secret create  \
 fandogh secret list
 ```
 این دستور لیست تمام secret های شما را نمایش می دهد.
+
+
+### نمونه استفاده از enviroment secret در مانیفست
+```
+
+kind: ExternalService
+name: nginx
+spec:
+  image: library/nginx:alpine
+  image_pull_policy: Always
+  env:
+   - name: SAMPLE_ENV
+     secret: my-secret-name
+
+  resources:
+      memory: 800Mi
+
+```
