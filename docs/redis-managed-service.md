@@ -16,6 +16,9 @@ sidebar_label: Redis
 |service_name| string| redis| نامی که برای سرویس مایلید در نظر گرفته شود|
 |redis_password| string| None| رمز عبور دیتابیس|
 |volume_name| string| None| نام volumeای که به سرویس وصل می شود|
+|redis_dashboard_enabled| boolean| False| در صورت نیاز به داشبورد redis مقدار این بخش باید True شود|
+|redis_dashboard_username| string| None| نام کاربری داشبورد redis|
+|redis_dashboard_password| string| None| گذرواژه داشبورد redis|
 
 > توجه داشته باشید که سرویس ‌Redis به صورت پیش فرض داده‌های خود را در Memory نگهداری می‌کند و این حالت پایدار نیست٬ زیرا چنانچه service شما تحت هر شرایطی از بین برود و یا restart شود٬ داده‌های شما پاک می‌شود٬ لذا حتما از یک [dedicated volumes](https://docs.fandogh.cloud/docs/dedicated-volume.html)  استفاده نمایید٬تا backup دیتاهای خود را به صورت مستمر ثبت و حفظ کنید.
 
@@ -40,6 +43,7 @@ sidebar_label: Redis
 
 شما همچنین می توانید برای اجرای راحت تر سرویس های مدیریت شده از [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
 
+- مانیفست redis بدون داشبورد مدیریتی
 ```
 kind: ManagedService
 name: test-redis
@@ -52,6 +56,28 @@ spec:
     - name: volume_name
       value: YOUR_VOLUME_NAME
 
+  resources:
+      memory: 200Mi
+```
+- مانیفست redis همراه با داشبورد مدیریتی
+
+```
+kind: ManagedService
+name: test-redis
+spec:
+  service_name: redis
+  version: 5.0.3
+  parameters:
+    - name: redis_password
+      value: pass123
+    - name: volume_name
+      value: YOUR_VOLUME_NAME
+    - name: redis_dashboard_enabled
+      value: 'true'
+    - name: redis_dashboard_username
+      value: _USERNAME_
+    - name: redis_dashboard_password
+      value: PASSWORD
   resources:
       memory: 200Mi
 ```
