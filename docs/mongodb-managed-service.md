@@ -43,7 +43,7 @@ sidebar_label: MongoDB
 
 > **هشدار**
 برای استفاده از سرویس MongoDB باید به نکته زیر توجه داشته باشید:
-> * برای حفط مسائل امنیتی سرویس MongoDB به صورت یک [Internal Service](https://docs.fandogh.cloud/docs/services.html#%DB%B2-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-%DB%8C%D8%A7-external-service) عمل می‌کند و شما خارج از namespace خود به آن دسترسی ندارید.
+برای حفط مسائل امنیتی سرویس MongoDB به صورت یک [Internal Service](https://docs.fandogh.cloud/docs/services.html#%DB%B2-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-%DB%8C%D8%A7-external-service) عمل می‌کند و شما خارج از namespace خود به آن دسترسی ندارید.
 
 ## Deploy With Manifest
   
