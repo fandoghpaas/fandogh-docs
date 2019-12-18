@@ -42,6 +42,7 @@
           "redis-managed-service",
           "mysql-managed-service",
           "postgresql-managed-service",
+          "mongodb-managed-service",
           "proxy-managed-service"
         ]
       },
