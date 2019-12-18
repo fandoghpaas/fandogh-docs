@@ -22,8 +22,8 @@ sidebar_label: MongoDB
 |mongodb_init_database| string | main| نام دیتابیسی که در ابتدا برای اجرای scriptهای نصب استفاده می‌شود |
 |volume_name| string| None| نام volumeای که به سرویس وصل می شود |
 |mongo_dashboard_enabled| boolean| False | در صورت نیاز به داشبورد mongo مقدار این بخش باید True شود |
-|mongo_dashboard_username| string| None| نام کاربری داشبورد mongo |
-|mongo_dashboard_password| string| None| نام کاربری داشبورد mongo |
+|mongo_dashboard_username| string| root| نام کاربری داشبورد mongo |
+|mongo_dashboard_password| string| root| نام کاربری داشبورد mongo |
 
 > توجه داشته باشید که سرویس ‌MongoDB برای آنکه بتواند داده‌های خود را ذخیره کند و از سرعت و کارایی مناسبی برخوردار باشد باید حتما به یک [dedicated volumes](https://docs.fandogh.cloud/docs/dedicated-volume.html) متصل شود در غیر این صورت با خطا مواجه شده و سرویس به درستی عمل نمی‌کند.
 
