@@ -39,10 +39,10 @@
         "label": "سرویس های مدیریت شده",
         "ids": [
           "managed-services-intro",
-          "redis-managed-service",
           "mysql-managed-service",
           "postgresql-managed-service",
           "mongodb-managed-service",
+          "redis-managed-service",
           "proxy-managed-service"
         ]
       },
