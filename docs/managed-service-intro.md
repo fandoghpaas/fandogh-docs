@@ -18,14 +18,14 @@ sidebar_label: مقدمه
 ### لیست سرویس‌های مدیریت شده یا Managed Service 
 |نام سرویس|ورژن|جزئیات|
 |---	|---	|---  |
-| Redis| 5.0.3 |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
-| Redis Dashboard| latest |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
 | MySQL| 5.7 |[مشاهده](https://docs.fandogh.cloud/docs/mysql-managed-service.html)
 | phpMyAdmin| latest |[مشاهده](https://docs.fandogh.cloud/docs/mysql-managed-service.html)
 | PostgreSQL| 10.4 |[مشاهده](https://docs.fandogh.cloud/docs/postgresql-managed-service.html)
 | Adminer| latest |[مشاهده](https://docs.fandogh.cloud/docs/postgresql-managed-service.html)
-| MongoDB| latest |[مشاهده](https://docs.fandogh.cloud/docs/mongodb-managed-service.html)
+| MongoDB| 4.2 |[مشاهده](https://docs.fandogh.cloud/docs/mongodb-managed-service.html)
 | Mongo Dashboard| latest |[مشاهده](https://docs.fandogh.cloud/docs/mongodb-managed-service.html)
+| Redis| 5.0.3 |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
+| Redis Dashboard| latest |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
 | Proxy| latest |[مشاهده](https://docs.fandogh.cloud/docs/proxy-managed-service.html)
 <br>
 
