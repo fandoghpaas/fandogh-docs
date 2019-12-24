@@ -46,8 +46,14 @@
           "proxy-managed-service"
         ]
       },
-      "custom-domains",
-      "ssl-certificate",
+      {
+        "type": "subcategory",
+        "label": "دامنه‌ها",
+        "ids": [
+          "custom-domains",
+          "ssl-certificate"
+        ]
+      },
       {
         "type": "subcategory",
         "label": "سکرت‌ها",
