@@ -41,6 +41,7 @@
           "managed-services-intro",
           "mysql-managed-service",
           "postgresql-managed-service",
+          "mssql-managed-service",
           "mongodb-managed-service",
 	  "redis-managed-service",
           "proxy-managed-service"
