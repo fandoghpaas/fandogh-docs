@@ -16,7 +16,7 @@ RabbitMQ یک سرویس متن باز [message-broker](https://en.wikipedia.org
 |service_name| string| rabbitmq| نامی که برای سرویس مایلید در نظر گرفته شود|
 |rabbitmq_username| string|rabbitmq |نام کاربری|
 |rabbitmq_password| string|rabbitmq |گذرواژه|
-|rabbitmq_exposed| boolean|false |آیا rabbitmq در محیط وب در دسترس باشد یا خیر|
+|dashboard_enabled| boolean|false |آیا rabbitmq در محیط وب در دسترس باشد یا خیر|
 |volume_name| string| |نام volumeای که به سرویس وصل می شود|
 
 برای دیپلوی کردن یک RabbitMQ می‌توانیم به این شکل یک سرویس بسازیم:
@@ -25,7 +25,7 @@ RabbitMQ یک سرویس متن باز [message-broker](https://en.wikipedia.org
        -c service_name=test-rabbitmq \
        -c rabbitmq_username=rabbitmq
        -c rabbitmq_password=rabbitmq
-      -c rabbitmq_exposed=true
+      -c dashboard_enabled=true
        -c volume_name=VOLUME_NAME
        -m 512
 ```
@@ -54,7 +54,7 @@ spec:
       value: rabbitmq
     - name: rabbitmq_password
       value: rabbitmq
-    - name: rabbitmq_exposed
+    - name: dashboard_enabled
       value: true  
     - name: volume_name
       value: VOLUME_NAME
@@ -74,7 +74,7 @@ spec:
       value: rabbitmq
     - name: rabbitmq_password
       value: rabbitmq
-    - name: rabbitmq_exposed
+    - name: dashboard_enabled
       value: false  
     - name: volume_name
       value: VOLUME_NAME
