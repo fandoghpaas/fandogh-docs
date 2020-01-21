@@ -17,6 +17,7 @@ RabbitMQ یک سرویس متن باز [message-broker](https://en.wikipedia.org
 |rabbitmq_username| string|rabbitmq |نام کاربری|
 |rabbitmq_password| string|rabbitmq |گذرواژه|
 |dashboard_enabled| boolean|false |آیا rabbitmq در محیط وب در دسترس باشد یا خیر|
+|rabbitmq_plugins| string| |لیست پلاگین‌های RabbitMQ |
 |volume_name| string| |نام volumeای که به سرویس وصل می شود|
 
 برای دیپلوی کردن یک RabbitMQ می‌توانیم به این شکل یک سرویس بسازیم:
@@ -37,12 +38,48 @@ RabbitMQ یک سرویس متن باز [message-broker](https://en.wikipedia.org
 
 > توجه داشته باشید در صورتی که از volume استفاده نکرده باشید، تنطیمات و اطلاعات این سرویس در جایی ذخیره نمی‌شود و در نتیجه در صورت restart شدن سرویس، سرویس به تنظیمات اولیه بازمی‌گردد.
 
+## RabbitMQ Plugins
+سرویس RabbitMQ تعدادی پلاگین از پیش تعریف شده در اختیار شما قرار می‌دهد که می‌توانید بسته به نوع نیاز خود آن‌ها را انتخاب و فعال کنید. لیست تمام پلاگین‌هایی که می‌توانید از طریق سرویس مدیریت شده سکوی ابری فندق فعال کنید در جدول زیر آمده است.
+|نام پلاگین |نام پلاگین |
+|---	|---	|
+|rabbitmq_amqp1_0	|rabbitmq_auth_backend_cache	|
+|rabbitmq_auth_backend_ldap	|rabbitmq_auth_backend_http	|
+|rabbitmq_auth_mechanism_ssl	|rabbitmq_auth_backend_oauth2	|
+|rabbitmq_event_exchange	|rabbitmq_consistent_hash_exchange	|
+|rabbitmq_federation_management	|rabbitmq_federation	|
+|rabbitmq_mqtt	|rabbitmq_jms_topic_exchange	|
+|rabbitmq_peer_discovery_common	|rabbitmq_peer_discovery_aws	|
+|rabbitmq_peer_discovery_etcd	|rabbitmq_peer_discovery_consul	|
+|rabbitmq_prometheus	|rabbitmq_peer_discovery_k8s	|
+|rabbitmq_recent_history_exchange	|rabbitmq_random_exchange	|
+|rabbitmq_shovel	|rabbitmq_sharding	|
+|rabbitmq_stomp	|rabbitmq_shovel_management	|
+|rabbitmq_tracing	|rabbitmq_top	|
+|rabbitmq_web_mqtt	|rabbitmq_trust_store	|
+|rabbitmq_web_stomp	|rabbitmq_web_mqtt_examples	|
+|rabbitmq_web_stomp_examples	|	|
+
+برای آنکه بتوانید از طریق `fandogh-cli` پلاگین‌ها را فعال کنید، می‌توانید در هنگام deploy به روش زیر عمل کن:
+```
+  fandogh managed-service deploy rabbitmq latest \
+       -c service_name=test-rabbitmq \
+       -c rabbitmq_username=rabbitmq
+       -c rabbitmq_password=rabbitmq
+      -c dashboard_enabled=true
+      -c rabbitmq_plugins="rabbitmq_trust_store rabbitmq_web_mqtt_examples rabbitmq_shovel"
+       -c volume_name=VOLUME_NAME
+       -m 512
+```
+
+>به نحوه تعریف پلاگین‌ها دقت کنید. در صورتی که از fandogh-cli استفاده می‌کنید باید نام پلاگین ها را با فاصله از هم و در بین double quotation یا " " قرار دهید تا تمام لیست دریافت شود.
+
+
 ## Deploy With Manifest
   
 
 شما همچنین می توانید برای اجرای راحت تر سرویس های مدیریت شده از [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
 
-- مانیفست FileBrowser با Dashboard
+- مانیفست RabbitMQ با Dashboard
 ```
 kind: ManagedService
 name: test-rabbitmq
@@ -62,7 +99,29 @@ spec:
       memory: 512Mi
 ```
 
-- مانیفست FileBrowser بدون Dashboard
+- مانیفست RabbitMQ با Dashboard و پلاگین
+```
+kind: ManagedService
+name: test-rabbitmq
+spec:
+  service_name: rabbitmq
+  version: latest
+  parameters:
+    - name: rabbitmq_username
+      value: rabbitmq
+    - name: rabbitmq_password
+      value: rabbitmq
+    - name: dashboard_enabled
+      value: true  
+    - name: rabbitmq_plugins
+      value: "rabbitmq_trust_store rabbitmq_web_mqtt_examples rabbitmq_shovel"
+    - name: volume_name
+      value: VOLUME_NAME
+  resources:
+      memory: 512Mi
+```
+
+- مانیفست RabbitMQ بدون Dashboard
 ```
 kind: ManagedService
 name: test-rabbitmq
