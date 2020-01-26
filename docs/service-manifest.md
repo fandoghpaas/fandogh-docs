@@ -109,7 +109,7 @@ spec:
       value: VARIABLE_VALUE
 
 ```
-* **hidden**
+**hidden**\
 شما همچنین می توانید با اضافه کردن فیلد hidden به env های خود تعیین کنید که مقادیر تعیین شده نمایش داده شوند یا خیر.
 
 > توجه داشته باشید که تمام env‌ها به صورت پیش فرض hidden:false در نظر گرفته می شوند و اگر
@@ -122,7 +122,7 @@ spec:
       hidden: true
 
 ```
-* **environment secret**
+**environment secret**\
 در صورتی که نیاز دارید مقدار داده یک environment variable داخل مانیفست در دسترس نباشد و از مخزنی امن دریافت شود، می‌توانید همانند مثال زیر از [environment-secret](https://docs.fandogh.cloud/docs/environment-secret-secret.html) استفاده کنید:
 
 ```
@@ -181,7 +181,7 @@ volume_mounts:
 با اضافه کردن این بخش به مانیفست سرویس، یک دایرکتوری در فضای‌ ذخیره‌سازی شما به نام mysql ساخته می‌شود و در نقطه /var/lib/mysql  سرویس مورد نظر شما mount می‌شود.\
 شما می‌توانید از طریق sub_path  دایرکتوری‌ بخصوصی از فضای ذخیره‌سازی را مشخص کنید و به وسیله mount_path مشخص کنید که آن دایرکتوری در کجای سرویس باید mount شود.\
 
- * **Dedicated Volume**
+**Dedicated Volume**\
 اگر می‌خواهید از `dedicated volume` استفاده کنید می توانید مانند قطعه کد زیر از متغیر volume_name استفاده کرده و نام volumeای که ساخته‌اید را در جلوی آن قرار دهید.
 
 ```
