@@ -56,13 +56,13 @@ Commands:
 
 ### ساخت اولین سرویس
 برای آنکه با چگونگی کار با fandogh-cli بیشتر آشنا شوید، اجازه بدهیدچگونگی و روند ایجاد یک سرویس ساده را با هم مشاهده کنیم.\
-- ابتدا یک directory دلخواه ایجاد کرده و داخل آن یک فایل به نام Dockerfile ایجاد نمایید و محتویات زیر را داخل آن کپی کنید:
+۱) ابتدا یک directory دلخواه ایجاد کرده و داخل آن یک فایل به نام Dockerfile ایجاد نمایید و محتویات زیر را داخل آن کپی کنید:
 ```
 FROM nginx:latest
 COPY index.html /usr/share/nginx/html/
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 ```
-- سپس یک فایل index.html هم در همان directory و کنار Dockerfile ایجاد کنید:
+۲) سپس یک فایل index.html هم در همان directory و کنار Dockerfile ایجاد کنید:
 ```
 <html>
 <body>
@@ -70,7 +70,7 @@ ENTRYPOINT ["nginx", "-g", "daemon off;"]
 </body>
 </html>
 ```
-- حال کافی است با استفاده از fandogh-cli یک ایمیج ایجاد کرده، منتشر کنیم و از روی آن ایمیج، سرویس مورد نظر را ایجاد کنیم:
+۳) حال کافی است با استفاده از fandogh-cli یک ایمیج ایجاد کرده، منتشر کنیم و از روی آن ایمیج، سرویس مورد نظر را ایجاد کنیم:
 ```
 $ fandogh login  --username=YOUR_USERNAME --password=YOUR_PASSWORD
 Logged in successfully
