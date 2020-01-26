@@ -41,8 +41,8 @@ fandogh service history delete --name service_name --version history_version
 ```
 پارامتر‌هایی که برای این دستور استفاده شده است عبارتند از:
 
-* پارامتر `name--` برای مشخص کردن نام سرویسی که قصد دارید یکی از تاریخچه‌های آن را حذف کنید.
-* پارامتر `version--` همان شناسه تاریخچه مربوط به سرویس است که در جدول نمایش داده شده با تیتر `History Version` مشخص شده است. 
+- پارامتر `name--` برای مشخص کردن نام سرویسی که قصد دارید یکی از تاریخچه‌های آن را حذف کنید.
+- پارامتر `version--` همان شناسه تاریخچه مربوط به سرویس است که در جدول نمایش داده شده با تیتر `History Version` مشخص شده است. 
 
 >توجه داشته باشید که حذف کردن تاریخچه یک عملیات غیرقابل بازگشت است و نسخه حذف شده برای همیشه از سکوی ابری فندق حذف خواهد شد؛ لذا قبل از انجام عمل حذف، از تصمیم خود اطمینان حاصل فرمایید.
 
@@ -60,15 +60,15 @@ fandogh service history delete --name service_name --version history_version
 ###  list
 با استفاده از دستور `fandogh service history list --name service_name` می‌توانید یک secret ایجاد کنید.
 
-* **name--**
+* **name--**\
 پارامتر name نمایانگر نام سرویسی است که می‌خواهید تاریخچه Deploymentهای آن را مشاهده کنید.
 
 ###  delete
 با استفاده از دستور `fandogh service history delete --name service_name --version history_version` می‌توانید یک نسخه مشخص از Deployment سرویسی که نام آن را وارد کرده‌اید، حذف کنید.
 
-* **name--**
+* **name--**\
 پارامتر name نمایانگر نام سرویسی است  که می‌خواهید نسخه‌ای مشخص از تاریخچه Deploymentهای آن را حذف کنید.
-* **version--**
+* **version--**\
 پارامتر version نمایانگر نسخه‌ای از Deployment است که می‌خواهید آن را حذف کنید.
 
 ## Rollback
@@ -76,7 +76,7 @@ fandogh service history delete --name service_name --version history_version
 ###  rollback
 با استفاده از دستور `fandogh service rollback --name service_name --version history_version` می‌توانید به نسخه‌ دلخواه عملیات Rollback را انجام دهید.
 
-* **name--**
+* **name--**\
 پارامتر name نمایانگر نام سرویسی است که می‌خواهید عملیات Rollback را بر روی آن انجام دهید.
-* **version--**
+* **version--**\
 پارامتر version نمایانگر نسخه‌ای از Deployment است که می‌خواهید جایگزین نسخه فعلی شود.
