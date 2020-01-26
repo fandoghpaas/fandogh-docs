@@ -100,5 +100,6 @@ fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 
 ### versions
 با وارد کردن دستور `fandogh image versions --image IMAGE_NAME` می‌توانید لیست ورژن‌های مربوط به هر image را مشاهده کنید.
+
 **image--** یا **i-** \
 این پارامتر نمایانگر نام imageای است که می‌خواهید لیست ورژن های آن را مشاهده کنید.
