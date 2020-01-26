@@ -18,7 +18,7 @@ sidebar_label: تصاویر در فندق
 ```
 fandogh image init --name hello_application
 ```
-* **name--** یا **n-**
+- **name--** یا **n-**\
 پارامتر name یا n نمایانگر نام پروژه ای است که می‌خواهید بارگذاری کنید.
 <br>
 
@@ -32,7 +32,7 @@ fandogh image init --name hello_application
 ```
 fandogh image publish --version 1.0
 ```
-* **version--** یا **v-**
+- **version--** یا **v-**\
 پارامتر version یا v نمایانگر ورژن پروژه ای است که می‌خواهید بارگذاری کنید.
 <br>
 
@@ -44,7 +44,7 @@ fandogh image publish --version 1.0
 ```
 fandogh image publish --version 1.0 -d
 ```
-* **detach** یا **d-**
+- **detach** یا **d-**\
 این پارامتر به fandogh-cli میگوید که همه کارها را در background انجام دهد تا کاربر بتواند از cli استفاده کرده و منتظر پایان کار سرور نماند.
 <br>
 
@@ -52,10 +52,10 @@ fandogh image publish --version 1.0 -d
 ```
 fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 ```
-* **image--** یا **i-**
+- **image--** یا **i-**\
 پارامتر image یا i نمایانگر نام imageای است که می‌خواهید لاگ های آن را مشاهده کنید.
 
-* **version--** یا **v-**
+- **version--** یا **v-**\
 پارامتر version یا v نمایانگر ورژن imageای است که می‌خواهید لاگ های آن را مشاهده کنید.
 
 
@@ -69,23 +69,23 @@ fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 ### init
 با وارد کردن دستور `fandogh image init --name IMAGE_NAME` شما سمت سرور پروژه ای با نام IMAGE_NAME بر روی فندق می‌سازید تا بتوانید محتوای پروژه خود را با دستور publish بر روی آن منتقل کنید.
 
-* **name--** یا **n-**
+- **name--** یا **n-**\
 پارامتر name یا n نمایانگر نام پروژه‌ای است که می‌خواهید بارگذاری کنید.
 
 ### publish
 با وارد کردن دستور `fandogh image publish --version IMAGE_VERSION` می‌توانید پروژه خود را به سرور فندق ارسال کنید.
-* **version--** یا **v-**
+- **version--** یا **v-**\
 پارامتر version یا v نمایانگر ورژن پروژه‌ای است که می‌خواهید بارگذاری کنید.
-* **detach** یا **d-**
+- **detach** یا **d-**\
 این پارامتر به fandogh-cli میگوید که همه کارها را در background انجام دهد تا کاربر بتواند از cli استفاده کرده و منتظر پایان کار سرور نماند.
 
 ### logs
 با استفاده از دستور `fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION` می‌توانید لاگ های مربوط به ساخت هر ورژن از یک image مشخص را مشاهده کنید.
 
-* **image--** یا **i-**
+- **image--** یا **i-**\
 پارامتر image یا i نمایانگر نام imageای است که می‌خواهید لاگ های آن را مشاهده کنید.
 
-* **version--** یا **v-** :
+- **version--** یا **v-** \
 پارامتر version یا v نمایانگر ورژن imageای است که می‌خواهید لاگ های آن را مشاهده کنید.
 
 ### list
@@ -98,5 +98,5 @@ fandogh image logs --image IMAGE_NAME --version IMAGE_VERSION
 
 ### versions
 با وارد کردن دستور `fandogh image versions --image IMAGE_NAME` می‌توانید لیست ورژن‌های مربوط به هر image را مشاهده کنید.
-* **image--** یا **i-** :
+- **image--** یا **i-** \
 این پارامتر نمایانگر نام imageای است که می‌خواهید لیست ورژن های آن را مشاهده کنید.
