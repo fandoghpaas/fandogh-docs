@@ -7,10 +7,10 @@ sidebar_label: RabbitMQ
 
 ## ![RabbitMQ](/img/docs/rabbitmq-managed-service.png "RabbitMQ")
 
-RabbitMQ یک سرویس متن باز [message-broker](https://en.wikipedia.org/wiki/Message_broker) یا **پیام دهنده** است که معماری Advanced Message Queuing Protocol یا به اختصار (AMQP) را ایجاد کرده‌ است.<br/>
-همچنین این سرویس در ادامه با معماری plug-in به نحوی گسترش یافت تا بتواند از پروتکول‌هایی مثل Streaming Text Oriented Messaging Protocol یا به اختصار (STOMP)، MQTT و ... هم پشتیبانی کند.<br/>
+RabbitMQ یک سرویس متن باز [Message Broker](https://en.wikipedia.org/wiki/Message_broker) یا **پیام دهنده** است که معماری `Advanced Message Queuing Protocol` یا به اختصار `AMQP` را ایجاد کرده‌ است.<br/>
+همچنین این سرویس در ادامه با معماری plug-in به نحوی گسترش یافت تا بتواند از پروتکول‌هایی مثل `Streaming Text Oriented Messaging Protocol` یا به اختصار (STOMP)، MQTT و ... هم پشتیبانی کند.<br/>
 
-برای اینکه بتوانید این سرویس را دیپلوی کنید٬ پارامتر‌های زیر را می‌توانید مشخص کنید:
+برای اینکه بتوانید این سرویس را دیپلوی کنید، پارامتر‌های زیر را می‌توانید مشخص کنید:
 |کانفیگ|نوع|پیش‌فرض|توضیح|
 |---	|---	|---	|---	|
 |service_name| string| rabbitmq| نامی که برای سرویس مایلید در نظر گرفته شود|
