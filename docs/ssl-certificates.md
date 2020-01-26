@@ -58,5 +58,6 @@ fandogh domain details --name my-domain.com
 
 ###  revoke-certificate
 با استفاده از دستور `fandogh domain revoke-certificate --name DOMAIN_NAME` می‌توانید تمامی گواهینامه‌های صادر شده برای یک دامنه را حذف کنید.
+
 **name--**\
 پارامتر name نمایانگر نام دامنه‌ای است که می‌خواهید گواهینامه‌های آن حذف گردد.
