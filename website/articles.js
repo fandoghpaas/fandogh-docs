@@ -2,15 +2,15 @@ const articles = [
 	{
                 title: 'زیرساخت ابری به زبان ساده',
                 description: 'در این پست تلاش کردیم به صورت خلاصه زیرساخت‌های ابری رو برای عموم توضیح بدیم.',
-                thumbnail: 'https://blog.fandogh.cloud/articles/fandogh-icon.jpg',
-                link: 'https://blog.fandogh.cloud/articles/cloud-infra-simple.html',
+                image: 'https://blog.fandogh.cloud/articles/fandogh-icon.jpg',
+                url: 'https://blog.fandogh.cloud/articles/cloud-infra-simple.html',
                 date: '۱۸ بهمن ۱۳۹۸'
         },
         {
                 title: 'چرخه CI/CD با استفاده از گیت‌لب و فندق',
                 description: 'در این بلاگ پست با هم قدم‌ به قدم یک چرخه CI/CD با استفاده از گیت‌لب و فندق راه‌اندازی می‌کنیم',
-                thumbnail: 'https://blog.fandogh.cloud/articles/gitlab-ci-cd-logo.png',
-                link: 'https://blog.fandogh.cloud/articles/how-to-gitlab-ci.html',
+                image: 'https://blog.fandogh.cloud/articles/gitlab-ci-cd-logo.png',
+                url: 'https://blog.fandogh.cloud/articles/how-to-gitlab-ci.html',
                 date: '۱۹ بهمن ۱۳۹۷'
         },
 	{
