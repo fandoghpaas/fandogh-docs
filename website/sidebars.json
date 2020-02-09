@@ -10,7 +10,20 @@
 	 "team-management"
 	]
       },
-      "images",
+      {
+       "type": "subcategory",
+       "label": "منابع",
+       "ids": [
+         "resources"
+        ]
+      },
+      {
+       "type": "subcategory",
+       "label": "ایمیج‌ها",
+       "ids": [
+         "images" 
+        ]
+      },
       {
         "type": "subcategory",
         "label": "سرویس‌ها",
@@ -65,7 +78,13 @@
 	  "environment-secret-secret"
 	]
       },
-      "dedicated-volume"
+      {
+        "type": "subcategory",
+        "label": "ذخیره‌سازی",
+        "ids":[
+          "dedicated-volume"
+        ]
+      }
     ]
   }
 }
