@@ -84,6 +84,13 @@
         "ids":[
           "dedicated-volume"
         ]
+      },
+      {
+        "type": "subcategory",
+        "label": "fandogh-cli cheat sheet",
+        "ids":[
+          "fandogh-cli-cheat-sheet"
+        ]
       }
     ]
   }
