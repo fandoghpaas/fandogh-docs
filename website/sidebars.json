@@ -30,6 +30,7 @@
         "ids": [
           "services",
           "service-manifest",
+          "service-lifecycle-handlers",
           "exec",
           "rollback"
         ]
