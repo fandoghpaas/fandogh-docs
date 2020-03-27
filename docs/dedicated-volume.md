@@ -136,6 +136,10 @@ fandogh volume delete --name vol1
 
 >شما همچنین می‌توانید با وارد کردن دستور`fandogh volume --help` در fandogh-cli لیست دستورات موجود را مشاهده کنید.
 
+###  **list**
+با استفاده از دستور `fandogh volume list` می‌توانید لیست تمام volumeهایی که تا به حال ساخته‌اید را مشاهده کنید.
+
+
 ###  add
 
 با وارد کردن دستور `fandogh volunme add --name VOLUME_NAME --capacity VOLUME_CAPACITY` شما می‌توانید یک volume با نام VOLUME_NAME و ظرفیت VOLUME_CAPACITY بسازید.
@@ -148,8 +152,17 @@ fandogh volume delete --name vol1
 **capacity--** یا **c-**\
 پارامتر capacity یا c بیانگر ظرفیت volume است.
 
-###  **list**
-با استفاده از دستور `fandogh volume list` می‌توانید لیست تمام volumeهایی که تا به حال ساخته‌اید را مشاهده کنید.
+###  resize
+
+با وارد کردن دستور `fandogh volunme resize --name VOLUME_NAME --capacity VOLUME_CAPACITY` شما می‌توانید فضای volume با نام VOLUME_NAME را به ظرفیت VOLUME_CAPACITY افزایش دهید.
+
+> **توجه داشته باشید که واحد ورودی فضا گیگابایت است**
+
+**name--** یا **n-**\
+پارامتر name یا n نمایانگر نام volume‌ای است که می‌خواهید فضای آن را افزایش دهید.
+
+**capacity--** یا **c-**\
+پارامتر capacity یا c بیانگر ظرفیت جدید volume است.
 
 ###  **delete**
 
