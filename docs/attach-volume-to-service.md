@@ -1,13 +1,13 @@
 ---
 layout: fandogh
 id: attach-volume-to-service
-title: اتصال dedicated volume به سرویس
-sidebar_label: اتصال dedicated volume به سرویس
+title: اتصال فزای ذخیزه‌سازی به سرویس
+sidebar_label: اتصال فزای ذخیزه‌سازی به سرویس
 ---
 بعد از اینکه شما یک dedicate volume ایجاد کردید، قدم بعدی اتصال آن به یک سرویس است تا داده‌های سرویس مورد نظر در مسیرهای مشخص شده در آن volume ذخیره شوند.\
 این روال در ادامه توضیح داده شده است.
 
-## چگونگی اتصال سرویس به volume
+## چگونگی اتصال سرویس به فضای ذخیره‌سازی
 
 
 ![Volume Attachment](/img/docs/volume_attachment.png "Volume Attachment")
