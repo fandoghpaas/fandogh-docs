@@ -85,7 +85,8 @@
         "label": "ذخیره‌سازی",
         "ids":[
           "dedicated-volume",
-          "attach-volume-to-service"
+          "attach-volume-to-service",
+          "dedicated-volume-resize"
         ]
       },
       {
