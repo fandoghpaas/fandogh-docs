@@ -9,6 +9,10 @@ p {
   font-size: 14px;
 }
 
+table {
+  text-align: left;
+}
+
 html,
 body,
 div,
