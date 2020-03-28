@@ -15,7 +15,7 @@ sidebar_label: افزایش فضای ذخیره‌سازی
 با استفاده از دستور زیر می‌توانید فضای Volume را افزایش دهید:
 
 ```
-fandogh volume resize --name VOLUME_NAME --capacity NEW_CAPACITY
+fandogh volume expand --name VOLUME_NAME --capacity NEW_CAPACITY
 ```
 **name--**\
 پارامتر name نمایانگر نام volumeای است که می‌خواهید فضای ‌آن را افزایش دهید.
@@ -35,7 +35,7 @@ fandogh volume resize --name VOLUME_NAME --capacity NEW_CAPACITY
 
 سرویس با نام **vol1** و فضای **۱۰ گیگابایت** به سرویسی با نام **svc** متصل است. حال با فرض اینکه فضای ما در شرف پر شدن است با دستور زیر فضای آن را افزایش می‌دهیم:
 ```
-fandogh volume resize --name vol1 --capacity 20
+fandogh volume expand --name vol1 --capacity 20
 ```
 با این دستور ما می‌خواهیم ۱۰ گیگابایت دیگر به فضای ذخیره‌سازی فعلی اضافه کنیم. بعد از اجرای دستور اگر دستور `fandogh volume list` را وارد کنیم، جزئیات به شکل زیر خواهد بود:
 
