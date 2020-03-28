@@ -152,9 +152,9 @@ fandogh volume delete --name vol1
 **capacity--** یا **c-**\
 پارامتر capacity یا c بیانگر ظرفیت volume است.
 
-###  resize
+###  expand
 
-با وارد کردن دستور `fandogh volunme resize --name VOLUME_NAME --capacity VOLUME_CAPACITY` شما می‌توانید فضای volume با نام VOLUME_NAME را به ظرفیت VOLUME_CAPACITY افزایش دهید.
+با وارد کردن دستور `fandogh volunme expand --name VOLUME_NAME --capacity VOLUME_CAPACITY` شما می‌توانید فضای volume با نام VOLUME_NAME را به ظرفیت VOLUME_CAPACITY افزایش دهید.
 
 > **توجه داشته باشید که واحد ورودی فضا گیگابایت است**
 
