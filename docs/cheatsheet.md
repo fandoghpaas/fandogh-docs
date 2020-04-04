@@ -270,12 +270,17 @@ fandogh volume add -n VOLUME_NAME -c VOLUME_SIZE
 fandogh volume add -n VOLUME_NAME -c 10
 ```
 
+افزایش فضای volume با نام `VOLUME_NAME` و ظرفیت جدید `VOLUME_CAPACITY`
+```
+fandogh volume expand -n VOLUME_NAME -c VOLUME_CAPACITY
+```
+
 نمایش لیست volumeهای موجود.
 ```
 fandogh volume list
 ```
 
-جذف volume با نام `VOLUME_NAME`.
+حذف volume با نام `VOLUME_NAME`.
 ```
 fandogh volume delete --name VOLUME_NAME
 ```
