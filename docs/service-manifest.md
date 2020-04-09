@@ -236,7 +236,7 @@ volume_mounts:
 
 ## فیلد spec در ManagedServiceها
  #### service_name
-از طریق این فیلد مشخص می‌کنید که قصد ایجاد کدام یک از managed-service های فندق را دارید؛ برای مشاهده انواع managed-service‌ها به [این بخش](https://docs.fandogh.cloud/docs/managed-services.html#%D8%A7%D9%86%D9%88%D8%A7%D8%B9-managed-service) رجوع کنید.
+از طریق این فیلد مشخص می‌کنید که قصد ایجاد کدام یک از managed-service های فندق را دارید؛ برای مشاهده انواع managed-service‌ها به [این بخش](https://docs.fandogh.cloud/docs/managed-services-intro.html) رجوع کنید.
  ### version
 از طریق این فیلد مشخص می‌کنید کدام ورژن برای سرویس انتخاب شده دیپلوی شود.
 
