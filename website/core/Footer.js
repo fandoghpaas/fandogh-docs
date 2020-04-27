@@ -41,7 +41,7 @@ class Footer extends React.Component {
           <a href="https://twitter.com/fandoghpaas?s=09" className="footer-site-top-social-item">
             <img src={imgUrl('footer/3.svg')} alt="Fandogh" />
           </a>
-          <a href="support@fandogh.cloud" className="footer-site-top-social-item">
+          <a href="mailto:support@fandogh.cloud" className="footer-site-top-social-item">
             <img src={imgUrl('footer/4.svg')} alt="Fandogh" />
           </a>
         </div>
