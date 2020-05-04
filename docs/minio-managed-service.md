@@ -1,8 +1,8 @@
 ---
 layout: fandogh
 id: minio-managed-service
-title: Minio
-sidebar_label: Minio
+title: MinIO
+sidebar_label: MinIO
 ---
 
 
