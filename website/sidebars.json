@@ -57,6 +57,7 @@
           "postgresql-managed-service",
           "mssql-managed-service",
           "mongodb-managed-service",
+          "minio-managed-service",
           "rabbitmq-managed-service",
 	  "redis-managed-service",
           "file-browser-managed-service",
