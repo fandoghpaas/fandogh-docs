@@ -11,7 +11,7 @@ sidebar_label: خلاصه دستورات fandogh-cli
 ## Login
 دستور ورود به حساب کاربری:
 ```
-fandogh login -u USERNAME -p PASSWORD
+fandogh login --username USERNAME --password PASSWORD
 ```
 ## Namespace
 
