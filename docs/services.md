@@ -151,7 +151,7 @@ fandogh service deploy \
 ## دسترسی به سرویس ها با [EXEC](https://docs.fandogh.cloud/docs/exec.html)
 سرویس ها بعد از آنکه دیپلوی می‌شوند، در یک محیط ایزوله قرار می‌گیرند که دسترسی به آن ها دیگر راحت نخواهد بود. برای اینکه بتوانیم دستورات خاصی را بر روی سرویس‌های خود اجرا کنیم از قابلیتی به نام **EXEC** استفاده می‌کنیم.
 
-> برای مطالعه بیشتر در مورد **دستورات exec** به صفحه [exec](https://docs.fandogh.cloud/docs/service-manifest.html) مراجعه نمایید.
+> برای مطالعه بیشتر در مورد **دستورات exec** به صفحه [exec](https://docs.fandogh.cloud/docs/exec.html) مراجعه نمایید.
 
 ##  مدیریت سرویس ها
 ![ CLI Image](/img/docs/cli_image.png "CLI Image")
