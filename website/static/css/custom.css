@@ -9,6 +9,10 @@ p {
   font-size: 14px;
 }
 
+table {
+  text-align: left;
+}
+
 html,
 body,
 div,
@@ -392,7 +396,7 @@ ul {
   margin: 0;
 }
 .articleHeader .divider {
-  width: 768px;
+  width: 520px;
   height: 2px;
   border-radius: 4px;
   background-color: #4f4f4f;

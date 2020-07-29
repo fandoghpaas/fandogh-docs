@@ -10,13 +10,27 @@
 	 "team-management"
 	]
       },
-      "images",
+      {
+       "type": "subcategory",
+       "label": "منابع",
+       "ids": [
+         "resources"
+        ]
+      },
+      {
+       "type": "subcategory",
+       "label": "ایمیج‌ها",
+       "ids": [
+         "images" 
+        ]
+      },
       {
         "type": "subcategory",
         "label": "سرویس‌ها",
         "ids": [
           "services",
           "service-manifest",
+          "service-lifecycle-handlers",
           "exec",
           "rollback"
         ]
@@ -44,7 +58,10 @@
           "mssql-managed-service",
           "mongodb-managed-service",
           "elasticsearch-managed-service",
-	  "redis-managed-service",
+          "minio-managed-service",
+          "rabbitmq-managed-service",
+	        "redis-managed-service",
+          "file-browser-managed-service",
           "proxy-managed-service"
         ]
       },
@@ -65,7 +82,22 @@
 	  "environment-secret-secret"
 	]
       },
-      "dedicated-volume"
+      {
+        "type": "subcategory",
+        "label": "ذخیره‌سازی",
+        "ids":[
+          "dedicated-volume",
+          "attach-volume-to-service",
+          "dedicated-volume-expansion"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "fandogh-cli cheat sheet",
+        "ids":[
+          "fandogh-cli-cheat-sheet"
+        ]
+      }
     ]
   }
 }
