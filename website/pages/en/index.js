@@ -202,7 +202,7 @@ const Documentation = props => {
       image: "blogger.svg",
       title: "بلاگ",
       url: "https://blog.fandogh.cloud/"
-    },
+    }
 #     {
 #       image: "loupe.svg",
 #       title: "منابع",
