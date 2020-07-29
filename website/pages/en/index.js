@@ -188,26 +188,26 @@ const Documentation = props => {
       url: "/docs/getting-started.html"
     },
 
-#     {
-#       image: "settings.svg",
-#       title: "آموزش‌ها",
-#       url: "/docs/getting-started.html"
-#     },
-#     {
-#       image: "project-management.svg",
-#       title: "مفاهیم",
-#       url: "/docs/getting-started.html"
-#     },
+//     {
+//       image: "settings.svg",
+//       title: "آموزش‌ها",
+//       url: "/docs/getting-started.html"
+//     },
+//     {
+//       image: "project-management.svg",
+//       title: "مفاهیم",
+//       url: "/docs/getting-started.html"
+//     },
     {
       image: "blogger.svg",
       title: "بلاگ",
       url: "https://blog.fandogh.cloud/"
     }
-#     {
-#       image: "loupe.svg",
-#       title: "منابع",
-#       url: "/docs/getting-started.html"
-#     }
+//     {
+//       image: "loupe.svg",
+//       title: "منابع",
+//       url: "/docs/getting-started.html"
+//     }
   ];
 
   let docs = documentations.map(item => <Document {...item} />);
