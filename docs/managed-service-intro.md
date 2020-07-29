@@ -24,6 +24,7 @@ sidebar_label: مقدمه
 | Adminer| latest |[مشاهده](https://docs.fandogh.cloud/docs/postgresql-managed-service.html)
 | MongoDB| 4.2 |[مشاهده](https://docs.fandogh.cloud/docs/mongodb-managed-service.html)
 | Mongo Dashboard| latest |[مشاهده](https://docs.fandogh.cloud/docs/mongodb-managed-service.html)
+| Elasticsearch| 7.8.0 |[مشاهده](https://docs.fandogh.cloud/docs/elasticsearch-managed-service.html)
 | Redis| 5.0.3 |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
 | Redis Dashboard| latest |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
 | Proxy| latest |[مشاهده](https://docs.fandogh.cloud/docs/proxy-managed-service.html)
