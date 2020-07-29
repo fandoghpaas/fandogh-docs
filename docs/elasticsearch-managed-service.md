@@ -27,7 +27,7 @@ sidebar_label: Elasticsearch
 |max_memory| string| 1024| حداکثر رم مصرفی Heap Size |
 |elastic_password| string| changeme| رمز عبور سرویس |
 |volume_name| string| | نام volumeای که به سرویس وصل می شود |
-|elastic_search_exposed| true/false| | مشخص میکند که سرویس از طریق وب در دسترس باشد یا خیر|
+|elastic_search_exposed| true/false| true | مشخص میکند که سرویس از طریق وب در دسترس باشد یا خیر|
 
 > توجه داشته باشید که سرویس ‌Elasticsearch برای آنکه بتواند داده‌های خود را ذخیره کند و از سرعت و کارایی مناسبی برخوردار باشد باید حتما به یک [dedicated volumes](https://docs.fandogh.cloud/docs/dedicated-volume.html) متصل شود در غیر این صورت با خطا مواجه شده و سرویس به درستی عمل نمی‌کند.
 
