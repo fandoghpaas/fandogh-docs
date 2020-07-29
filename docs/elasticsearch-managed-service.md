@@ -23,10 +23,11 @@ sidebar_label: Elasticsearch
 |کانفیگ|نوع|پیش‌فرض|توضیح|
 |---	|---	|---	|---	|
 |service_name| string| elastic-search| نامی که برای سرویس مایلید در نظر گرفته شود|
-|min_memory| string| 512 | حداقل رم مصرفی |
-|max_memory| string| 1024| حداکثر رم مصرفی |
+|min_memory| string| 512 | حداقل رم مصرفی Heap Size |
+|max_memory| string| 1024| حداکثر رم مصرفی Heap Size |
 |elastic_password| string| changeme| رمز عبور سرویس |
 |volume_name| string| | نام volumeای که به سرویس وصل می شود |
+|elastic_search_exposed| true/false| | مشخص میکند که سرویس از طریق وب در دسترس باشد یا خیر|
 
 > توجه داشته باشید که سرویس ‌Elasticsearch برای آنکه بتواند داده‌های خود را ذخیره کند و از سرعت و کارایی مناسبی برخوردار باشد باید حتما به یک [dedicated volumes](https://docs.fandogh.cloud/docs/dedicated-volume.html) متصل شود در غیر این صورت با خطا مواجه شده و سرویس به درستی عمل نمی‌کند.
 
@@ -40,7 +41,7 @@ sidebar_label: Elasticsearch
        -c max_memory=1024 \
        -c elastic_password=changeme \
        -c volume_name=VOLUME_NAME \
-       -m 2048
+       -m 2048Mi
 ```
 این دستور یک سرویس Elasticsearch ایجاد می‌کند که:
 * نام آن elastic-search ( یعنی در شبکه داخلی فضانام شما باقی سرویس‌ها از طریق نام elastic-search و بر روی پورت 9200 می‌توانند به آن متصل شوند) است .
@@ -50,9 +51,14 @@ sidebar_label: Elasticsearch
 * اسم محل ذخیره سازی که به آن متصل است VOLUME_NAME بوده.
 * و میزان رم کلی که به سرویس اختصاص یافته است ۲۰۴۸ مگابایت است.
 
-> **هشدار**
-برای استفاده از سرویس Elasticsearch باید به نکته زیر توجه داشته باشید:
-برای حفط مسائل امنیتی سرویس Elasticsearch به صورت یک [Internal Service](https://docs.fandogh.cloud/docs/services.html#%DB%B2-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-%DB%8C%D8%A7-external-service) عمل می‌کند و شما خارج از namespace خود به آن دسترسی نداشته و تنها از طریق داشبورد مدیریتی Kibana می‌توانید به محتوای آن دسترسی داشته باشید و در صورتی که نیاز دارید داده‌ه.
+> **توجه** \
+برای استفاده از سرویس URL سرویس Elasticsearc در توجه داشته باشید که در صورت Expose شدن این سرویس، باید username و password را به مرورگر خود بدهید؛ مقدار password چیزی است که به هنگام ساخت سرویس به عنوان پارامتر به فندق می‌دهید و username هم `elastic` خواهد بود.
+
+> **Connection String** \
+ در صورتی که برای ارتباط با سرویس Elasticsearch نیاز به Connection String داشته باشید، مقدار آن به شکل زیر است:
+> ```
+ > http://elastic:YOUR_PASSWORD@ELASTIC_SERVICE_NAME:9200
+ >```
 
 ## Deploy With Manifest
   
@@ -75,6 +81,8 @@ spec:
       value: changeme
     - name: volume_name
       value: VOLUME_NAME
+    - name: elastic_search_exposed
+	  value: true
   resources:
       memory: 2048Mi
 ```
