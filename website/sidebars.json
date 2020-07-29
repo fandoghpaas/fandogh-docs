@@ -43,7 +43,7 @@
           "postgresql-managed-service",
           "mssql-managed-service",
           "mongodb-managed-service",
-          "elsaticsearch-managed-service",
+          "elasticsearch-managed-service",
 	  "redis-managed-service",
           "proxy-managed-service"
         ]
