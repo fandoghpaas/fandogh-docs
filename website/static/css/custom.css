@@ -10,7 +10,7 @@ p {
 }
 
 table {
-  text-align: left;
+  text-align: inherit;
 }
 
 html,
