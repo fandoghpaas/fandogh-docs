@@ -23,8 +23,8 @@ sidebar_label: Elasticsearch
 |کانفیگ|نوع|پیش‌فرض|توضیح|
 |---	|---	|---	|---	|
 |service_name| string| elastic-search| نامی که برای سرویس مایلید در نظر گرفته شود|
-|min_memory| string| 512 | حداقل رم مصرفی Heap Size |
-|max_memory| string| 1024| حداکثر رم مصرفی Heap Size |
+|min_heap_memory| string| 512 | حداقل رم مصرفی Heap Size |
+|max_heap_memory| string| 1024| حداکثر رم مصرفی Heap Size |
 |elastic_password| string| changeme| رمز عبور سرویس |
 |volume_name| string| | نام volumeای که به سرویس وصل می شود |
 |elastic_search_exposed| true/false| true | مشخص میکند که سرویس از طریق وب در دسترس باشد یا خیر|
@@ -37,8 +37,8 @@ sidebar_label: Elasticsearch
 ```
   fandogh managed-service deploy elastic-search latest \
        -c service_name=elastic-search \
-       -c min_memory=512 \
-       -c max_memory=1024 \
+       -c min_heap_memory=512 \
+       -c max_heap_memory=1024 \
        -c elastic_password=changeme \
        -c volume_name=VOLUME_NAME \
        -m 2048Mi
@@ -73,9 +73,9 @@ spec:
   service_name: elastic-search
   version: latest
   parameters:
-    - name: min_memory
+    - name: min_heap_memory
       value: 512
-    - name: max_memory
+    - name: max_heap_memory
       value: 1024
     - name: elastic_password
       value: changeme
