@@ -191,6 +191,14 @@ volume_mounts:
       volume_name: my-volume
 ```
 
+ ### volume_browser_enabled
+ با استفاده از این فیلد می‌توانید برای سرویس‌هایی که به Dedicated Volume متصل هستند، یک کانتینر File Browser ایجاد نمایید تا به محتوای فضای‌ ذخیره‌سازی دسترسی داشته باشید.
+ ```
+ volume_browser_enabled: true/false
+ ```
+ برای کسب اطلاعات و آشنایی و درک بیشتر این ویژگی می‌توانید مستندات مربوط به آن را از [این بخش](https://docs.fandogh.cloud/docs/volume-browser.html) مطالعه نمایید.
+
+
  ### resources
 از طریق این فیلد می‌توانید مشخص کنید که چه مقدار منابع نیاز دارید.\
 ساختار این فیلد به این شکل است:
