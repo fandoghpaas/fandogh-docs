@@ -88,6 +88,7 @@
         "ids":[
           "dedicated-volume",
           "attach-volume-to-service",
+          "volume-browser",
           "dedicated-volume-expansion"
         ]
       },
