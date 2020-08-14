@@ -19,6 +19,9 @@ RabbitMQ یک سرویس متن باز [Message Broker](https://en.wikipedia.org
 |dashboard_enabled| boolean|false |آیا rabbitmq در محیط وب در دسترس باشد یا خیر|
 |rabbitmq_plugins| string| |لیست پلاگین‌های RabbitMQ |
 |volume_name| string| |نام volumeای که به سرویس وصل می شود|
+|volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
+
+> توجه داشته باشید برای استفاده از قابلیت Volume Browser سرویس شما باید به یک Dedicated Volume متصل باشد؛ در غیر این صورت با خطای سرور مواجه خواهید شد.
 
 برای دیپلوی کردن یک RabbitMQ می‌توانیم به این شکل یک سرویس بسازیم:
 ```

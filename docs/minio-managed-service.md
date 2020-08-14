@@ -21,8 +21,11 @@ MinIO یک  [cloud storage](https://en.wikipedia.org/wiki/Cloud_storage "Cloud s
 |minio_access_key| string| | مقدار access key|
 |minio_secret_key| string| |مقدار secret key|
 |volume_name| string| |نام volumeای که به سرویس وصل می شود|
+|volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
 
 > توجه داشته باشید طول minio_access_key و minio_secret_key باید بیشتر از ۱۲ کاراکتر باشد، در غیر این صورت با خطای سرور مواجه خواهید شد.
+
+> توجه داشته باشید برای استفاده از قابلیت Volume Browser سرویس شما باید به یک Dedicated Volume متصل باشد؛ در غیر این صورت با خطای سرور مواجه خواهید شد.
 
 برای دیپلوی کردن یک سرویس MinIO می‌توانیم به شکل زیر عمل کنیم:
 ```

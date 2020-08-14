@@ -28,10 +28,13 @@ sidebar_label: Elasticsearch
 |elastic_password| string| changeme| رمز عبور سرویس |
 |volume_name| string| | نام volumeای که به سرویس وصل می شود |
 |elastic_search_exposed| true/false| true | مشخص میکند که سرویس از طریق وب در دسترس باشد یا خیر|
+|volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
 
 > توجه داشته باشید که سرویس ‌Elasticsearch برای آنکه بتواند داده‌های خود را ذخیره کند و از سرعت و کارایی مناسبی برخوردار باشد باید حتما به یک [dedicated volumes](https://docs.fandogh.cloud/docs/dedicated-volume.html) متصل شود در غیر این صورت با خطا مواجه شده و سرویس به درستی عمل نمی‌کند.
 
 > حداقل رم قابل سفارش برای سرویس Elasticsearch باید ۲۰۴۸ مگابایت باشد تا سرویس عملکرد ایده‌آلی داشته باشد، در غیر این صورت خطاهای متفاوتی را تجربه خواهید کرد.
+
+> توجه داشته باشید برای استفاده از قابلیت Volume Browser سرویس شما باید به یک Dedicated Volume متصل باشد؛ در غیر این صورت با خطای سرور مواجه خواهید شد.
 
 برای دیپلوی کردن Elasticsearch می‌توانیم به این شکل یک سرویس بسازیم:
 ```

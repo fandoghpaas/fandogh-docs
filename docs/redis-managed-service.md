@@ -17,8 +17,11 @@ sidebar_label: Redis
 |redis_dashboard_enabled| boolean| False| در صورت نیاز به داشبورد redis مقدار این بخش باید True شود|
 |redis_dashboard_username| string| None| نام کاربری داشبورد redis|
 |redis_dashboard_password| string| None| گذرواژه داشبورد redis|
+|volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
 
 > توجه داشته باشید که سرویس ‌`Redis` به صورت پیش فرض داده‌های خود را در `Memory` نگهداری می‌کند و این حالت پایدار نیست، زیرا چنانچه service شما تحت هر شرایطی از بین برود و یا restart شود، داده‌های شما پاک می‌شوند؛ لذا حتما از یک [dedicated volumes](https://docs.fandogh.cloud/docs/dedicated-volume.html)  استفاده نمایید تا backup دیتاهای خود را به صورت مستمر ثبت و حفظ کنید.
+
+> توجه داشته باشید برای استفاده از قابلیت Volume Browser سرویس شما باید به یک Dedicated Volume متصل باشد؛ در غیر این صورت با خطای سرور مواجه خواهید شد.
 
 به عنوان مثال برای دیپلوی کردن یک Redis می‌توانیم به این شکل یک سرویس بسازیم:
 ```
