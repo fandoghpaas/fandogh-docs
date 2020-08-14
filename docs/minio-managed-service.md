@@ -34,7 +34,7 @@ MinIO یک  [cloud storage](https://en.wikipedia.org/wiki/Cloud_storage "Cloud s
        -c minio_access_key=12charchters
        -c minio_secret_key=12charchters
        -c volume_name=VOLUME_NAME
-       -m 512
+       -m 512Mi
 ```
 این دستور یک سرویس MinIO ایجاد می‌کند که:
 * نام آن test-minio ( یعنی در شبکه داخلی فضانام شما باقی سرویس‌ها از طریق نام test-minio و بر روی پورت 9000 می‌توانند به آن متصل شوند)  است.

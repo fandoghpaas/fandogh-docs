@@ -31,7 +31,7 @@ RabbitMQ یک سرویس متن باز [Message Broker](https://en.wikipedia.org
        -c rabbitmq_password=rabbitmq
       -c dashboard_enabled=true
        -c volume_name=VOLUME_NAME
-       -m 512
+       -m 512Mi
 ```
 این دستور یک سرویس RabbitMQ ایجاد می‌کند که:
 * نام آن test-rabbitmq ( یعنی در شبکه داخلی فضانام شما باقی سرویس‌ها از طریق نام test-rabbitmq و بر روی پورت 5672 می‌توانند به آن متصل شوند)
