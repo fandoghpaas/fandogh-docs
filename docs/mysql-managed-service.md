@@ -15,8 +15,11 @@ MySQL یکی از محبوب‌ترین RDBMS‌های امروزی است که 
 |phpmyadmin_enabled|boolean | true | فعال یا غیرفعال بودن PHPMyAdmin
 |mysql_root_password| string| root| رمز عبور یوزر root دیتابیس|
 |volume_name| string| None| نام volumeای که به سرویس وصل می‌شود|
+|volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
 
 > توجه داشته باشید که اگر می‌خواهید سرعت I/O در سرویس دیتابیس شما بیشتر شود، می‌توانید از volume‌ها استفاده کنید و نام آن را به صورت `c volume_name=VOLUME_NAME-` موقع ساخت Managed Service در fandogh-cli وارد نمایید. ( VOLUME_NAME نام volume‌ای است که موقع ساخت آن تعیین کرده‌اید).
+
+> توجه داشته باشید برای استفاده از قابلیت Volume Browser سرویس شما باید به یک Dedicated Volume متصل باشد؛ در غیر این صورت با خطای سرور مواجه خواهید شد.
 
 به عنوان مثال برای دیپلوی کردن یک MySQL می‌توانیم به این شکل عمل کنیم:
 ```

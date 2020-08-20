@@ -24,8 +24,11 @@ sidebar_label: MongoDB
 |mongo_dashboard_enabled| boolean| False | در صورت نیاز به داشبورد mongo مقدار این بخش باید True شود |
 |mongo_dashboard_username| string| root| نام کاربری داشبورد mongo |
 |mongo_dashboard_password| string| root| نام کاربری داشبورد mongo |
+|volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
 
 > توجه داشته باشید که سرویس ‌MongoDB برای آنکه بتواند داده‌های خود را ذخیره کند و از سرعت و کارایی مناسبی برخوردار باشد باید حتما به یک [dedicated volumes](https://docs.fandogh.cloud/docs/dedicated-volume.html) متصل شود در غیر این صورت با خطا مواجه شده و سرویس به درستی عمل نمی‌کند.
+
+> توجه داشته باشید برای استفاده از قابلیت Volume Browser سرویس شما باید به یک Dedicated Volume متصل باشد؛ در غیر این صورت با خطای سرور مواجه خواهید شد.
 
 به عنوان مثال برای دیپلوی کردن یک MongoDB می‌توانیم به این شکل یک سرویس بسازیم:
 ```
