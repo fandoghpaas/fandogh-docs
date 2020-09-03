@@ -4,6 +4,13 @@
       "getting-started",
       {
        "type": "subcategory",
+       "label": "کلاسترها",
+       "ids": [
+         "cluster"
+        ]
+      },
+      {
+       "type": "subcategory",
        "label": "فضانام‌ها",
        "ids": [
          "namespaces",
