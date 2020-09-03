@@ -13,6 +13,27 @@ sidebar_label: خلاصه دستورات fandogh-cli
 ```
 fandogh login --username USERNAME --password PASSWORD
 ```
+## Cluster
+دستور نمایش لیست کلاستر‌ها:
+```
+fandogh cluster list
+```
+
+دستور ایجاد کلاستر جدید:
+```
+fandogh cluster add --name CLUSTER_NAME --url CLUSTER_URL
+```
+
+دستور فعال کردن کلاستر:
+```
+fandogh cluster active
+```
+
+دستور حذف کلاستر:
+```
+fandogh cluster delete
+```
+
 ## Namespace
 
 دستور نمایش فضانام‌های کاربر:
