@@ -65,9 +65,10 @@
           "mssql-managed-service",
           "mongodb-managed-service",
           "elasticsearch-managed-service",
+          "kibana-managed-service",
           "minio-managed-service",
           "rabbitmq-managed-service",
-	        "redis-managed-service",
+	  "redis-managed-service",
           "file-browser-managed-service",
           "proxy-managed-service"
         ]

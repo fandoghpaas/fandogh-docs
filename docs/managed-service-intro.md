@@ -25,6 +25,7 @@ sidebar_label: مقدمه
 | MongoDB| 4.2 |[مشاهده](https://docs.fandogh.cloud/docs/mongodb-managed-service.html)
 | Mongo Dashboard| latest |[مشاهده](https://docs.fandogh.cloud/docs/mongodb-managed-service.html)
 | Elasticsearch| 7.8.0 |[مشاهده](https://docs.fandogh.cloud/docs/elasticsearch-managed-service.html)
+| Kibana| 7.8.0 |[مشاهده](https://docs.fandogh.cloud/docs/kibana-managed-service.html)
 | MinIO| latest |[مشاهده](https://docs.fandogh.cloud/docs/minio-managed-service.html)
 | Redis| 5.0.3 |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
 | Redis Dashboard| latest |[مشاهده](https://docs.fandogh.cloud/docs/redis-managed-service.html)
