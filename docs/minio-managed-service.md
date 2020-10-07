@@ -20,6 +20,8 @@ MinIO یک  [cloud storage](https://en.wikipedia.org/wiki/Cloud_storage "Cloud s
 |service_name| string| minio| نامی که برای سرویس مایلید در نظر گرفته شود|
 |minio_access_key| string| | مقدار access key|
 |minio_secret_key| string| |مقدار secret key|
+|minio_access_key_old| string| | مقدار access key قبلی|
+|minio_secret_key_old| string| |مقدار secret key قبلی|
 |volume_name| string| |نام volumeای که به سرویس وصل می شود|
 |volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
 
@@ -66,6 +68,49 @@ spec:
   resources:
       memory: 512Mi
 ```
+
+## تغییر تنظیمات امنیتی
+اگر قصد داشته باشید `secret key` و `access key` که قبلا بر روی سرویس MinIO خود ایجاد کرده‌اید را تغییر دهید، می‌توانید از دو پارامتر `minio_secret_key_old` و `minio_access_key_old` استفاده کنید.\
+برای این منظور، مقدار فعلی minio_secret_key و minio_access_key را به ترتیب به عنوان مقادیر قدیمی به minio_secret_key_old و minio_access_key_old تخصیص می‌دهید و مقادیر جدیدی برای minio_secret_key و minio_access_key قرار می‌دهید.\
+برای مثال فرض کنید سرویس MinIO شما در ابتدا با مانیفست زیر ایجاد شده باشد:
+```
+kind: ManagedService
+name: test-minio
+spec:
+  service_name: minio
+  version: latest
+  parameters:
+    - name: minio_access_key
+      value: 12charachters
+    - name: minio_secret_key
+      value: 12charachters
+    - name: volume_name
+      value: VOLUME_NAME
+  resources:
+      memory: 512Mi
+```
+حال قصد داریم مقادیر secret key و access key را بنا به دلایلی تغییر دهیم؛ حال مانیفست بالا را به صورت زیر ویرایش می‌کنیم:
+```
+kind: ManagedService
+name: test-minio
+spec:
+  service_name: minio
+  version: latest
+  parameters:
+    - name: minio_access_key
+      value: 12charachtersnew
+    - name: minio_secret_key
+      value: 12charachtersnew
+    - name: minio_access_key_old
+      value: 12charachters
+    - name: minio_secret_key_old
+      value: 12charachters
+    - name: volume_name
+      value: VOLUME_NAME
+  resources:
+      memory: 512Mi
+```
+بعد از دیپلوی کردن مانیفست جدید، در ابتدای راه‌اندازی سرویس MinIO محتوای Environment Variableهای `minio_secret_key_old` و `minio_access_key_old` برای پردازش بر روی سرویس ایجاد می‌شوند و بعد از آنکه مقادیر جدید با مقادیر قبلی تعویض شوند، این Environment Variableها دیگر توسط سرویس مورد استفاده قرار نمی‌گیرند و شما می‌توانید آن‌ها را از مانیفست خود حذف کنید.
 
 
 ## کار با MC
@@ -130,4 +175,3 @@ mc minio ls
 خروجی این دستور حاوی لیستی از Bucketهای موجود در Object Storage شما خواهد بود.
 
 MinIO Client حاوی دستورات دیگری ‌است که می‌توانید از طریق [مستندات](https://docs.min.io/docs/minio-client-complete-guide.html)، آن را مطالعه نموده و استفاده نمایید.
-
