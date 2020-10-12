@@ -18,6 +18,8 @@ sidebar_label: مقدمه
 ### لیست سرویس‌های مدیریت شده یا Managed Service 
 |نام سرویس|ورژن|جزئیات|
 |---	|---	|---  |
+| Gitlab| 13.4.3-ce.0 |[مشاهده](https://docs.fandogh.cloud/docs/gitlab-managed-service.html)
+| Gitlab Runner| alpine-v13.5.0-rc2 |[مشاهده](https://docs.fandogh.cloud/docs/gitlab-runner-managed-service.html)
 | MySQL| 5.7 |[مشاهده](https://docs.fandogh.cloud/docs/mysql-managed-service.html)
 | phpMyAdmin| latest |[مشاهده](https://docs.fandogh.cloud/docs/mysql-managed-service.html)
 | PostgreSQL| 10.4 |[مشاهده](https://docs.fandogh.cloud/docs/postgresql-managed-service.html)
