@@ -60,6 +60,7 @@
         "label": "سرویس های مدیریت شده",
         "ids": [
           "managed-services-intro",
+          "gitlab-managed-service",
           "mysql-managed-service",
           "postgresql-managed-service",
           "mssql-managed-service",
