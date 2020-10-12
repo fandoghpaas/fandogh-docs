@@ -38,6 +38,7 @@ https://gitlab_website_address/admin/runners
 |service_name| string| gitlab-runner| نامی که برای سرویس مایلید در نظر گرفته شود|
 |gitlab_registration_token| string| | مقدار registration token که از داشبورد Gitlab دریافت کرده‌اید|
 |gitlab_runner_name| string| | نامی یکتا برای runner|
+| gitlab_runner_memory| string| 256m| میزان رم مورد نیاز برای راه‌اندازی runnerهای داخلی سرویس Gitlab Runner |
 
 حال سرویس Gitlab Runner را با دستور زیر مستقر می‌کنیم:
 ```
@@ -45,22 +46,50 @@ https://gitlab_website_address/admin/runners
        -c service_name=gitlab-runner \
        -c gitlab_registration_token=REGISTRATION_TOKEN_FROM_GITLAB \
        -c gitlab_runner_name=sample-docker-runner \
-       -m 512Mi
+       -m 656Mi
 ```
 
-> توجه داشته باشید حداقل میزان رمی که باید به سرویس ‌Gitlab Runner تخصیص داده شود، حداقل ۵۱۲ مگابایت (512Mi) است.
+> توجه داشته باشید حداقل میزان رمی که باید به سرویس ‌Gitlab Runner تخصیص داده شود، حداقل 656 مگابایت (512Mi) است.
 
 > توجه داشته باشید اگر قصد داشته باشید چند سرویس Gitlab Runner ایجاد کنید، حتما باید مقادیر service_name و gitlab_runner_name را به صورت مجزا و یکتا انتخاب کنید در غیر این صورت دچار خطا خواهید شد.
 
 این دستور یک سرویس Gitlab Runner ایجاد می‌کند که:
 * نام آن gitlab-runner است.
-* میزان رم آن ۵۱۲ مگابایت.
+* میزان رم آن ۶۵۶ مگابایت.
 * مقدار gitlab_registration_token برابر با REGISTRATION_TOKEN_FROM_GITLAB است که در مرحله قبل بدست آورده‌اید.
 * نام یکتای runner یا همان gitlab_runner_name برابر با runner-one است.
 
 بعد از آن که سرویس Gitlab Runner ساخته شد، سکوی ابری فندق روند Register کردن آن را شروع می‌کند و در صورتی که مراحل را به درستی انجام داده باشید، نتیجه‌ای مانند تصویر زیر را خواهید دید:
 
 ![Gitlab Registration Completed](/img/docs/gitlab_runner_registration_completed.png "Gitlab Registration Completed")
+
+### نحوه محاسبه رم مصرفی سرویس Gitlab Runner
+سرویس Gitlab Runner یک رم مصرفی کلی دارد که با پارامتر memory-- توسط کاربر تعیین می‌شود. سرویس Gitlab Runner برای هر Job یک سرویس داخلی ایجاد می‌کند که این سرویس داخلی که همان Runner است تنها در مدت زمان اجرای Job فعالیت دارد و بعد از اجرای کامل Job، متوقف شده و از بین می‌رود.\
+این Runner داخلی برای آنکه بتواند به درستی راه‌اندازی شود به میزان مشخصی رم احتیاج دارد که می‌توانید با پارامتر `gitlab_runner_memory` آن را مشخص کنید (مقدار این پارامتر به صورت پیشفرض 256m بوده که برای پروژه‌های سبک مناسب است).\
+حال چگونه باید memory انتهایی یا همان رم کلی را مشخص کنیم؟\
+بر اساس این فرمول:
+```
+Total Memory = service memory + gitlab_runner_memory
+```
+در فرمول بالا به صورت مثال اگر میزان gitlab_runner_memory را برابر با 300m قرار دهیم، خود سرویس Gitlab Runner هم برای اجرا حداقل 400Mi رم نیاز خواهد داشت. در نتیجه مقدار memory-- را برابر با 700Mi قرار می‌دهیم.\
+ برای روشن‌تر شدن این روند به نمونه مانیفست زیر توجه فرمایید:
+ ```
+kind: ManagedService
+name: gitlab-runner
+spec:
+  service_name: gitlab-runner
+  version: latest
+  parameters:
+    - name: gitlab_registration_token
+      value: REGISTRATION_TOKEN_FROM_GITLAB
+    - name: gitlab_runner_name
+      value: sample-docker-runner
+    - name: gitlab_runner_memory
+      value: 400m
+  resources:
+      memory: 800Mi
+```
+نمونه مانیفست بالا یک سرویس `Gitlab Runner` با نام `gitlab-runner` ایجاد می‌کند. این سرویس برای `Runner` که برای هر `Job` ایجاد می‌کند، `۴۰۰ مگابایت (400m)`  رم تخصیص می‌دهد و رم مربوط به سرویس `Gitlab Runner` برابر با ۴۰۰ = ۴۰۰ - ۸۰۰ خواهد بود.
 
 ### Deploy Gitlab Runner With Manifest
 
@@ -78,8 +107,10 @@ spec:
       value: REGISTRATION_TOKEN_FROM_GITLAB
     - name: gitlab_runner_name
       value: sample-docker-runner
+    - name: gitlab_runner_memory
+      value: 256m
   resources:
-      memory: 512Mi
+      memory: 656Mi
 ```
 
 ## ایجاد Job در ‌Gitlab
