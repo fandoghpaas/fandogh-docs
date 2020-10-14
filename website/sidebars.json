@@ -61,6 +61,7 @@
         "ids": [
           "managed-services-intro",
           "gitlab-managed-service",
+          "gitlab-runner-managed-service",
           "mysql-managed-service",
           "postgresql-managed-service",
           "mssql-managed-service",
