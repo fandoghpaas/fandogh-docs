@@ -39,6 +39,13 @@ https://gitlab_website_address/admin/runners
 |gitlab_registration_token| string| | مقدار registration token که از داشبورد Gitlab دریافت کرده‌اید|
 |gitlab_runner_name| string| | نامی یکتا برای runner|
 | gitlab_runner_memory| string| 256m| میزان رم مورد نیاز برای راه‌اندازی runnerهای داخلی سرویس Gitlab Runner |
+|gitlab_server_url| string| http://gitlab|آدرس سرویس/سرور gitlab|
+| timezone| string| UTC|انتخاب timezone مورد نظر|
+
+> در صورتی که سرویس gitlab شما داخل سکوی ابری فندق قرار دارد، کافی است نامی که برای سرویس gitlab انتخاب کرده‌اید را به صورت http://SERVICE_NAME به عنوان مقدار gitlab_server_url قرار دهید. و اگر سرور gitlab شما خارج از فضانام است، باید آدرس دقیق آن را را به صورت https:// قرار دهید.
+
+> برای انتخاب timezone می‌توانید به آدرس زیر مراجعه کنید:
+> https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 حال سرویس Gitlab Runner را با دستور زیر مستقر می‌کنیم:
 ```
