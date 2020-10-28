@@ -36,7 +36,7 @@ sidebar_label: Gitlab
 ```
   fandogh managed-service deploy gitlab latest \
        -c service_name=test-gitlab \
-       -c volume_name=VOLUME_NAME
+       -c volume_name=VOLUME_NAME \
        -m 3072Mi
 ```
 این دستور یک سرویس Gitlab ایجاد می‌کند که:
