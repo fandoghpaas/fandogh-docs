@@ -17,6 +17,7 @@ SQL Server با Transact-SQL (T-SQL) پیوند و ارتباط نزدیکی د�
 |service_name| string| sql-server| نامی که برای سرویس مایلید در نظر گرفته شود|
 |volume_name| string| None| نام volumeای که به سرویس وصل می شود |
 |adminer_enabled| boolean| True | فعال یا غیرفعال بودن Adminer |
+|mssql_agent_enabled| boolean| False | فعال یا غیرفعال بودن MSSQL Agent |
 |mssql_sa_password| string| MicrosoftSQL@123| رمز عبور دیتابیس |
 |volume_browser_enabled| boolean| false| آیا سرویس مدیریت Dedicated Volume برای این سرویس ساخته شود یا خیر|
 
