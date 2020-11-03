@@ -109,7 +109,7 @@ spec:
     - name: volume_name
       value: YOUR_VOLUME_NAME
   resources:
-      memory: 400Mi
+      memory: 512Mi
 ```
 - مانیفست MongoDB همراه با داشبورد مدیریتی
 
@@ -135,5 +135,5 @@ spec:
     - name: mongo_dashboard_password
       value: YOUR_DASHBOARD_PASSWORD
   resources:
-      memory: 400Mi
+      memory: 512Mi
 ```
