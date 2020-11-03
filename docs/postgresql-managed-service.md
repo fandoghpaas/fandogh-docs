@@ -51,12 +51,12 @@ spec:
   service_name: postgresql
   version: 10.4
   parameters:
-  - name: adminer_enabled
-    value: true
-  - name: postgres_password
-    value: some_long_unpredictable_string
-  - name: volume_name
-    value: YOUR_VOLUME_NAME
+    - name: adminer_enabled
+      value: true
+    - name: postgres_password
+      value: some_long_unpredictable_string
+    - name: volume_name
+      value: YOUR_VOLUME_NAME
   domains:
   - name: domain.com
   - name: www.domain.com
