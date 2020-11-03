@@ -33,9 +33,9 @@ MinIO یک  [cloud storage](https://en.wikipedia.org/wiki/Cloud_storage "Cloud s
 ```
   fandogh managed-service deploy minio latest \
        -c service_name=test-minio \
-       -c minio_access_key=12charchters
-       -c minio_secret_key=12charchters
-       -c volume_name=VOLUME_NAME
+       -c minio_access_key=12charchters \
+       -c minio_secret_key=12charchters \
+       -c volume_name=VOLUME_NAME \
        -m 512Mi
 ```
 این دستور یک سرویس MinIO ایجاد می‌کند که:
