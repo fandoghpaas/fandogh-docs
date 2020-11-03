@@ -66,11 +66,11 @@ RabbitMQ یک سرویس متن باز [Message Broker](https://en.wikipedia.org
 ```
   fandogh managed-service deploy rabbitmq latest \
        -c service_name=test-rabbitmq \
-       -c rabbitmq_username=rabbitmq
-       -c rabbitmq_password=rabbitmq
-      -c dashboard_enabled=true
-      -c rabbitmq_plugins="rabbitmq_trust_store rabbitmq_web_mqtt_examples rabbitmq_shovel"
-       -c volume_name=VOLUME_NAME
+       -c rabbitmq_username=rabbitmq \
+       -c rabbitmq_password=rabbitmq \
+       -c dashboard_enabled=true \
+       -c rabbitmq_plugins="rabbitmq_trust_store rabbitmq_web_mqtt_examples rabbitmq_shovel" \
+       -c volume_name=VOLUME_NAME \
        -m 512
 ```
 
