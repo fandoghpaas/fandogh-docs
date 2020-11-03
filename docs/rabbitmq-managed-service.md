@@ -92,14 +92,14 @@ spec:
   service_name: rabbitmq
   version: latest
   parameters:
-  - name: rabbitmq_username
-    value: rabbitmq
-  - name: rabbitmq_password
-    value: rabbitmq
-  - name: dashboard_enabled
-    value: true  
-  - name: volume_name
-    value: VOLUME_NAME
+    - name: rabbitmq_username
+      value: rabbitmq
+    - name: rabbitmq_password
+      value: rabbitmq
+    - name: dashboard_enabled
+      value: true  
+    - name: volume_name
+      value: VOLUME_NAME
   domains:
   - name: domain.com
   - name: www.domain.com
