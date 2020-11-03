@@ -45,6 +45,37 @@ SQL Server با Transact-SQL (T-SQL) پیوند و ارتباط نزدیکی د�
 برای استفاده از سرویس MSSQL Server باید به نکته زیر توجه داشته باشید:
 برای حفط مسائل امنیتی سرویس MSSQL Server به صورت یک [Internal Service](https://docs.fandogh.cloud/docs/services.html#%DB%B2-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-%DB%8C%D8%A7-external-service) عمل می‌کند و شما خارج از namespace خود به آن دسترسی ندارید.
 
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: test-mssql
+spec:
+  service_name: mssql
+  version: latest
+  parameters:
+    - name: adminer_enabled
+      value: false
+    - name: mssql_sa_password
+      value: YOUR_PASSWORD
+    - name: volume_name
+      value: YOUR_VOLUME_NAME
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 2048Mi
+```
+
+> توجه داشته باشید، دامنه‌هایی که به سرویس مدیریت شده MSSQL SERVER اضافه می‌شوند، در اصل به داشبورد مدیریتی آن متصل می‌شوند، نه خود سرویس دیتابیس.
+
 ## Deploy With Manifest
   
 
