@@ -48,6 +48,45 @@ sidebar_label: MongoDB
 برای استفاده از سرویس MongoDB باید به نکته زیر توجه داشته باشید:
 برای حفط مسائل امنیتی سرویس MongoDB به صورت یک [Internal Service](https://docs.fandogh.cloud/docs/services.html#%DB%B2-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-%DB%8C%D8%A7-external-service) عمل می‌کند و شما خارج از namespace خود به آن دسترسی ندارید.
 
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: test-mongo
+spec:
+  service_name: mongodb
+  version: 4.2
+  parameters:
+    - name: mongodb_init_root_username
+      value: YOUR_USERNAME
+    - name: mongodb_init_root_password
+      value: YOUR_PASSWORD
+    - name: mongodb_init_database
+      value: main
+    - name: volume_name
+      value: YOUR_VOLUME_NAME
+    - name: mongo_dashboard_enabled
+      value: 'true'
+    - name: mongo_dashboard_username
+      value: YOUR_DASHBOARD_USERNAME
+    - name: mongo_dashboard_password
+      value: YOUR_DASHBOARD_PASSWORD
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 512Mi
+```
+
+> توجه داشته باشید، دامنه‌هایی که به سرویس مدیریت شده MongoDB اضافه می‌شوند، در اصل به داشبورد مدیریتی آن متصل می‌شوند، نه خود سرویس دیتابیس.
+
 ## Deploy With Manifest
   
 
