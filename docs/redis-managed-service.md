@@ -39,6 +39,34 @@ sidebar_label: Redis
 *  در صورتی که **رمز عبور** یا **redis_password** را وارد نکنید، برای اجرای دستورها دیگر  نیازی به رمز عبور نخواهید داشت ولی با این کار **سرویس را در معرض خطرهای بیرونی زیادی** قرار می‌دهید لذا بهتر است که از رمز عبور معتبری استفاده نمایید.<br>
 * برای حفط مسائل امنیتی سرویس Redis به صورت یک [Internal Service](https://docs.fandogh.cloud/docs/services.html#%DB%B2-%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-%DB%8C%D8%A7-external-service) عمل می‌کند و شما خارج از namespace خود به آن دسترسی ندارید.
 
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: test-redis
+spec:
+  service_name: redis
+  version: 5.0.3
+  parameters:
+    - name: redis_password
+      value: pass123
+    - name: volume_name
+      value: YOUR_VOLUME_NAME
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 512Mi
+```
+> توجه داشته باشید، دامنه‌هایی که به سرویس مدیریت شده Redis اضافه می‌شوند، در اصل به داشبورد مدیریتی آن متصل می‌شوند.
+
 ## Deploy With Manifest
   
 
@@ -56,9 +84,8 @@ spec:
       value: pass123
     - name: volume_name
       value: YOUR_VOLUME_NAME
-
   resources:
-      memory: 200Mi
+      memory: 512Mi
 ```
 - مانیفست Redis همراه با داشبورد مدیریتی
 
@@ -80,5 +107,5 @@ spec:
     - name: redis_dashboard_password
       value: PASSWORD
   resources:
-      memory: 200Mi
+      memory: 512Mi
 ```
