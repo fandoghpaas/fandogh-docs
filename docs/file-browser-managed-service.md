@@ -31,6 +31,28 @@ sidebar_label: File Browser
 
 > در صورتی که volume_name را مشخص نکنید، این سرویس به Shared Storage متصل می‌شود اما به خاطر داشته باشید که Shared Storage برای هر کاربر ۲.۵ گیگابایت است و در صورتی که مازاد آن داده‌ای را ذخیره کنید، احتمال پاک شدن آن وجود دارد و سکوی ابری فندق مسئولیتی در قبال آن ندارد.
 
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: test-file-browser
+spec:
+  service_name: filebrowser
+  version: latest
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 512Mi
+```
+
 ## Deploy With Manifest
   
 
