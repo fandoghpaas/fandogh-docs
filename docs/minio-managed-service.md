@@ -33,9 +33,9 @@ MinIO یک  [cloud storage](https://en.wikipedia.org/wiki/Cloud_storage "Cloud s
 ```
   fandogh managed-service deploy minio latest \
        -c service_name=test-minio \
-       -c minio_access_key=12charchters
-       -c minio_secret_key=12charchters
-       -c volume_name=VOLUME_NAME
+       -c minio_access_key=12charchters \
+       -c minio_secret_key=12charchters \
+       -c volume_name=VOLUME_NAME \
        -m 512Mi
 ```
 این دستور یک سرویس MinIO ایجاد می‌کند که:
@@ -46,6 +46,35 @@ MinIO یک  [cloud storage](https://en.wikipedia.org/wiki/Cloud_storage "Cloud s
 * و نام volume که داده‌های minio بر روی آن ذخیره می‌شود VOLUME_NAME است.
 
 بعد از آن که سرویس MinIO ساخته شد، از طریق لینکی که در اختیار شما قرار می‌گیرد می‌توانید وارد داشبورد مدیریتی MinIO شده و access_key و secret_key را وارد نمایید و از سرویس استفاده کنید.
+
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: test-minio
+spec:
+  service_name: minio
+  version: latest
+  parameters:
+    - name: minio_access_key
+      value: 12charachters
+    - name: minio_secret_key
+      value: 12charachters
+    - name: volume_name
+      value: VOLUME_NAME
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 512Mi
+```
 
 ## Deploy With Manifest
 

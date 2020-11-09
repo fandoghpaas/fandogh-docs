@@ -2,7 +2,7 @@
 layout: fandogh
 id: mysql-managed-service
 title: Mysql + phpMyAdmin
-sidebar_label: Mysql + phpMyAdmin
+sidebar_label: MySQL + phpMyAdmin
 ---
 ## ![MySQL + PHPMyAdmin](/img/docs/mysql-phpmyadmin.png "MySQL + PHPMyAdmin")
 
@@ -37,6 +37,37 @@ fandogh managed-service deploy mysql 9.1 \
 > هشدار برای استفاده از سرویس MySql باید به نکته زیر توجه داشته باشید. برای حفظ مسائل امنیتی سرویس MySql به صورت یک internal service عمل می کند و شما خارج از namespace خود به آن دسترسی ندارید.
 
 > برای اتصال سایر سرویس های یک فضانام به سرویس MySql از اسم سرویسی که ساخته اید می توانید استفاده کنید. 
+
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: db
+spec:
+  service_name: mysql
+  version: 5.7
+  parameters:
+    - name: phpmyadmin_enabled
+      value: true
+    - name: mysql_root_password
+      value: some_long_unpredictable_string
+    - name: volume_name
+      value: YOUR_VOLUME_NAME
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 800Mi
+```
+> توجه داشته باشید، دامنه‌هایی که به سرویس مدیریت شده MySQL اضافه می‌شوند، در اصل به داشبورد مدیریتی آن متصل می‌شوند، نه خود سرویس دیتابیس.
+
 ## Deploy With Manifest
 
 شما همچنین می‌توانید برای اجرای راحت‌تر سرویس‌های مدیریت شده از [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
@@ -54,7 +85,6 @@ spec:
       value: some_long_unpredictable_string
     - name: volume_name
       value: YOUR_VOLUME_NAME
-
   resources:
       memory: 800Mi
 ```

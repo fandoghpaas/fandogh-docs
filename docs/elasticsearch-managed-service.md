@@ -63,6 +63,41 @@ sidebar_label: Elasticsearch
  > http://elastic:YOUR_PASSWORD@ELASTIC_SERVICE_NAME:9200
  >```
 
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: elastic-search
+spec:
+  service_name: elastic-search
+  version: latest
+  parameters:
+    - name: min_heap_memory
+      value: 512
+    - name: max_heap_memory
+      value: 1024
+    - name: elastic_password
+      value: changeme
+    - name: volume_name
+      value: VOLUME_NAME
+    - name: elastic_search_exposed
+	  value: true
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 2048Mi
+```
+
+> توجه داشته باشید، دامنه‌هایی که به سرویس مدیریت شده Elasticsearch اضافه می‌شوند، در صورتی که این سرویس elastic_search_exposed شده باشد در دسترس خواهند بود.
+
 ## Deploy With Manifest
   
 

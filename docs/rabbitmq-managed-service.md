@@ -27,10 +27,10 @@ RabbitMQ یک سرویس متن باز [Message Broker](https://en.wikipedia.org
 ```
   fandogh managed-service deploy rabbitmq latest \
        -c service_name=test-rabbitmq \
-       -c rabbitmq_username=rabbitmq
-       -c rabbitmq_password=rabbitmq
-      -c dashboard_enabled=true
-       -c volume_name=VOLUME_NAME
+       -c rabbitmq_username=rabbitmq \
+       -c rabbitmq_password=rabbitmq \
+       -c dashboard_enabled=true \
+       -c volume_name=VOLUME_NAME \
        -m 512Mi
 ```
 این دستور یک سرویس RabbitMQ ایجاد می‌کند که:
@@ -66,16 +66,48 @@ RabbitMQ یک سرویس متن باز [Message Broker](https://en.wikipedia.org
 ```
   fandogh managed-service deploy rabbitmq latest \
        -c service_name=test-rabbitmq \
-       -c rabbitmq_username=rabbitmq
-       -c rabbitmq_password=rabbitmq
-      -c dashboard_enabled=true
-      -c rabbitmq_plugins="rabbitmq_trust_store rabbitmq_web_mqtt_examples rabbitmq_shovel"
-       -c volume_name=VOLUME_NAME
+       -c rabbitmq_username=rabbitmq \
+       -c rabbitmq_password=rabbitmq \
+       -c dashboard_enabled=true \
+       -c rabbitmq_plugins="rabbitmq_trust_store rabbitmq_web_mqtt_examples rabbitmq_shovel" \
+       -c volume_name=VOLUME_NAME \
        -m 512
 ```
 
 >به نحوه تعریف پلاگین‌ها دقت کنید. در صورتی که از fandogh-cli استفاده می‌کنید باید نام پلاگین ها را با فاصله از هم و در بین double quotation یا " " قرار دهید تا تمام لیست دریافت شود.
 
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: test-rabbitmq
+spec:
+  service_name: rabbitmq
+  version: latest
+  parameters:
+    - name: rabbitmq_username
+      value: rabbitmq
+    - name: rabbitmq_password
+      value: rabbitmq
+    - name: dashboard_enabled
+      value: true  
+    - name: volume_name
+      value: VOLUME_NAME
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 512Mi
+```
+
+> توجه داشته باشید، دامنه‌هایی که به سرویس مدیریت شده RabbitMQ اضافه می‌شوند، در اصل به داشبورد مدیریتی آن متصل می‌شوند.
 
 ## Deploy With Manifest
   

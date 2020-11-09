@@ -61,7 +61,32 @@ sidebar_label: Gitlab
 - http
 سرویس مدیریت شده `Gitlab` بر روی سکوی ابری فندق از دسترسی `ssh` پشتیبانی نمی‌کند؛ از همین رو باید با استفاده از لینک `http` که در اختیار شما قرار داده می‌شود پروژه خود را clone کرده و یا دیگر عملیات git را بر روی آن انجام دهید.
 
-### Deploy Gitlab With Manifest
+## افزودن دامنه دلخواه
+اگر قصد داشته باشید دامنه یا دامنه‌های دلخواهتان را به سرویس مدیریت شده مورد نظر متصل نمایید، از طریق این بخش می‌توانید لیست این دامنه‌ها را مشخص کنید.\
+برای مثال فرض کنید تمایل دارید سرویس مدیریت شده مورد نظر شما روی  [domain.com](http://domain.com/)  و  [www.domain.com](http://www.domain.com/)  در دسترس باشد:
+```
+  domains:
+     - name: domain.com
+     - name: www.domain.com
+```
+بدین شکل بخش دامنه را به مانیفست سرویس خود اضافه کرده و آن را مستقر نمایید:
+```
+kind: ManagedService
+name: test-gitlab
+spec:
+  service_name: gitlab
+  version: latest
+  parameters:
+    - name: volume_name
+      value: VOLUME_NAME
+  domains:
+  - name: domain.com
+  - name: www.domain.com
+  resources:
+      memory: 3072Mi
+```
+
+## Deploy Gitlab With Manifest
 
 شما همچنین می توانید برای اجرای راحت تر سرویس های مدیریت شده از [مانیفست](https://docs.fandogh.cloud/docs/service-manifest.html) همانند مثال زیر استفاده کنید.
 
