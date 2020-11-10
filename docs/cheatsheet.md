@@ -119,7 +119,7 @@ fandogh service logs --name SERVICE_NAME
 
 نمایش `۱۰۰۰` لاگ آخر سرویس با نام `SERVICE_NAME`:
 ```
-fandogh service details --name SERVICE_NAME --max 1000
+fandogh service logs --name SERVICE_NAME --max 1000
 ```
 
 نمایش `۱۰۰` لاگ آخر سرویس با نام `SERVICE_NAME` و ادامه نمایش لاگ سرویس به صورت `realtime`:
